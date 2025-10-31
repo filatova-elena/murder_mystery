@@ -1,0 +1,26 @@
+{
+  "document": {
+    "id": "montrose_estate_payments_1990",
+    "title": "Montrose Estate Payment Ledger - 1990",
+    "type": "Financial Document",
+    "date": "October-November 1990",
+    "location": "Montrose Estate Records",
+    "content": "MONTROSE FAMILY ESTATE\nPAYMENT LEDGER - 1990\n\nDate: October 28, 1990\nPayee: Thomas Reed\nAmount: $8,500.00\nPayment Type: Check #2847\nEntry ID: EST-1990-2847\n\nDescription: Property Consulting Services\n\nLedger Notation:\n\"Professional consultation regarding property maintenance and security assessment. Confidential arrangement. No itemized services required.\"\n\nAuthorized By: [Montrose Estate Trustee]\nPayment Method: Bank Check\nCheck Number: 2847\nBank: First National Bank of Long Beach\nAccount: Montrose Family Trust\n\n---\n\nADDITIONAL ENTRIES - OCTOBER 1990:\n\nDate: October 15, 1990\nPayee: Thomas Reed\nAmount: $2,000.00\nPayment Type: Cash\nEntry ID: EST-1990-CASH-28\n\nDescription: Discretionary Services - Initial Consultation\n\nLedger Notation:\n\"Advance payment for property assessment services. Confidential arrangement.\"\n\n---\n\nTOTAL PAID TO THOMAS REED (October 1990):\n- October 15, 1990: $2,000 (cash)\n- October 28, 1990: $8,500 (check)\nTotal: $10,500.00",
+    "reveals": "The Montrose Estate paid Thomas Reed $10,500 in October 1990—$2,000 cash on October 15 and $8,500 by check on October 28. The payments were labeled as 'Property Consulting Services' and 'Confidential arrangement.' The Sullivan bakery fire occurred November 5, 1990.",
+    "character_interpretations": {
+      "heiress": "My family paid Thomas Reed $10,500 in October 1990. October 28. Who is Thomas Reed?",
+      "fiduciary": "$10,500 paid to Thomas Reed in October 1990. 'Confidential arrangement' with no itemized services. Suspicious.",
+      "explorer": "October 15: $2,000 cash advance. October 28: $8,500 check. Strange.",
+      "art_collector": "Ten thousand dollars for 'property consulting' with no details? Suspicious.",
+      "professor": "An initial cash payment on October 15, followed by a larger check on October 28. The pattern is worth noting.",
+      "baker": "Thomas Reed. The Montrose family paid him.",
+      "clockmaker": "October 15 payment. October 28 payment. Seven days between payments.",
+      "dressmaker": "The Montrose family paid Thomas Reed in October 1990. I wonder what services he provided.",
+      "influencer": "The Montrose Estate paid Thomas Reed $10,500 in October 1990. This could be huge if there's a story here!",
+      "mortician": "$10,500 for unspecified 'consulting services' with no itemized details. That's unusual for a legitimate business transaction.",
+      "doctor": "Nothing medically relevant here, but the payment structure is interesting.",
+      "psychic": "The spirits whisper of money changing hands in shadows. The Montrose name appears in the darkness."
+    }
+  }
+}
+
