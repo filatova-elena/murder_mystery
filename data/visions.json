@@ -6,7 +6,7 @@
       "subtitle": "The translucent specter of a frail young woman in a faded blue dress, her eyes hollow with a century of longing",
       "character_specific": {
         "doctor": "Thaddeus??? Is that you? [You sense this isn't about you but someone from the ghost's past]",
-        "explorer": "Thomas? You are back? Lost at sea they told me? [You sense this isn't about you but someone lost long ago]"
+        "explorer": "Thosmas? Brother? You are back from your travels, they said you were lost at sea."
       },
       "full": [
         "Finally. FINALLY someone can hear me! I've been calling out for so long... Cordelia. My dear, sweet friend Cordelia. She was dying and she didn't even know it. [A profound longing and relief wash over you as she speaks.]",
@@ -56,7 +56,9 @@
       "title": "A Vision of Cordelia",
       "subtitle": "A presence shrouded in sorrow and secrets",
       "character_specific": {
-        "dressmaker": "You remind me of Elias, he used to write me poems...."
+        "dressmaker": "You remind me of Elias, he used to write me poems....",
+        "doctor": "You remind me of Thaddeus, unpleasant man.",
+        "explorer": "Thomas? You are back! There is something I MUST tell you.[You sense it's not about you, but someone from her past]"
       },
       "full": [
         "I saw them together. In the garden at twilight. His hand on her face. Alice! How could he? She is his patient! She is vulnerable! He is taking advantage of her, I just feel it in my bones, I have to do something! [Your heart clenches with betrayal and worry for a friend.]",
@@ -105,6 +107,9 @@
       "ghost": "sebastian",
       "title": "A Vision of Sebastian",
       "subtitle": "A shadow in the darkness, consumed by obsession",
+      "character_specific": {
+        "doctor": "You remind me of my brother",
+      },
       "full": [
         "The Jupiter-Venus conjunction! September 4th, 1925. The alignment was perfect, absolutely perfect! I administered the Elixir of Eternal Love that very morning, just as planned. Cordelia drank it willingly. [You feel hope and romantic idealism—the sense of creating something beautiful.]",
         "My formula was flawless. Years of work, years of research! Damiana, Valerian, Rose Otto... all the finest ingredients. I was so proud. This was going to be my masterpiece! [You feel the satisfaction of a craftsman perfecting their work.]",
