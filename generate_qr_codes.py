@@ -125,6 +125,33 @@ def generate_character_qr_codes(output_dir="qr_codes"):
         url = f"{BASE_URL}/character/{character}.html"
         create_qr_code(url, f"character_{character}", output_dir)
 
+def generate_artifact_qr_codes(output_dir="qr_codes"):
+    """Generate QR codes for all artifact clues"""
+    print("\n🎨 Generating Artifact QR Codes...")
+    
+    artifacts = [
+        "blood-specs", "vintage-photograph-romano", "rose-garden-map",
+        "ornate-vase-hidden-compartment", "pocket-watch", "glass-bottle-venetian",
+        "bears-in-forest", "flamenco-dancer", "woman-on-balcony",
+        "decorative-vase-dragon", "photograph-eleanor-baby", "photograph-eleanor-child",
+        "photograph-eleanor-adolescent", "rose-garden-bed", "cordelia-wedding-dress",
+        "crystal-ball", "ray-turner-book"
+    ]
+    
+    for artifact in artifacts:
+        url = f"{BASE_URL}/clue/artifacts/{artifact}.html"
+        create_qr_code(url, f"artifact_{artifact}", output_dir)
+
+def generate_vision_qr_codes(output_dir="qr_codes"):
+    """Generate QR codes for all vision pages"""
+    print("\n👁️ Generating Vision QR Codes...")
+    
+    visions = ["alice", "cordelia", "sebastian"]
+    
+    for vision in visions:
+        url = f"{BASE_URL}/clue/vision/{vision}.html"
+        create_qr_code(url, f"vision_{vision}", output_dir)
+
 def generate_custom_qr_code(url, filename, output_dir="qr_codes"):
     """Generate a QR code for a custom URL"""
     print(f"\n🔗 Generating Custom QR Code...")
@@ -136,6 +163,8 @@ def generate_all_qr_codes(output_dir="qr_codes"):
     generate_botanical_qr_codes(output_dir)
     generate_document_qr_codes(output_dir)
     generate_character_qr_codes(output_dir)
+    generate_artifact_qr_codes(output_dir)
+    generate_vision_qr_codes(output_dir)
     print(f"\n✅ All QR codes generated successfully!")
     print(f"📁 Find them in: {os.path.abspath(output_dir)}/")
 
@@ -150,7 +179,7 @@ def main():
     )
     parser.add_argument(
         "--type",
-        choices=["all", "botanicals", "documents", "characters", "custom"],
+        choices=["all", "botanicals", "documents", "characters", "artifacts", "visions", "custom"],
         default="all",
         help="Type of QR codes to generate (default: all)"
     )
@@ -186,6 +215,10 @@ def main():
         generate_document_qr_codes(args.output)
     elif args.type == "characters":
         generate_character_qr_codes(args.output)
+    elif args.type == "artifacts":
+        generate_artifact_qr_codes(args.output)
+    elif args.type == "visions":
+        generate_vision_qr_codes(args.output)
     elif args.type == "custom":
         if not args.url or not args.name:
             print("❌ Error: --url and --name are required for custom QR codes")
