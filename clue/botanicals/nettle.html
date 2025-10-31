@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overgrown Stinging Plant Patch</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    .botanical-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .botanical-content {
+      background-color: var(--secondary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 30px;
+      margin: 30px 0;
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+  <div class="container botanical-container">
+    <h1 id="botanicalTitle">Overgrown Stinging Plant Patch</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);">Botanical Specimen</p>
+
+    <div class="botanical-content" id="botanicalContent"></div>
+
+    <div id="characterObservations" class="message-box" style="display: none;">
+      <h2>You observe...</h2>
+      <div id="characterAnalysis"></div>
+    </div>
+
+    <div class="nav-footer">
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../../assets/script.js"></script>
+  <script>
+    const BOTANICAL_ID = 'nettle_forgotten_patch';
+
+    async function loadBotanical() {
+      const response = await fetch('../../data/botanical.json?t=' + new Date().getTime());
+      const data = response.ok ? await response.json() : null;
+      
+      if (!data) {
+        document.getElementById('botanicalContent').innerText = 'Error loading specimen.';
+        return;
+      }
+
+      const botanical = data.botanical.find(b => b.id === BOTANICAL_ID);
+      
+      if (!botanical) {
+        document.getElementById('botanicalContent').innerText = 'Specimen not found.';
+        return;
+      }
+
+      document.getElementById('botanicalTitle').innerText = botanical.title || '';
+      document.getElementById('botanicalContent').innerHTML = botanical.description || '';
+
+      const character = getCharacter();
+      if (character && character !== 'default' && botanical.character_interpretations && botanical.character_interpretations[character]) {
+        document.getElementById('characterAnalysis').innerHTML = `<p>${botanical.character_interpretations[character]}</p>`;
+        document.getElementById('characterObservations').style.display = 'block';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      if (!checkCharacterSelected('/')) {} else { loadBotanical(); }
+    });
+  </script>
+</body>
+</html>

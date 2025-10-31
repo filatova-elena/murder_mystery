@@ -1,0 +1,156 @@
+{
+  "documents": [
+    {
+      "id": "death_cert_alice",
+      "title": "Death Certificate - Alice Whitmore",
+      "type": "Official Document",
+      "is_primary": true,
+      "date": "October 7, 1925",
+      "signedBy": "Dr. Thaddeus Crane",
+      "location": "Fiduciary Office",
+      "reveals": "Injury patterns don't match a simple fall. Evidence of blunt force trauma from heavy object inconsistent with stairs."
+    },
+    {
+      "id": "death_cert_sebastian",
+      "title": "Death Certificate - Sebastian Crane",
+      "type": "Official Document",
+      "is_primary": true,
+      "date": "October 12-13, 1925",
+      "signedBy": "Dr. Thaddeus Crane",
+      "location": "Fiduciary Office",
+      "reveals": "Shows suspicion of poisoning but official cause is vague. Medical analysis shows concentrated foxglove in system."
+    },
+    {
+      "id": "death_cert_cordelia",
+      "title": "Death Certificate - Cordelia Montrose",
+      "type": "Official Document",
+      "is_primary": true,
+      "date": "October 18, 1925",
+      "signedBy": "Dr. Thaddeus Crane",
+      "location": "Fiduciary Office",
+      "reveals": "Medical records show cumulative toxin damage. Timeline doesn't match natural heart failure pattern."
+    },
+    {
+      "id": "autopsy_alice",
+      "title": "Autopsy Report - Alice Whitmore",
+      "type": "Medical Examination Report",
+      "is_primary": true,
+      "date": "October 8, 1925",
+      "location": "Mortuary",
+      "examiner": "Silas Blackwell (Mortician)",
+      "reveals": "Physical examination of body shows blunt force trauma to skull consistent with accidental fall. [Injury pattern inconsistent with fall. Evidence of weapon strike. [REDACTED]]. Official notation changed from 'suspicious blunt force trauma' to 'consistent with accidental fall.' Silas's private notes mention the discrepancy but falsified public record."
+    },
+    {
+      "id": "autopsy_sebastian",
+      "title": "Autopsy Report - Sebastian Crane",
+      "type": "Medical Examination Report",
+      "is_primary": true,
+      "date": "October 14, 1925",
+      "location": "Mortuary",
+      "examiner": "Silas Blackwell (Mortician)",
+      "reveals": "Body shows signs of acute poisoning. Organ tissue analysis indicates [REDACTED - FOXGLOVE]. Cardiac tissue severely damaged. [CORRECTED BY HAND]. Original notes describe 'deliberate poisoning with concentrated toxin.' Crossed out and replaced with 'suspected criminal poisoning - cause unknown.' Cover-up evident in handwriting changes."
+    },
+    {
+      "id": "autopsy_cordelia",
+      "title": "Autopsy Report - Cordelia Montrose",
+      "type": "Medical Examination Report",
+      "is_primary": true,
+      "date": "October 19, 1925",
+      "location": "Mortuary",
+      "examiner": "Silas Blackwell (Mortician)",
+      "reveals": "Body shows cumulative poison accumulation in organs. [REDACTED]. Cardiac tissue degraded from prolonged toxin exposure. Original notation: 'Consistent with 6-8 weeks of systematic poisoning.' [CROSSED OUT]. Replaced with 'Natural cardiac failure consistent with stress and grief.' Silas's private notes contradict the official report entirely."
+    },
+    {
+      "id": "prenup_agreement",
+      "title": "Pre-nuptial Agreement",
+      "type": "Legal Document",
+      "is_primary": true,
+      "date": "August 15, 1925",
+      "location": "Fiduciary Office",
+      "reveals": "Sebastian Crane and Cordelia Montrose were engaged to be married. Establishes their relationship and timeline."
+    },
+    {
+      "id": "payment_records",
+      "title": "Payment Records",
+      "type": "Financial Document",
+      "is_primary": true,
+      "date": "October 1925",
+      "location": "Mortuary",
+      "amount": "$500",
+      "reveals": "Someone paid the mortician $500 for 'discretion' and to keep quiet about discrepancies in death records."
+    },
+    {
+      "id": "romano_shipping",
+      "title": "Romano Shipping Records",
+      "type": "Trade Documents",
+      "is_primary": true,
+      "date": "1920-1925",
+      "location": "Harbor / Archive",
+      "reveals": "Harbor Import & Trading manifests showing what was smuggled through the Romano operation. Documents the legitimate exotic ingredients Sebastian ordered for his formulas. Connects to his work as apothecary and the botanical imports."
+    },
+    {
+      "id": "trust_records",
+      "title": "Trust Records",
+      "type": "Financial Document",
+      "is_primary": true,
+      "date": "1925-present",
+      "location": "Fiduciary Office",
+      "reveals": "Documents the Montrose estate trust setup, inheritance chain, and rightful heirs. Shows how the estate passed down."
+    },
+    {
+      "id": "name_change_docs",
+      "title": "Crane Family Name Change Documentation",
+      "type": "Legal Document",
+      "is_primary": true,
+      "date": "1960s",
+      "location": "Fiduciary Office",
+      "reveals": "Documentation showing the Crane family changed their name to Sinclair in the 1960s to distance themselves from Dr. Thaddeus's crimes."
+    },
+    {
+      "id": "shipping_manifests_romano",
+      "title": "Shipping Manifests with Secret Notations",
+      "type": "Trade Documents - Secondary",
+      "is_primary": false,
+      "date": "1930-1968",
+      "location": "Old filing cabinet at Montrose mansion (hidden compartment)",
+      "reveals": "Yellowed paperwork showing legitimate art and antiques mixed with coded entries like 'special shipment' and 'private delivery.' Prices don't match listed items. Suggests the Romano family was using legitimate imports as cover for moving valuable contraband and hidden valuables before the IRS seized assets."
+    },
+    {
+      "id": "marriage_certificate_dimarco",
+      "title": "Marriage Certificate - Luisa DiMarco",
+      "type": "Legal Document - Secondary",
+      "is_primary": false,
+      "date": "1960",
+      "location": "Montrose family estate records, filed under 'Personal Documents'",
+      "reveals": "Document shows Romano family member marrying under variation of family name as 'Mrs. Luisa DiMarco' with residence in Reno, Nevada. Name change and relocation date coincides with early IRS investigation in 1960. Suggests family members moved valuables to new identities/locations to prevent seizure. Luisa DiMarco identity never resurfaces - money possibly followed her out of state."
+    },
+    {
+      "id": "bank_statement_fragments",
+      "title": "Bank Statement Fragments - Post 1960s",
+      "type": "Financial Documents - Secondary",
+      "is_primary": false,
+      "date": "1965-1967",
+      "location": "Art Collector's private safe",
+      "reveals": "Torn pages from bank statements with mostly redacted information. Fragments show multiple large wire transfers totaling millions (adjusted for era), many to international accounts. Addresses are coded or vague: 'CA Estate,' 'Private Trust Account,' 'Inheritance Transfer.' Visible dates show transfer activity ceased after 1967 - exactly when major IRS seizures concluded. Suggests the treasure was moved offshore just before the government could seize it."
+    },
+    {
+      "id": "boat_registration_marina",
+      "title": "Marine Registry Document - 'La Stella Nuova'",
+      "type": "Property Records - Secondary",
+      "is_primary": false,
+      "date": "1930-1968",
+      "location": "Marina office records, dusty old files",
+      "reveals": "Faded registration for Romano-owned boat 'La Stella Nuova' (The New Star) berthed at Long Beach Marina for 30 years before being mysteriously sold in 1968. Maintenance records show expensive repairs and 'reinforced hull work' in 1965 - same year as asset movement. Boat was sold to private buyer, location of buyer unknown. Speculation: treasure was loaded onto boat and moved before seizure. Boat's current whereabouts unknown."
+    },
+    {
+      "id": "treasure_map_hand_drawn",
+      "title": "Hand-Drawn Map - Montrose Estate Grounds",
+      "type": "Historical Map - Treasure Location",
+      "is_primary": true,
+      "date": "Unknown (circa 1920s-1930s based on paper age)",
+      "location": "Hidden compartment inside purple and gold vase",
+      "drawn_by": "Unknown - presumed to be Frankie Romano or associate",
+      "reveals": "A faded hand-drawn map on aged parchment showing the Montrose Estate grounds. The map displays a clear path leading from the mansion into the garden along the left side, passing the garage wall. On the right side of the property, a prominent red X is marked directly adjacent to the rose garden beds. Distance measurements are noted along the path in faded pencil. The simplicity and precision of the markings suggest the artist was intimately familiar with the estate layout. This map pinpoints the exact burial location of the Romano family treasure."
+    }
+  ]
+}

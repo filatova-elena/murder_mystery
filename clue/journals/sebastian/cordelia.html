@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sebastian's Notebook - Cordelia</title>
+  <link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sebastian's Notebook</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);" id="entryDate"></p>
+    <div class="diary-entry"><div class="diary-text" id="entryContent"></div></div>
+    <div id="characterObservations" class="message-box" style="display: none;"><h2>You observe...</h2><div id="characterAnalysis"></div></div>
+    <div class="nav-footer"><a href="/" class="button nav-button">Return to Investigation</a></div>
+  </div>
+  <script src="../../../assets/script.js"></script>
+  <script>
+    async function loadEntry() {
+      try {
+        const response = await fetch('../../../data/journals/sebastian_notebooks.json');
+        const data = await response.json();
+        const entry = (data.entries || [])[2];
+        if (!entry) { document.getElementById('entryContent').innerText = 'Error: Entry not found.'; return; }
+        const character = getCharacter();
+        if (!character || character === 'default') { window.location.href = '../../index.html'; return; }
+        
+        // Format date
+        let formattedDate = entry.date;
+        if (entry.date) {
+          const dateParts = entry.date.split('-');
+          if (dateParts.length === 3) {
+            const date = new Date(entry.date);
+            formattedDate = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+          }
+        }
+        document.getElementById('entryDate').innerText = `${formattedDate} - ${entry.title || ''}`;
+        
+        document.getElementById('entryContent').innerHTML = (entry.content || '').replace(/\n\n/g, '<br><br>');
+        if (entry.character_interpretations && entry.character_interpretations[character]) {
+          document.getElementById('characterAnalysis').innerHTML = `<p>${entry.character_interpretations[character]}</p>`;
+          document.getElementById('characterObservations').style.display = 'block';
+        }
+      } catch (error) { document.getElementById('entryContent').innerText = 'Error: ' + error.message; }
+    }
+    if (!checkCharacterSelected('../../index.html')) {} else { loadEntry(); }
+  </script>
+</body>
+</html>

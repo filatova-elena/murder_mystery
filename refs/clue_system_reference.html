@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clue System Reference - Game Dynamics</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .reference-container {
+      max-width: 1200px;
+    }
+    
+    .clue-type-section {
+      background-color: var(--primary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 25px;
+      margin: 20px 0;
+      text-align: left;
+    }
+    
+    .clue-type-section h3 {
+      color: var(--accent-gold);
+      font-size: 1.3em;
+      margin-bottom: 15px;
+      border-bottom: 1px solid var(--accent-gold);
+      padding-bottom: 10px;
+    }
+    
+    .access-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin: 15px 0;
+    }
+    
+    .access-box {
+      background-color: var(--secondary-dark);
+      border: 1px solid var(--accent-gold);
+      padding: 12px;
+      border-radius: 2px;
+    }
+    
+    .access-box h4 {
+      color: var(--accent-gold);
+      font-size: 0.9em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    
+    .access-box ul {
+      display: block;
+      margin: 0;
+      padding-left: 20px;
+    }
+    
+    .access-box li {
+      font-size: 0.9em;
+      margin: 5px 0;
+    }
+    
+    .matrix-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.9em;
+    }
+    
+    .matrix-table th,
+    .matrix-table td {
+      border: 1px solid var(--accent-gold);
+      padding: 12px;
+      text-align: left;
+    }
+    
+    .matrix-table th {
+      background-color: var(--accent-purple);
+      color: var(--accent-gold);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    .matrix-table tr:nth-child(even) {
+      background-color: rgba(212, 165, 116, 0.05);
+    }
+    
+    .check-mark {
+      color: #90ee90;
+      font-weight: bold;
+    }
+    
+    .x-mark {
+      color: #ff6b6b;
+      font-weight: bold;
+    }
+    
+    .partial-mark {
+      color: var(--accent-gold);
+      font-weight: bold;
+    }
+    
+    .character-column {
+      background-color: rgba(74, 20, 140, 0.2);
+    }
+    
+    .mechanics-box {
+      background-color: rgba(212, 165, 116, 0.1);
+      border: 2px solid var(--accent-gold);
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 2px;
+    }
+    
+    .mechanics-box h4 {
+      color: var(--accent-gold);
+      font-size: 1.1em;
+      margin-bottom: 12px;
+    }
+    
+    .example-clue {
+      background-color: var(--primary-dark);
+      border-left: 3px solid var(--accent-gold);
+      padding: 12px 15px;
+      margin: 10px 0;
+      font-size: 0.9em;
+    }
+    
+    .example-clue strong {
+      display: block;
+      color: var(--accent-gold);
+      margin-bottom: 5px;
+    }
+    
+    .ghost-types {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin: 20px 0;
+    }
+    
+    .ghost-card {
+      background-color: var(--primary-dark);
+      border: 2px solid var(--accent-purple);
+      padding: 15px;
+      border-radius: 2px;
+    }
+    
+    .ghost-card h4 {
+      color: var(--accent-gold);
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+    
+    .ghost-card .access-level {
+      font-size: 0.85em;
+      margin: 8px 0;
+      padding: 5px;
+      background-color: rgba(212, 165, 116, 0.1);
+    }
+    
+    .section-divider {
+      border-top: 2px solid var(--accent-gold);
+      margin: 40px 0;
+      padding-top: 30px;
+    }
+    
+    .note-box {
+      background-color: rgba(74, 20, 140, 0.15);
+      border-left: 4px solid var(--accent-purple);
+      padding: 15px;
+      margin: 15px 0;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container reference-container">
+    <h1>Clue System Reference</h1>
+    <p style="font-style: italic; margin-bottom: 20px; color: var(--accent-gold);">Internal Documentation - Game Dynamics & Character Access</p>
+    
+    <div class="introduction">
+      <p>This page documents the complete clue system for "The Lost Souls of Kennebec Avenue." It serves as a master reference for how information is distributed among characters and how the investigation mechanics work.</p>
+    </div>
+    
+    <!-- CLUE TYPES OVERVIEW -->
+    <h2>Clue Types Overview</h2>
+    <p style="text-align: left; margin-bottom: 20px;">The game uses seven distinct clue categories, each revealing different layers of truth based on character expertise and access levels.</p>
+    
+    <!-- VISIONS -->
+    <div class="clue-type-section">
+      <h3>1. Visions (Ghost QR Codes)</h3>
+      <p style="margin-bottom: 15px;">Spectral manifestations accessible through QR codes placed at specific locations around the house. Different characters perceive different levels of detail.</p>
+      
+      <div class="access-grid">
+        <div class="access-box">
+          <h4>Full (All Ghosts)</h4>
+          <ul>
+            <li>Psychic Medium</li>
+            <li>Grandmother</li>
+          </ul>
+        </div>
+        <div class="access-box">
+          <h4>Full (Specific Ghosts)</h4>
+          <ul>
+            <li><strong>Cordelia:</strong> Baker, Dressmaker</li>
+            <li><strong>Alice:</strong> Explorer</li>
+          </ul>
+        </div>
+        <div class="access-box">
+          <h4>Partial (Vague Hints)</h4>
+          <ul>
+            <li>Baker, Dressmaker (for non-Cordelia)</li>
+            <li>Explorer (for non-Alice)</li>
+          </ul>
+        </div>
+        <div class="access-box">
+          <h4>Mechanical (Static Interference)</h4>
+          <ul>
+            <li>Clockmaker (all ghosts - timing clues)</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="note-box">
+        <strong>Mechanic:</strong> When others attempt to scan, they receive: "You sense a presence but cannot communicate with it."
+      </div>
+      
+      <h4 style="color: var(--accent-gold); margin-top: 20px; margin-bottom: 10px;">Ghost Locations & Access:</h4>
+      <div class="ghost-types">
+        <div class="ghost-card">
+          <h4>Alice's Ghost (Stairs/Laboratory)</h4>
+          <div class="access-level"><strong>Full:</strong> Psychic Medium, Grandmother, Explorer - Complete vision of confrontation with Sebastian, the poisoning</div>
+          <div class="access-level"><strong>Partial:</strong> Baker, Dressmaker, Clockmaker - Fragmented emotions: "poison... Cordelia... he killed me..." or timing hints</div>
+        </div>
+        
+        <div class="ghost-card">
+          <h4>Cordelia's Ghost (Bedroom/Dining Room)</h4>
+          <div class="access-level"><strong>Full:</strong> Psychic Medium, Grandmother, Baker, Dressmaker - Complete vision of slow poisoning, morning tea ritual</div>
+          <div class="access-level"><strong>Partial:</strong> Explorer, Clockmaker - Explorer gets fragmented emotions; Clockmaker gets timing hints</div>
+        </div>
+        
+        <div class="ghost-card">
+          <h4>Sebastian's Ghost (Laboratory/Garage)</h4>
+          <div class="access-level"><strong>Full:</strong> Psychic Medium, Grandmother - His obsession, making the elixir, the conjunction, panic</div>
+          <div class="access-level"><strong>Partial:</strong> Baker, Dressmaker, Explorer, Clockmaker - Dark presence and guilt; vague hints specific to their expertise</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- RUMORS -->
+    <div class="clue-type-section">
+      <h3>2. Rumors (Physical Printed Cards)</h3>
+      <p style="margin-bottom: 15px;">Hearsay and gossip spread throughout the town. Only ⅔ of rumors are true. Characters with full access collect rumors; all others must share when asked.</p>
+      
+      <div class="access-grid">
+        <div class="access-box">
+          <h4>Full Access (Collect Rumors)</h4>
+          <ul>
+            <li>Heiress</li>
+            <li>Influencer</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Can ask others to share rumors; others must give up at least one rumor card</p>
+        </div>
+        <div class="access-box">
+          <h4>Partial Access (Must Share)</h4>
+          <ul>
+            <li>Everyone else</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Must give up at least one rumor card when interacting with collectors</p>
+        </div>
+      </div>
+      
+      <div class="note-box">
+        <strong>Key Mechanic:</strong> When you interact with Heiress or Influencer, you must give up (surrender) at least one rumor card from your hand. They can ask which rumor you're sharing, but you must share at least one. When two collectors interact with each other, they must exchange at least one card each (both give up one card to the other). Rumors must be verified against facts to determine truth.
+      </div>
+      
+      <h4 style="color: var(--accent-gold); margin-top: 20px; margin-bottom: 10px;">Rumor Categories:</h4>
+      
+      <div class="example-clue">
+        <strong>TRUE Rumors (Must include some)</strong>
+        <ul style="margin: 8px 0; padding-left: 20px; display: block;">
+          <li>"I heard Sebastian Crane was involved with bootleggers"</li>
+          <li>"They say Cordelia disappeared for months in early 1925"</li>
+          <li>"The Sullivan bakery fire was suspicious"</li>
+          <li>"Dr. Crane and the mortician were paid to keep quiet"</li>
+          <li>"Alice Whitmore had strange abilities - some called her a witch"</li>
+        </ul>
+      </div>
+      
+      <div class="example-clue">
+        <strong>FALSE Rumors (Misdirection)</strong>
+        <ul style="margin: 8px 0; padding-left: 20px; display: block;">
+          <li>"The Romano family had Sebastian murdered"</li>
+          <li>"Cordelia killed herself from heartbreak"</li>
+          <li>"Alice fell down the stairs while drunk"</li>
+          <li>"The Montrose family was respectable and honest"</li>
+        </ul>
+      </div>
+      
+      <div class="example-clue">
+        <strong>PARTIAL Truth Rumors (Misleading)</strong>
+        <ul style="margin: 8px 0; padding-left: 20px; display: block;">
+          <li>"Sebastian Crane was poisoned" (true but makes it seem like murder)</li>
+          <li>"There was a love triangle involving Cordelia" (true but unexpected participants)</li>
+          <li>"The dressmaker was obsessed with Cordelia" (true but with genuine intent, not creepy)</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- FACTS -->
+    <div class="clue-type-section">
+      <h3>3. Knowledge (Base Information)</h3>
+      <p style="margin-bottom: 15px;">Simple factual statements and base information that characters know about the case, people, and history. Unlike rumors, knowledge is always truthful. Examples: "Heiress knows who Cordelia Montrose is," "Doctor knows about a patient's medical condition," "Baker knows the family that lived here."</p>
+      
+      <p style="text-align: left; margin: 15px 0;"><strong>How it works:</strong> Each character has certain pieces of knowledge based on their background and expertise. This is straightforward information they know from their own experience—not specialized interpretation, just facts.</p>
+      
+      <h4 style="color: var(--accent-gold); margin-top: 20px; margin-bottom: 10px;">Example - Knowledge About Cordelia:</h4>
+      <div class="example-clue">
+        <strong>Heiress knows:</strong> "Cordelia Montrose was my distant ancestor; she lived in this house in 1925 and was engaged but the wedding never happened"
+      </div>
+      <div class="example-clue">
+        <strong>Baker knows:</strong> "The Montrose family had a bakery order placed before the bride disappeared"
+      </div>
+      <div class="example-clue">
+        <strong>Doctor knows:</strong> "Dr. Thaddeus Crane was a physician in town during that era"
+      </div>
+    </div>
+    
+    <!-- BOTANICAL CLUES -->
+    <div class="clue-type-section">
+      <h3>4. Botanical Clues (Plant Specimens & Records)</h3>
+      <p style="margin-bottom: 15px;">Items or documents mentioning plant-related evidence. Presented as QR codes attached to physical specimens or botanical records.</p>
+      
+      <div class="access-grid">
+        <div class="access-box">
+          <h4>Full Access</h4>
+          <ul>
+            <li>Botany Professor</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Complete botanical identification and properties</p>
+        </div>
+        <div class="access-box">
+          <h4>Partial Access</h4>
+          <ul>
+            <li>Fiduciary (knows poisons)</li>
+            <li>Explorer (knows shipping)</li>
+            <li>Baker (intuitive knowledge)</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Limited botanical information based on expertise</p>
+        </div>
+      </div>
+      
+      <h4 style="color: var(--accent-gold); margin-top: 20px; margin-bottom: 10px;">Botanical Evidence Examples:</h4>
+      
+      <div class="example-clue">
+        <strong>Pressed Flowers (from Elias to Cordelia)</strong>
+        <div style="margin-top: 8px;">
+          <strong>Botany Professor:</strong> "Rosa damascena, Digitalis purpurea (Foxglove - POISONOUS), Valerian officinalis"<br>
+          <strong>Fiduciary:</strong> "Recognizes the foxglove as highly toxic"<br>
+          <strong>Baker:</strong> "These flowers feel wrong somehow... one of them is dangerous"<br>
+          <strong>Everyone else:</strong> "Dried pressed flowers, still fragrant"
+        </div>
+      </div>
+      
+      <div class="example-clue">
+        <strong>Plant Specimens in Jars (at laboratory)</strong>
+        <div style="margin-top: 8px;">
+          <strong>Botany Professor:</strong> "Digitalis purpurea, Turnera diffusa, Mandragora officinarum, Valeriana officinalis. This is a poison preparation."<br>
+          <strong>Fiduciary:</strong> "These cause cardiac arrest. High toxicity level."<br>
+          <strong>Explorer:</strong> "Harbor Import & Trading labels - I recognize this supplier"<br>
+          <strong>Everyone else:</strong> "Jars of dried plants and herbs"
+        </div>
+      </div>
+    </div>
+    
+    <!-- MEDICAL CLUES -->
+    <div class="clue-type-section">
+      <h3>5. Medical Clues (Death Records, Autopsy Notes)</h3>
+      <p style="margin-bottom: 15px;">Evidence related to causes of death, medical conditions, and disease descriptions. Presented as QR codes on official records and documents.</p>
+      
+      <div class="access-grid">
+        <div class="access-box">
+          <h4>Full Access</h4>
+          <ul>
+            <li>Town Doctor</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Complete medical analysis and diagnosis</p>
+        </div>
+        <div class="access-box">
+          <h4>Partial Access</h4>
+          <ul>
+            <li>Mortician</li>
+            <li>Botany Professor</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Limited medical details from their perspective</p>
+        </div>
+      </div>
+      
+      <h4 style="color: var(--accent-gold); margin-top: 20px; margin-bottom: 10px;">Medical Evidence Examples:</h4>
+      
+      <div class="example-clue">
+        <strong>Death Certificates</strong>
+        <div style="margin-top: 8px;">
+          <strong>Town Doctor:</strong> "Alice: Blunt force trauma inconsistent with fall. Sebastian: Acute digitalis poisoning with laceration. Cordelia: Cumulative cardiac glycoside toxicity - slow poisoning."<br>
+          <strong>Mortician:</strong> "Injury patterns don't match official cause. Blood evidence suggests violence."<br>
+          <strong>Botany Professor:</strong> "Digitalis and cardiac glycosides = plant poisons"<br>
+          <strong>Everyone else:</strong> "Official causes: Accidental fall, Homicide-poison, Natural causes-heart failure"
+        </div>
+      </div>
+      
+      <div class="example-clue">
+        <strong>Dr. Thaddeus Crane's Diary (Medical Notes)</strong>
+        <div style="margin-top: 8px;">
+          <strong>Town Doctor:</strong> "Full medical context - symptoms, diagnostic reasoning, guilt about cover-up"<br>
+          <strong>Mortician:</strong> "Timeline of deaths, his complicity with Silas"<br>
+          <strong>Botany Professor:</strong> "Plant-based poison references"<br>
+          <strong>Everyone else:</strong> "Emotional diary entries without medical detail"
+        </div>
+      </div>
+    </div>
+    
+    <!-- DOCUMENTS -->
+    <div class="clue-type-section">
+      <h3>6. Documents (Legal, Financial, Estate Records)</h3>
+      <p style="margin-bottom: 15px;">Birth certificates, death certificates, financial records, pre-nuptial agreements. Physically printed; QR codes reveal additional analytical information.</p>
+      
+      <div class="access-grid">
+        <div class="access-box">
+          <h4>Full Access</h4>
+          <ul>
+            <li>Fiduciary</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Complete legal and financial analysis, can spot discrepancies</p>
+        </div>
+        <div class="access-box">
+          <h4>Partial Access</h4>
+          <ul>
+            <li>Mortician</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Can see connections to death records and family involvement</p>
+        </div>
+      </div>
+      
+      <h4 style="color: var(--accent-gold); margin-top: 20px; margin-bottom: 10px;">Document Examples:</h4>
+      
+      <div class="example-clue">
+        <strong>Pre-Nuptial Agreement</strong>
+        <div style="margin-top: 8px;">
+          <strong>Fiduciary:</strong> "Legal analysis: Sebastian Crane was Cordelia's fiancé. Property separation clause. Signed August 15, 1925. Witnessed by Dr. Thaddeus Crane."<br>
+          <strong>Mortician:</strong> "Signed by the same Dr. Crane who signed the death certificates"<br>
+          <strong>Everyone else:</strong> "Legal agreement between Cordelia Montrose and Sebastian Crane, August 1925"
+        </div>
+      </div>
+      
+      <div class="example-clue">
+        <strong>Payment Records ($500 to Silas the Mortician)</strong>
+        <div style="margin-top: 8px;">
+          <strong>Fiduciary:</strong> "Large payment from Montrose Family Trust. Purpose: 'Confidential arrangement.' This is clearly a bribe covering something up."<br>
+          <strong>Mortician:</strong> "My ancestor received this payment. He kept quiet about something."<br>
+          <strong>Everyone else:</strong> "Payment record from October 1925"
+        </div>
+      </div>
+      
+      <div class="example-clue">
+        <strong>Adoption/Placement Papers</strong>
+        <div style="margin-top: 8px;">
+          <strong>Fiduciary:</strong> "Critical finding: Placement papers exist for baby to Sullivan family, but NO finalized adoption decree. This means Eleanor legally remained Cordelia's heir."<br>
+          <strong>Mortician:</strong> "Documents are suspiciously incomplete"<br>
+          <strong>Everyone else:</strong> "Papers about a baby adoption in 1925"
+        </div>
+      </div>
+    </div>
+    
+    <!-- JOURNALS -->
+    <div class="clue-type-section">
+      <h3>7. Journals (Personal Diaries & Writings)</h3>
+      <p style="margin-bottom: 15px;">Personal diary entries, journal pages, and private writings. These reveal intimate thoughts, confessions, and personal knowledge. Presented as QR codes on journal pages or manuscript sections.</p>
+      
+      <div class="access-grid">
+        <div class="access-box">
+          <h4>Full Access</h4>
+          <ul>
+            <li>Doctor (Dr. Thaddeus's diary)</li>
+            <li>Character-specific journals (depends on which journal)</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Full confessions and personal thoughts</p>
+        </div>
+        <div class="access-box">
+          <h4>Partial Access</h4>
+          <ul>
+            <li>Mortician (sees entries related to deaths)</li>
+            <li>Fiduciary (sees financial/legal implications)</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Entries relevant to their expertise</p>
+        </div>
+      </div>
+      
+      <h4 style="color: var(--accent-gold); margin-top: 20px; margin-bottom: 10px;">Journal Examples:</h4>
+      
+      <div class="example-clue">
+        <strong>Dr. Thaddeus Crane's Diary</strong>
+        <div style="margin-top: 8px;">
+          <strong>Doctor:</strong> "Full confession - his own handwriting detailing the poisoning, Alice's threat, her murder, his guilt"<br>
+          <strong>Mortician:</strong> "Entries about falsifying death certificates and the bribe payment"<br>
+          <strong>Everyone else:</strong> "Personal diary with emotional entries about loss and regret"
+        </div>
+      </div>
+    </div>
+    
+    <!-- ARTIFACTS -->
+    <div class="clue-type-section">
+      <h3>8. Artifacts (Physical Objects & Heirlooms)</h3>
+      <p style="margin-bottom: 15px;">Decorative items, paintings, furniture, and objects with historical significance. QR codes attached reveal provenance and background details.</p>
+      
+      <div class="access-grid">
+        <div class="access-box">
+          <h4>Full Access (Provenance Expert)</h4>
+          <ul>
+            <li>Art Collector</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Full dating, valuation, provenance, and criminal connections</p>
+        </div>
+        <div class="access-box">
+          <h4>Partial Access</h4>
+          <ul>
+            <li>Explorer (physical search, connections)</li>
+            <li>Heiress (family history)</li>
+          </ul>
+          <p style="font-size: 0.85em; margin-top: 8px; color: var(--accent-gold);">Limited context based on their knowledge</p>
+        </div>
+      </div>
+      
+      <h4 style="color: var(--accent-gold); margin-top: 20px; margin-bottom: 10px;">Artifact Examples:</h4>
+      
+      <div class="example-clue">
+        <strong>The Glass Bottle (Venetian, 1920-1925)</strong>
+        <div style="margin-top: 8px;">
+          <strong>Art Collector:</strong> "Venetian glass, high quality. Popular during Prohibition for 'medicinal spirits.' Imported through Harbor Import & Trading (Romano smuggling operation). Worth $500-800. In Romano records as 'special delivery to pharmaceutical client.'"<br>
+          <strong>Explorer:</strong> "This came through the Romano smuggling operation at the docks"<br>
+          <strong>Heiress:</strong> "Expensive, from the 1920s, belonged to someone wealthy"<br>
+          <strong>Everyone else:</strong> "Ornate glass bottle, empty, beautiful craftsmanship"
+        </div>
+      </div>
+      
+      <div class="example-clue">
+        <strong>The Pocket Watch (Swiss, Gold)</strong>
+        <div style="margin-top: 8px;">
+          <strong>Art Collector:</strong> "Swiss movement, gold case, high-end piece owned by someone wealthy. Engraving done locally in Long Beach."<br>
+          <strong>Clockmaker (Special):</strong> "September 4, 1925, 6:14 AM - Jupiter-Venus conjunction. This was significant for alchemical timing."<br>
+          <strong>Explorer:</strong> "Symbols relate to navigation and astronomical alignment"<br>
+          <strong>Heiress:</strong> "Expensive Montrose-era piece"<br>
+          <strong>Everyone else:</strong> "Pocket watch with strange symbols and a date engraved inside"
+        </div>
+      </div>
+      
+      <div class="example-clue">
+        <strong>The Wedding Dress (1920s, Silk & Lace)</strong>
+        <div style="margin-top: 8px;">
+          <strong>Art Collector:</strong> "1920s style, high-quality silk and lace, custom-made, never worn. Worth $2000-3000 at auction."<br>
+          <strong>Dressmaker (Special):</strong> "Made by my ancestor Elias Monroe for Cordelia. Every stitch perfect. He loved her. Her measurements show she was thin, possibly unwell. Lock of her hair in the hem."<br>
+          <strong>Heiress:</strong> "Montrose family item, incredibly well-preserved"<br>
+          <strong>Everyone else:</strong> "Beautiful white wedding dress from the 1920s, perfectly preserved"
+        </div>
+      </div>
+    </div>
+    
+    <div class="section-divider"></div>
+    
+    <!-- CHARACTER ACCESS MATRIX -->
+    <h2>Character Access Matrix</h2>
+    <p style="text-align: left; margin-bottom: 20px;">Quick reference showing which clue types each character can fully access, partially access, or cannot access.</p>
+    
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th>Character</th>
+          <th>Facts (Expert)</th>
+          <th>Rumors</th>
+          <th>Visions</th>
+          <th>Botanical</th>
+          <th>Medical</th>
+          <th>Documents</th>
+          <th>Journals</th>
+          <th>Artifacts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="character-column"><strong>Art Collector</strong></td>
+          <td>Provenance</td>
+          <td class="x-mark">Must Share</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="check-mark">FULL ✓</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Baker</strong></td>
+          <td>✗</td>
+          <td class="x-mark">Must Share</td>
+          <td class="check-mark">FULL (Cordelia) ✓</td>
+          <td class="partial-mark">Partial</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Clockmaker</strong></td>
+          <td>Timing</td>
+          <td class="x-mark">Must Share</td>
+          <td class="partial-mark">Static (Timing)</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Dressmaker</strong></td>
+          <td>✗</td>
+          <td class="x-mark">Must Share</td>
+          <td class="check-mark">FULL (Cordelia) ✓</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Doctor</strong></td>
+          <td>Medical</td>
+          <td class="x-mark">Must Share</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="check-mark">FULL ✓</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Explorer</strong></td>
+          <td>Historical</td>
+          <td class="x-mark">Must Share</td>
+          <td class="check-mark">FULL (Alice) ✓</td>
+          <td class="partial-mark">Partial</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="partial-mark">Partial</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Fiduciary</strong></td>
+          <td>Legal/Financial</td>
+          <td class="x-mark">Must Share</td>
+          <td class="x-mark">✗</td>
+          <td class="partial-mark">Partial (Toxicology)</td>
+          <td class="x-mark">✗</td>
+          <td class="check-mark">FULL ✓</td>
+          <td class="x-mark">✗</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Grandmother</strong></td>
+          <td>✗</td>
+          <td class="x-mark">Must Share</td>
+          <td class="check-mark">FULL ✓</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Heiress</strong></td>
+          <td>Family History</td>
+          <td class="check-mark">FULL (Collect)</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="partial-mark">Partial</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Influencer</strong></td>
+          <td>Historical Context</td>
+          <td class="check-mark">FULL (Collect)</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Mortician</strong></td>
+          <td>Death Investigation</td>
+          <td class="x-mark">Must Share</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="partial-mark">Partial</td>
+          <td class="partial-mark">Partial</td>
+          <td class="x-mark">✗</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Professor (Botany)</strong></td>
+          <td>Botanical/Poison</td>
+          <td class="x-mark">Must Share</td>
+          <td class="x-mark">✗</td>
+          <td class="check-mark">FULL ✓</td>
+          <td class="partial-mark">Partial</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+        </tr>
+        <tr>
+          <td class="character-column"><strong>Psychic Medium</strong></td>
+          <td>✗</td>
+          <td class="x-mark">Must Share</td>
+          <td class="check-mark">FULL ✓</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+          <td class="x-mark">✗</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="section-divider"></div>
+    
+    <!-- CHARACTER STARTING ITEMS -->
+    <h2>Character Starting Items</h2>
+    <p style="text-align: left; margin-bottom: 20px;">Each character begins the investigation with specific items, documents, and information. These starting assets reflect their background and role in the story.</p>
+    
+    <div class="clue-type-section">
+      <h3>Art Collector</h3>
+      <ul style="text-align: left;">
+        <li><strong>Artifact:</strong> The Ornate Glass Bottle (Venetian, 1920-1925)</li>
+        <li><strong>Knowledge:</strong> [Knowledge about art/provenance to be determined]</li>
+        <li><strong>Rumor Cards:</strong> [Rumors to be determined]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Baker</h3>
+      <ul style="text-align: left;">
+        <li><strong>Knowledge:</strong> [Background knowledge about the Montrose family/house to be determined]</li>
+        <li><strong>Rumor Cards:</strong> [Rumors to be determined]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Clockmaker</h3>
+      <ul style="text-align: left;">
+        <li><strong>Artifact:</strong> [Artifact to be determined]</li>
+        <li><strong>Knowledge:</strong> [Timing/astronomical knowledge to be determined]</li>
+        <li><strong>Rumor Cards:</strong> [Rumors to be determined]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Dressmaker</h3>
+      <ul style="text-align: left;">
+        <li><strong>Artifact:</strong> [The Wedding Dress or related item to be determined]</li>
+        <li><strong>Knowledge:</strong> [Memories of making Cordelia's dress, Elias Monroe connection]</li>
+        <li><strong>Rumor Cards:</strong> [Rumors to be determined]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Doctor</h3>
+      <ul style="text-align: left;">
+        <li><strong>Document:</strong> [Medical records or Dr. Crane's notes to be determined]</li>
+        <li><strong>Knowledge:</strong> [Medical history, Dr. Thaddeus Crane background]</li>
+        <li><strong>Rumor Cards:</strong> [Rumors to be determined]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Explorer</h3>
+      <ul style="text-align: left;">
+        <li><strong>Artifact:</strong> [Item related to exploration/travel to be determined]</li>
+        <li><strong>Knowledge:</strong> [Historical knowledge of Long Beach/shipping routes]</li>
+        <li><strong>Rumor Cards:</strong> [Rumors to be determined]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Fiduciary</h3>
+      <ul style="text-align: left;">
+        <li><strong>Document:</strong> Montrose Family Trust records</li>
+        <li><strong>Document:</strong> [Financial records to be determined]</li>
+        <li><strong>Knowledge:</strong> [Legal/financial background]</li>
+        <li><strong>Rumor Cards:</strong> [Rumors to be determined]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Grandmother</h3>
+      <ul style="text-align: left;">
+        <li><strong>Knowledge:</strong> [Direct memories/knowledge from being present in the 1920s]</li>
+        <li><strong>Rumor Cards:</strong> [Rumors to be determined]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Heiress</h3>
+      <ul style="text-align: left;">
+        <li><strong>Artifact:</strong> [Family heirlooms to be determined]</li>
+        <li><strong>Document:</strong> [Montrose family papers to be determined]</li>
+        <li><strong>Knowledge:</strong> Family history, connection to Cordelia Montrose</li>
+        <li><strong>Rumor Cards:</strong> [Starts collecting rumors through interactions]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Influencer</h3>
+      <ul style="text-align: left;">
+        <li><strong>Knowledge:</strong> [Local history, town gossip knowledge]</li>
+        <li><strong>Rumor Cards:</strong> [Starts collecting rumors through interactions]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Mortician</h3>
+      <ul style="text-align: left;">
+        <li><strong>Document:</strong> [Death records or family records to be determined]</li>
+        <li><strong>Knowledge:</strong> [Family history as morticians, knowledge of deaths]</li>
+        <li><strong>Rumor Cards:</strong> [Rumors to be determined]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Psychic Medium</h3>
+      <ul style="text-align: left;">
+        <li><strong>Knowledge:</strong> [Psychic impressions/background to be determined]</li>
+        <li><strong>Rumor Cards:</strong> [Starts with some rumors, collects more through interactions]</li>
+      </ul>
+    </div>
+    
+    <div class="clue-type-section">
+      <h3>Botany Professor</h3>
+      <ul style="text-align: left;">
+        <li><strong>Knowledge:</strong> [Botanical/poison knowledge background]</li>
+        <li><strong>Rumor Cards:</strong> [Rumors to be determined]</li>
+      </ul>
+    </div>
+    
+    <div class="section-divider"></div>
+    
+    <!-- GAME MECHANICS -->
+    <h2>Game Mechanics & Interaction Flow</h2>
+    
+    <div class="mechanics-box">
+      <h4>When a Player Finds a QR Code:</h4>
+      <ol style="text-align: left;">
+        <li>Player scans QR code with their phone</li>
+        <li>Website checks their character (from character card scan)</li>
+        <li>System displays appropriate information level based on character and clue type</li>
+        <li>Some clues require multiple characters to piece together the full truth</li>
+      </ol>
+    </div>
+    
+    <div class="mechanics-box">
+      <h4>Rumor Card Mechanics:</h4>
+      <ol style="text-align: left;">
+        <li>Rumors are printed on physical cards scattered around or distributed to players</li>
+        <li>Players keep rumor cards until they interact with Heiress or Influencer</li>
+        <li>When meeting a collector, players MUST show all their rumor cards</li>
+        <li>Collectors log rumors and track which are true vs. false</li>
+        <li>Players can discuss and debate if rumors are truthful based on other evidence</li>
+      </ol>
+    </div>
+    
+    <div class="mechanics-box">
+      <h4>Vision (Ghost QR) Mechanics:</h4>
+      <ol style="text-align: left;">
+        <li>QR codes are placed at locations where ghosts appear (stairs, bedroom, laboratory, etc.)</li>
+        <li>Only Psychic Medium can scan for full visions</li>
+        <li>Specific characters (Baker for Cordelia, Explorer for Alice, Dressmaker for Cordelia) get partial visions</li>
+        <li>Clockmaker gets static interference with timing information</li>
+        <li>All others receive: "You sense a presence but cannot communicate with it"</li>
+        <li>Visions provide cryptic but TRUE information that must be interpreted</li>
+      </ol>
+    </div>
+    
+    <div class="mechanics-box">
+      <h4>Information Sharing & Investigation Strategy:</h4>
+      <ol style="text-align: left;">
+        <li>Players must interact with other characters to piece together the complete truth</li>
+        <li>Information flows through social interaction during the game</li>
+        <li>Some players have privileged information they can choose when/how to share</li>
+        <li>Different characters know different parts of the truth based on their expertise</li>
+        <li>The narrative only fully emerges when characters collaborate and compare findings</li>
+      </ol>
+    </div>
+    
+    <div class="section-divider"></div>
+    
+    <!-- DESIGN NOTES -->
+    <h2>Design Notes & Principles</h2>
+    
+    <div class="introduction">
+      <h3 style="color: var(--accent-gold); margin-bottom: 15px;">Information Distribution Strategy</h3>
+      <ul style="text-align: left; display: block;">
+        <li><strong>No single player knows everything:</strong> Each character has access to different clue categories, forcing collaboration</li>
+        <li><strong>Overlapping information:</strong> Some clues can be accessed by multiple characters, allowing verification and discussion</li>
+        <li><strong>Competing narratives:</strong> Rumors provide false and partial truths that must be tested against facts</li>
+        <li><strong>Expert interpretation:</strong> The same document means different things to different characters based on their expertise</li>
+        <li><strong>Cryptic layers:</strong> Visions provide truth but require interpretation; ghosts speak in emotional, non-literal terms</li>
+      </ul>
+    </div>
+    
+    <div class="introduction">
+      <h3 style="color: var(--accent-gold); margin-bottom: 15px;">Character Role Balance</h3>
+      <ul style="text-align: left; display: block;">
+        <li><strong>Information Collectors:</strong> Heiress, Influencer, Psychic Medium gather information from others</li>
+        <li><strong>Specialists:</strong> Doctor, Fiduciary, Art Collector, Professor have deep expertise in specific areas</li>
+        <li><strong>Partial Witnesses:</strong> Baker, Dressmaker, Explorer, Clockmaker, Mortician have limited but crucial insight</li>
+        <li><strong>Unique Access:</strong> Each character type has at least one clue category only they or one other can access</li>
+      </ul>
+    </div>
+    
+    <div class="note-box">
+      <strong>Implementation Note:</strong> All QR codes should link to a verification system that checks which character is scanning. The JavaScript backend needs to track:
+      <ul style="display: block; margin-top: 8px; padding-left: 20px;">
+        <li>Current player's character (scanned from character card)</li>
+        <li>Which clue/document is being scanned</li>
+        <li>Return appropriate information level</li>
+      </ul>
+    </div>
+    
+    <div class="nav-footer">
+      <p style="text-align: center; font-style: italic; color: var(--accent-gold);">Internal Reference Document - Not for Player Distribution</p>
+    </div>
+  </div>
+</body>
+</html>

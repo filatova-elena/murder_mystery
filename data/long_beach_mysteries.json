@@ -1,0 +1,73 @@
+{
+  "podcast_series": {
+    "title": "Long Beach Urban Legends & Mysteries",
+    "host": "The Influencer",
+    "episodes": [
+      {
+        "episode_number": 1,
+        "title": "The Vanishing Bride - What Really Happened to Cordelia Montrose?",
+        "air_date": "2023-01-15",
+        "summary": "In October 1925, three people died mysteriously at the Montrose mansion in Long Beach. The official story: Cordelia Montrose died of a broken heart after her new fiancé Sebastian suddenly passed away. But the timeline doesn't add up. We investigate the theory that something far more sinister was at play. Was it truly grief? Or could there be a darker explanation involving the pharmacist's experimental elixir? Skeptical analysis suggests natural causes, but the evidence is peculiar.",
+        "key_points": [
+          "Three deaths in 11 days",
+          "Sebastian Crane's 'Elixir of Eternal Love' - romantic gesture or something darker?",
+          "Cordelia's health decline began before Sebastian's death",
+          "Official records list different causes for each death - accident, poisoning, natural causes",
+          "No toxicology reports from 1925 - impossible to verify claims"
+        ]
+      },
+      {
+        "episode_number": 2,
+        "title": "The Sullivan Bakery Fire - Accident or Arson?",
+        "air_date": "2023-02-20",
+        "summary": "In 1990, the Sullivan family bakery - a Long Beach institution for generations - burned to the ground under suspicious circumstances. The official investigation ruled it an accident caused by electrical wiring. But locals whisper about a family connection to the 1925 deaths. We examine the fire investigation records, interview fire marshals, and question whether this was truly an accident or if someone wanted to destroy evidence of the family's past.",
+        "key_points": [
+          "Bakery burned in 1990 - nearly 65 years after the 1925 deaths",
+          "Eleanor Sullivan (baker) connection to Cordelia Montrose",
+          "Fire occurred shortly after new investigations into the 1925 deaths began",
+          "Electrical fire is convenient explanation - hard to disprove",
+          "Baker's connection to the Montrose mystery suggests possible motive"
+        ]
+      },
+      {
+        "episode_number": 3,
+        "title": "The Romano Treasure - Mob Money Myth or Real Fortune?",
+        "air_date": "2023-04-10",
+        "summary": "Frankie 'the Coast' Romano ran bootlegging operations at the Port of Long Beach during Prohibition. When federal authorities seized his assets in the 1960s, they recovered less than half of what he supposedly accumulated. The legend: Frankie hid millions before the feds arrived. We trace the rumors, examine property records, interview family members, and ask the question - is the 'Romano Treasure' a real fortune waiting to be found, or an elaborate family myth?",
+        "key_points": [
+          "Frankie Romano controlled bootlegging from 1922-1962",
+          "Harbor Import & Trading Co as a legitimate front for operations",
+          "IRS seized assets in 1960s - but amount recovered was suspiciously low",
+          "Connection to Montrose mansion suggests possible hiding location",
+          "Multiple sources mention 'the garden,' 'the paintings,' and 'the boats' - poetic references or actual treasure maps?"
+        ]
+      },
+      {
+        "episode_number": 4,
+        "title": "Where the Sun Sets - Decoding the Treasure Hunt",
+        "air_date": "2023-06-05",
+        "summary": "Multiple sources hint at a treasure hidden in Long Beach. A pocket watch engraved with astronomical symbols. A sealed letter with poetic clues. Rumors of buried gold at the Montrose mansion. We compile all the evidence, separate fact from fiction, and attempt to decode the cryptic references that may point to the location of Frankie Romano's hidden fortune. Rational analysis suggests these are likely coincidences and folklore, but the pattern is intriguing.",
+        "key_points": [
+          "Pocket watch with Jupiter-Venus conjunction date - September 4, 1925",
+          "Letter references: 'garden,' 'paintings,' 'boats,' 'where the sun sets in the west'",
+          "Montrose mansion as central location in multiple mysteries",
+          "White roses in the mansion garden - memorial or marker?",
+          "Skeptical conclusion: No evidence of actual treasure, but fascinating puzzle regardless"
+        ]
+      },
+      {
+        "episode_number": 5,
+        "title": "Connected Mysteries - Are These Stories Really Linked?",
+        "air_date": "2023-08-12",
+        "summary": "As we compile all our research, a pattern emerges. The 1925 deaths. The Sullivan bakery fire. The Romano treasure. The mysterious pocket watch. These may not be separate mysteries - they may all be threads of a single, larger story. We examine how these cases interconnect, the families involved, and whether the truth has been hiding in plain sight all along. Rational skepticism suggests coincidence, but the connections are too numerous to ignore.",
+        "key_points": [
+          "Montrose family connection to all three mysteries",
+          "Temporal clustering - major events 1925, 1962, 1990",
+          "Botanical/chemical elements appear in multiple cases",
+          "Harbor operations, pharmacist operations, family secrets all converge",
+          "Conclusion: More evidence needed, but story is compelling"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "entries": [
+    {
+      "date": "1924-06-15",
+      "patient": "Alice Whitmore",
+      "chief_complaint": "Insomnia and nervous fatigue",
+      "notes": "Patient attributes sleep disturbance to heightened sensitivity. Claims premonitions and psychic impressions. Her observations regarding other patients are remarkably accurate. Prescribed valerian root."
+    },
+    {
+      "date": "1924-07-02",
+      "patient": "Alice Whitmore",
+      "chief_complaint": "Follow-up consultation",
+      "notes": "Sleep improved but irritability continues. Patient describes others' circumstances with uncanny precision. She simply said: 'I listen to what people don't say.' Remarkable insight. Extended consultation beyond protocol."
+    },
+    {
+      "date": "1925-08-12",
+      "patient": "Alice Whitmore",
+      "chief_complaint": "Vivid disturbing dreams",
+      "notes": "Patient described a colleague's medical crisis three days before it occurred. When skeptical, she noted her abilities are often dismissed as fraud. I assured her otherwise. Our consultations have become less clinical. I should refer her elsewhere but have not."
+    },
+    {
+      "date": "1925-09-10",
+      "patient": "Alice Whitmore",
+      "chief_complaint": "Premonitions of danger",
+      "notes": "Patient reports overwhelming impressions of tragedy surrounding Cordelia Montrose's upcoming marriage. She perceives 'discord and toxicity.' Cannot articulate specifics but expresses deep conviction. Asked: 'Do you believe me, Thaddeus?' Professional boundaries abandoned."
+    },
+    {
+      "date": "1925-09-25",
+      "patient": "Alice Whitmore",
+      "chief_complaint": "Intensified premonitions",
+      "notes": "Patient increasingly agitated. Believes Cordelia is in danger—specifically mentions 'poisoning.' Not sleeping despite medication. Asked: 'What would you do if you knew something terrible was going to happen?' Her question seemed personal. I am in breach of medical ethics."
+    },
+    {
+      "date": "1925-10-08",
+      "patient": "Alice Whitmore",
+      "chief_complaint": "Acute distress - unscheduled visit",
+      "notes": "Patient appeared unannounced, highly distressed. She spoke of events already transpired and moral obligation. Asked directly: 'Will you choose integrity or preservation?' She urged me toward actions I cannot take. When I refused, she withdrew. Said: 'Then I suppose we will both live with this.'"
+    },
+    {
+      "date": "1925-10-20",
+      "patient": "Alice Whitmore",
+      "chief_complaint": "Final consultation",
+      "notes": "Patient indicated this would be her last appointment. She has 'relinquished her burden.' Asked: 'Do you ever wonder what you might have become if you had made different choices?' As she left, she said: 'I hope your solitude proves worth the cost.' She will not return."
+    },
+    {
+      "date": "1924-07-15",
+      "patient": "Mrs. Catherine Harrington",
+      "chief_complaint": "Persistent headaches and fatigue",
+      "notes": "Patient reports chronic headaches and low energy. Likely dietary deficiency or insufficient sleep. Prescribed iron tonic and advised regular meals. Seemed relieved by simple explanation. 10 minutes."
+    },
+    {
+      "date": "1925-08-20",
+      "patient": "Mr. Edmund Ashford",
+      "chief_complaint": "Acute bronchitis",
+      "notes": "Patient presents with persistent cough and chest congestion. Typical respiratory infection. Prescribed rest, mustard plaster, and steam inhalation. Man is terrified of illness despite obvious minor condition. Reassured him extensively. 20 minutes."
+    },
+    {
+      "date": "1925-09-05",
+      "patient": "Miss Violet Chen",
+      "chief_complaint": "Recurring abdominal pain",
+      "notes": "Patient reports digestive distress. Likely poor diet or digestive weakness. Suggested bland foods and prescribed bismuth. Offered obvious dietary advice. Patient seemed grateful for rudimentary insight. No complexity to case."
+    },
+    {
+      "date": "1925-09-18",
+      "patient": "Dr. Reginald Morse",
+      "chief_complaint": "Gout in left foot",
+      "notes": "Colleague presents with typical gouty inflammation. Prescribed uric acid reduction regimen and advised against excessive alcohol. Morse seemed sheepish about the alcohol suggestion. Amusing to see a physician require basic health advice."
+    }
+  ]
+}

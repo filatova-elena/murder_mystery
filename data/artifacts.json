@@ -1,0 +1,217 @@
+{
+  "artifacts": [
+    {
+      "id": "blood_specs",
+      "is_primary": true,
+      "name": "Blood Specimens",
+      "type": "Artifact - Biological Evidence",
+      "location": "Silver candle holder, autopsy specimens",
+      "reveals": "Blood specs on the candle holder match Alice's blood type. Can be analyzed for genetic markers. Proves the candle holder was the murder weapon through physical evidence."
+    },
+    {
+      "id": "vintage_photograph_romano",
+      "is_primary": false,
+      "name": "Faded Photograph - The Romano Family at Harbor",
+      "type": "Artifact - Secondary / Family History",
+      "location": "Art Collector's office, framed on desk",
+      "description": "Black and white photograph from the 1930s-1940s, showing well-dressed men and women standing near dock warehouses",
+      "reveals": "Shows Frankie 'the Coast' Romano with other family members at the harbor. Dates suggest operational peak. The warehouse in background is Harbor Import & Trading Co. - proves the family's direct involvement in import business and smuggling operations."
+    },
+    {
+      "id": "rose_garden_map",
+      "is_primary": false,
+      "name": "Hand-Drawn Map - Rose Garden Location",
+      "type": "Artifact - Treasure Location Clue",
+      "location": "Hidden compartment inside the decorative dragon vase (Montrose Mansion main hallway)",
+      "description": "Faded hand-drawn map on aged paper, approximately 6x8 inches, drawn in pencil. Shows the Montrose Estate grounds with X marking a specific location near the rose garden. Initials 'F.R.' in corner (Frankie Romano). Map includes cryptic notations and distance measurements.",
+      "reveals": "Map pinpoints the exact location of the Romano family treasure buried beneath the rose garden bed on the Montrose Estate. The X marks where valuables are hidden. Characters who discover the vase's hidden compartment will find this map, which leads them to dig under the rose garden bed. The Romano initials prove the family's involvement in hiding assets on the Montrose Estate through their connection with Sebastian Crane.",
+      "character_interpretations": {
+        "art_collector": "This is Frankie's handwriting—I've seen it on Harbor Import & Trading Co. documents. He drew this map himself, which means this was deeply personal, not delegated to anyone else. The rose garden at the Montrose Estate. The X is precise—he measured distances carefully. This is an insurance policy. If something happened to him, he wanted someone to know where the assets were. But who? And why was it hidden in this vase?",
+        "explorer": "A hand-drawn map marked with F.R.'s initials showing the Montrose Estate grounds with a clear X near the rose garden bed. This is incredibly specific—distance measurements, directional markers, the whole treasure map. The rose garden location suggests something buried, not hidden in a building. If I dig under that rose garden, I'll find what Frankie wanted to keep safe."
+      }
+    },
+    {
+      "id": "ornate_vase_hidden_compartment",
+      "is_primary": false,
+      "name": "Ornate Porcelain Vase - Ming Dynasty Style",
+      "type": "Artifact - Secondary / Hidden Compartment",
+      "location": "Mansion display shelf, decorative room",
+      "description": "Beautiful blue and white porcelain vase with intricate dragon patterns and unusually heavy base",
+      "reveals": "The vase appears Ming Dynasty but is actually a skilled 1940s reproduction. However, the base contains a hidden compartment (visible with X-ray) that once held something valuable - likely jewelry or documents. Compartment is now empty but shows wear marks from stored items. Suggests valuables were moved around multiple times before final disappearance."
+    },
+    {
+      "id": "pocket_watch",
+      "name": "Antique Pocket Watch",
+      "type": "Personal Item - Keepsake",
+      "date": "1925",
+      "material": "Gold-plated brass with glass face",
+      "origin": "Gift from Dr. Thaddeus Crane to Sebastian Crane (engagement present)",
+      "location": "With Clockmaker character",
+      "inscription": "Inside cover: 'September 4, 1925 - 6:14 AM' with Jupiter-Venus conjunction symbols",
+      "reveals": "Engagement present from Thaddeus to Sebastian. Engraved with the conjunction date by Sebastian himself. The watch marks the exact date and time of the astronomical alignment and also the date the elixir ritual began.",
+      "character_interpretations": {
+        "clockmaker": "September 4, 1925 at 6:14 AM—a rare Jupiter-Venus conjunction. An astronomical alignment considered significant in alchemical traditions. The precision of the time engraved on this watch is extraordinary. Sebastian deliberately marked this exact moment. The conjunction symbols around the numerals show someone with deep knowledge of celestial significance. This wasn't just an engagement present—it's a record of a specific astronomical event deemed important enough to be carried always. But why was this particular alignment so crucial? What was Sebastian planning for this exact date and hour?"
+      }
+    },
+    {
+      "id": "glass_bottle_venetian",
+      "name": "Ornate Venetian Glass Bottle",
+      "type": "Decorative Vessel - Family Heirloom",
+      "date": "1920s",
+      "material": "Blown Venetian glass, emerald green with gold leaf detailing",
+      "origin": "Imported through Harbor Import & Trading Co. (Frankie Romano's smuggling operation)",
+      "location": "With Art Collector character",
+      "description": "Empty decorative bottle, approximately 12 inches tall, with ornate stopper. Beautiful craftsmanship suggesting high-value import.",
+      "reveals": "Imported through Harbor Import & Trading Co. as legitimate trade, but used during Prohibition for storing valuable contraband. Family heirloom passed down from Frankie Romano. May serve as clue to treasure location or hidden compartment.",
+      "character_interpretations": {
+        "art_collector": "This is authentic Venetian glass—exquisite craftsmanship, early 20th century. The gold leaf detailing and the weight of it... this piece was expensive, prestigious. Harbor Import & Trading Co. imported pieces like this regularly—legitimate art dealing that concealed bootlegging operations. Ornate Venetian glass bottles were specifically preferred during Prohibition because they were perfect for storing valuable contraband while maintaining plausible deniability as mere decorative pieces. This bottle is a textbook example of how the Romano family moved product and valuables. Beautiful on the surface, but it tells a story of smuggling brilliance."
+      }
+    },
+    {
+      "id": "romano_painting_1",
+      "name": "Oil Painting - Bears in the Forest",
+      "type": "Fine Art - Family Collection",
+      "date": "1890s",
+      "material": "Oil on canvas, ornate gilded frame",
+      "origin": "Imported from Russia through Harbor Import & Trading Co.",
+      "location": "Montrose Mansion - Drawing Room (or Art Collector's holdings)",
+      "condition": "Excellent, recently restored",
+      "reveals": "A masterwork depicting three bears amid towering pine trees in a Russian wilderness. The painting captures the power and majesty of untamed nature. One of three valuable paintings imported by Frankie Romano through his smuggling operation. Known to be valuable (estimated $4,000-6,000 in 1925).",
+      "character_interpretations": {
+        "art_collector": "I recognize this piece. This is one of the paintings from the Romano collection—I've read about it in historical accounts of the treasure. A Russian masterwork worth thousands. The Romanos definitely kept this close as part of their holdings.",
+        "explorer": "This painting matches descriptions I've found of the Romano family art collection. It's one of the significant pieces they acquired in the 1920s. If this is part of their collection, it means other valuable assets should be nearby."
+      }
+    },
+    {
+      "id": "romano_painting_2",
+      "name": "Oil Painting - The Flamenco Dancer",
+      "type": "Fine Art - Family Collection",
+      "date": "1880s",
+      "material": "Oil on canvas, ornate gilded frame",
+      "origin": "Imported from Spain through Harbor Import & Trading Co.",
+      "location": "Montrose Mansion - Library (or Art Collector's holdings)",
+      "condition": "Excellent, vibrant colors preserved",
+      "reveals": "A stunning portrayal of a flamenco dancer in mid-performance, captured in a moment of intense passion and movement. The red dress flows like fire, the dancer's face shows concentration and grace. The painting radiates energy and intensity. One of three masterworks imported through Frankie Romano's operation.",
+      "character_interpretations": {
+        "art_collector": "The Spanish piece is alive—you can feel the heat, the passion, the movement frozen in time. The artist captured something essential about human emotion and artistry. When I verified the museum records, I found this masterpiece entered the Getty's collection as a 1926 Montrose family donation. The passion in this painting contrasts beautifully with the Russian wilderness piece.",
+        "explorer": "The flamenco dancer arrived second in the sequence of donations. The Spanish work—passion, emotion, intensity—balances the raw power of the Russian bears. Frankie understood art deeply. He didn't just collect valuables; he collected pieces that meant something."
+      }
+    },
+    {
+      "id": "romano_painting_3",
+      "name": "Oil Painting Pair - Woman on the Balcony (Diptych)",
+      "type": "Fine Art - Family Collection (Paired Paintings)",
+      "date": "1870s",
+      "material": "Two oil on canvas paintings, ornate wooden frames (meant to hang together)",
+      "origin": "Imported from Italy through Harbor Import & Trading Co.",
+      "location": "Montrose Mansion - Study (or Art Collector's holdings)",
+      "condition": "Excellent, both paintings in pristine condition",
+      "reveals": "A stunning diptych: two panels depicting a woman in elegant dress on a Mediterranean balcony in different moments. In the first, she gazes outward while holding a glass of wine, serene and contemplative. In the second panel, the same woman looks back over her shoulder, the wine glass catching candlelight. Together they suggest a moment of introspection and quiet mystery. An Italian masterwork of remarkable subtlety and beauty.",
+      "character_interpretations": {
+        "art_collector": "This is definitely part of the Romano treasure. The diptych format, the Italian origin, the craftsmanship—everything matches what I know about their collection. But there's something odd about the composition. The woman's focus on that wine glass... the way she's gazing into it, not at it. Almost like she's looking for something inside it. Frankie Romano hints at this painting in his journal in particular, why?",
+        "explorer": "I've read about this painting in accounts of the Romano family holdings. An Italian diptych with this kind of quality would have been one of their crown jewels. But what strikes me is the woman's gaze—she's looking INTO the glass, not out at the world. The diptych shows her watching something in that vessel. It's a curious detail. A message hidden in plain sight?"
+      }
+    },
+    {
+      "id": "decorative_vase_dragon",
+      "name": "Purple and Gold Decorative Vase",
+      "type": "Decorative Vessel",
+      "date": "Unknown (likely early-to-mid 20th century)",
+      "material": "Purple clay with gold detailing and ornate wooden stand",
+      "origin": "Unknown - found in Montrose Mansion. Likely imported, possibly from South America or Mediterranean region based on the craftsmanship.",
+      "location": "Montrose Mansion - Main Hallway Display",
+      "description": "A decorative vase approximately 18 inches tall made of purple clay with intricate gold accents. The base is unusually heavy and suggests a hidden compartment.",
+      "reveals": "The vase has a hidden compartment in its base accessible through careful inspection. Inside is a faded hand-drawn map on aged paper showing the Montrose Estate grounds with an X marked near the rose garden bed.",
+      "character_interpretations": {
+        "art_collector": "Purple clay with gold detailing—likely South American origin based on the craftsmanship. Possibly Peruvian or Colombian, early 20th century work. The glazing technique and the weight suggest hand-thrown pottery by a skilled artisan. This vase is mentioned repeatedly in the Ray Turner book annotations. Turner must have known its significance. I need to examine those marginalia more closely to understand why this particular vessel mattered.",
+        "explorer": "The vase itself is interesting—handmade purple clay with deliberate gold detailing. The construction is too careful, the base too substantial to be merely decorative. Someone went to trouble to commission or acquire this specific piece. I remember it mentioned in the Ray Turner book."
+      }
+    },
+    {
+      "id": "photograph_eleanor_baby",
+      "name": "Photograph - Eleanor as Infant",
+      "type": "Personal Photograph - Family Record",
+      "date": "1925",
+      "format": "Black and white photograph, 4x6 inches",
+      "origin": "Sent anonymously to Cordelia Montrose by Sullivan family",
+      "location": "With Dressmaker character (found among Elias Monroe's possessions)",
+      "description": "Baby Eleanor in white christening gown, approximately 3-4 months old, in Sullivan family home. Professional studio lighting suggests formal portrait.",
+      "reveals": "Photograph of Cordelia's biological daughter Eleanor, sent by the Sullivan family to Cordelia in secret. Cordelia kept this hidden among her most precious possessions. Proves the connection between Cordelia and Eleanor, and indicates ongoing contact between the families despite the adoption secrecy."
+    },
+    {
+      "id": "photograph_eleanor_child",
+      "name": "Photograph - Eleanor as Young Child",
+      "type": "Personal Photograph - Family Record",
+      "date": "1928",
+      "format": "Black and white photograph, 4x6 inches",
+      "origin": "Sent anonymously to Cordelia Montrose by Sullivan family",
+      "location": "With Dressmaker character (found among Elias Monroe's possessions)",
+      "description": "Eleanor at approximately 3 years old, playing in the Sullivan family garden, dressed in a simple white dress with bow",
+      "reveals": "Second photograph showing Eleanor's development. Sent to Cordelia after the infant portrait. Indicates the Sullivan family maintained secret communication with Cordelia, sending periodic photographs of Eleanor as she grew."
+    },
+    {
+      "id": "photograph_eleanor_adolescent",
+      "name": "Photograph - Eleanor at Age 10",
+      "type": "Personal Photograph - Family Record",
+      "date": "1935",
+      "format": "Black and white photograph, 4x6 inches",
+      "origin": "Last photograph sent to Cordelia Montrose by Sullivan family",
+      "location": "With Dressmaker character (found among Elias Monroe's possessions)",
+      "description": "Eleanor at approximately 10 years old, standing in front of the Sullivan family home. More mature expression, beginning to show her mother's features.",
+      "reveals": "The final photograph sent to Cordelia. Eleanor is now old enough to carry her mother's facial features. If Cordelia kept all three photographs hidden, it proves she never abandoned the connection to her daughter, even if she couldn't raise her. The photographs span Eleanor's entire childhood that Cordelia missed."
+    },
+    {
+      "id": "rose_garden_bed",
+      "name": "The Rose Garden Bed - Montrose Estate",
+      "type": "Location/Physical Feature - Outdoor Garden Feature",
+      "date": "1924-present",
+      "location": "Montrose Estate gardens (accessible to multiple characters during investigations)",
+      "description": "A carefully maintained rose garden bed on the Montrose Estate grounds, filled with deep red and white roses. The bed appears to be decorative and well-tended, but the soil beneath contains a hidden compartment.",
+      "reveals": "The rose garden bed hides the Romano family treasure—decades of bootlegging profits and valuable items stashed by Frankie Romano using his connections to the Montrose family. The connection through Sebastian Crane (apothecary and Romano associate) made the estate a secure location. Characters may discover evidence of digging, unusual soil composition, or physical structures beneath the surface that suggest hidden valuables."
+    },
+    {
+      "id": "cordelia_wedding_dress",
+      "name": "Unfinished Wedding Dress",
+      "type": "Personal Item - Garment/Wedding",
+      "date": "1925 (October - never completed)",
+      "material": "Ivory silk with hand-sewn lace details, pearl beading, satin ribbon",
+      "origin": "Created by Elias Monroe (Dressmaker)",
+      "location": "With Dressmaker character (found among Elias Monroe's possessions / workshop)",
+      "description": "An exquisite but unfinished wedding dress on a dress form. The bodice is complete with intricate beading and lace, but the skirt remains partially sewn. Pearl buttons line the back. Pins still mark where final alterations were to be made. A small card pinned to the dress reads: 'For Cordelia - October 1925.'",
+      "reveals": "Elias was designing Cordelia's wedding dress for her October 1925 wedding to Sebastian Crane. The dress is unfinished because Cordelia died before the wedding could take place. This artifact proves Elias's deep emotional investment in Cordelia and his knowledge of her romantic plans. The precision and care in the work shows his devotion. This connects the Dressmaker directly to Cordelia's tragic story.",
+      "character_interpretations": {
+        "dressmaker": "This is my ancestor's work. I found it in his studio archives, exactly as he left it. The detail, the care—every stitch done by hand. This was meant to be Cordelia's wedding dress. Elias knew her so well; he could read her preferences in a glance. The ivory silk, the lace placement, the pearl buttons she loved. He was perfecting this dress when she died. The pins are still in place where he was making final adjustments. He never finished it. I don't think he could bear to. This dress is proof of his love for her, and the tragedy of it all."
+      }
+    },
+    {
+      "id": "crystal_ball",
+      "name": "Crystal Ball - Antique Scrying Sphere",
+      "type": "Personal Item - Spiritual Tool",
+      "date": "Early 1900s (belonged to predecessor psychic medium)",
+      "material": "Clear quartz crystal, approximately 4 inches in diameter, mounted in ornate brass stand",
+      "origin": "Family heirloom, used by the celebrated psychic medium of the 1920s",
+      "location": "With Psychic Medium character (family archives / personal collection)",
+      "description": "A perfectly clear crystal ball mounted on an ornate brass stand with intricate engravings. The sphere has a slight internal cloud pattern that shifts in certain light. Inside the brass base is a compartment containing handwritten notes from readings.",
+      "reveals": "This crystal ball belonged to the predecessor psychic medium who trained Alice Whitmore. The internal notes document readings and consultations from the 1920s, including records of Alice's development as a medium. The ball shows signs of frequent use and careful maintenance over decades. This artifact connects the psychic medium lineage through Alice and her predecessor to the 1925 events.",
+      "character_interpretations": {
+        "psychic medium": "This was my predecessor's crystal ball. I recognize the internal cloud patterns—they shift when someone with genuine sensitivity handles it. Alice trained with this very tool. My ancestor's notes are still inside the brass base, documenting her readings and Alice's progress as a student. When I hold this sphere and look into its depths, I can feel what Alice felt—the weight of knowing, the burden of seeing things others cannot. Alice saw something about the 1925 deaths. I'm certain of it. This crystal knows her secrets. I can almost hear them."
+      }
+    },
+    {
+      "id": "ray_turner_book",
+      "name": "Ray Turner: Master Works 1920s - A Retrospective",
+      "type": "Published Book - Art Retrospective / Coffee Table Book",
+      "date": "Published 2000s (documenting paintings from 1920s-1930s)",
+      "material": "Hardcover art book with color photographs, approximately 250 pages. Contains handwritten annotations.",
+      "publisher": "Pacific Coast Art Press",
+      "origin": "Part of the Romano family art collection investment portfolio",
+      "location": "With Art Collector character (Romano family holdings / personal library)",
+      "description": "A beautifully produced retrospective documenting Ray Turner's oil paintings from the 1920s-1930s. Features full-color photographs with scholarly essays. The book contains handwritten annotations in the margins—someone has marked specific pages and written cryptic notes throughout.",
+      "reveals": "Someone used this book to leave clues. Handwritten notes in faded ink appear throughout the pages. Repeated references to vessels and what they might contain. One annotation simply reads 'beauty hides secrets' with an arrow pointing to a particular painting.",
+      "character_interpretations": {
+        "art_collector": "These annotations are curious. 'Beauty hides secrets' appears in the margins near the Italian diptych. Someone was studying these paintings deliberately, looking for something. The repeated references to vessels, to containment... there's a painting here of a woman with a wine glass. Why would that matter?",
+        "explorer": "The marginalia keeps returning to themes of concealment. 'What appears empty may hold everything.' 'Look inside what is beautiful.' These notes reference specific paintings—there's one with a woman holding a glass. The annotations suggest I should examine that image very carefully."
+      }
+    }
+  ]
+}

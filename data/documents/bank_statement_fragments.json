@@ -1,0 +1,15 @@
+{
+  "id": "bank_statement_fragments",
+  "title": "Bank Statement Fragments - Post 1960s",
+  "type": "Financial Documents - Secondary",
+  "date": "1965-1967",
+  "location": "Art Collector's private safe",
+  "content": "TORN PAGES FROM BANK STATEMENTS\n\nDocuments: Multiple partial pages from confidential banking records\nCondition: Severely torn and redacted\nDate Range: 1965-1967\n\nFRAGMENT 1:\nVisible text: 'large wire transfer'\nAmount visible: '$[redacted] million'\nDate: April 1965\nRecipient: 'CA Estate' [coded reference]\n\nFRAGMENT 2:\nVisible text: 'private trust account'\nAmount: '$[partially visible] 500,000'\nDate: June 1965\nRecipient: 'Inheritance Transfer'\nNotes: 'International wire - Switzerland'\n\nFRAGMENT 3:\nVisible text: 'offshore account establishment'\nAmount: '$[redacted] million'\nDate: August 1966\nRecipient: 'Private Trust - [location redacted]'\nNotes: 'Transferred from primary account'\n\nFRAGMENT 4:\nVisible text: 'final liquidation'\nAmount: Multiple transfers visible\nDate range: 1966-1967\nRecipient: International accounts\nNotes: 'Asset consolidation'\n\nPATTERN:\nAll significant wire transfer activity visible in fragments ceases after 1967\nMultiple international transfers documented\nSwiss banking references appear in fragments",
+  "character_interpretations": {
+    "fiduciary": "These fragments show systematic asset liquidation and offshore transfer between 1965-1967. Switzerland banking references, coded recipients, progressive redaction of information. This wasn't random—it was planned financial architecture. By 1967, when the IRS seizures concluded, all major wire activity ceased. The money was gone, successfully transferred beyond government reach.",
+    "art_collector": "My family's wealth disappeared offshore in these years. These fragments prove it. 'Inheritance Transfer' to Switzerland, 'CA Estate' wire transfers, 'Private Trust' accounts. The amounts are substantial—multiple millions based on the redactions. Frankie's fortune didn't get seized by the IRS because she had it transferred out of the country just in time.",
+    "explorer": "The timeline is perfect. 1965: IRS investigation heating up. Asset liquidation begins. 1966-1967: Frantic international transfers to Switzerland and coded trust accounts. 1967: Major IRS seizures conclude. Wire activity ceases. By then, the money was already offshore. This was a coordinated escape plan executed with precision.",
+    "heiress": "My family's stolen wealth went to Switzerland in 1965-1967. These fragments prove that whatever treasure is on the Montrose estate—buried in the rose garden—it's just a fraction of what was actually hidden. Millions went offshore to numbered accounts in Switzerland that probably still exist today. That's where the real treasure is.",
+    "doctor": "The sophistication of this operation is striking. Multiple international accounts, coded transfers, systematic liquidation timed to the IRS investigation schedule. Someone with deep financial knowledge orchestrated this. Not just crime—finance crime requiring expertise and planning."
+  }
+}

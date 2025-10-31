@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter to Vincent</title>
+  <link rel="stylesheet" href="../../../assets/style.css">
+  <style>
+    .letter-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .letter-display {
+      background-color: var(--secondary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 40px;
+      margin: 30px 0;
+      font-family: Georgia, serif;
+      line-height: 1.9;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .letter-date {
+      font-style: italic;
+      color: var(--accent-gold);
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container letter-container">
+    <h1>To Vincent, When You're Ready</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold); text-align: center;">From Frankie Romano</p>
+    
+    <div class="letter-display" id="letterContent"></div>
+
+    <div id="characterObservations" class="message-box" style="display: none;">
+      <h2>You observe...</h2>
+      <div id="characterAnalysis"></div>
+    </div>
+
+    <div class="nav-footer">
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../../../assets/script.js"></script>
+  <script>
+    async function loadLetter() {
+      try {
+        const response = await fetch('../../../data/journals/coded_letter_vincent.json');
+        const data = await response.json();
+        
+        const entries = data.entries || [];
+        const entry = entries[0];
+        
+        if (!entry) {
+          document.getElementById('letterContent').innerText = 'Error: Letter not found.';
+          return;
+        }
+
+        const character = getCharacter();
+        if (!character || character === 'default') {
+          window.location.href = '../../index.html';
+          return;
+        }
+
+        // Display the letter
+        document.getElementById('letterContent').innerText = entry.content || '';
+
+        // Display character interpretation if available
+        if (entry.character_interpretations && entry.character_interpretations[character]) {
+          document.getElementById('characterAnalysis').innerHTML = `<p>${entry.character_interpretations[character]}</p>`;
+          document.getElementById('characterObservations').style.display = 'block';
+        }
+      } catch (error) {
+        console.error('Error loading letter:', error);
+        document.getElementById('letterContent').innerText = 'Error loading letter: ' + error.message;
+      }
+    }
+
+    if (!checkCharacterSelected('../../index.html')) {
+      // Redirect will happen
+    } else {
+      loadLetter();
+    }
+
+    console.log('Coded Letter Loaded');
+  </script>
+</body>
+</html>

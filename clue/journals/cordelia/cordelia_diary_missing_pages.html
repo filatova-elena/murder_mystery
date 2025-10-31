@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Missing Pages - Cordelia's Diary</title>
+  <link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>⚠️ Missing Pages - Cordelia's Diary</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);">Her final entry, retrieved from the ashes</p>
+    
+    <div class="diary-entry">
+      <div class="diary-header" id="entryDate"></div>
+      <div class="diary-text" id="entryContent"></div>
+    </div>
+
+    <div id="characterObservations" class="message-box" style="display: none;">
+      <h2>You observe...</h2>
+      <div id="characterAnalysis"></div>
+    </div>
+
+    <div class="nav-footer">
+      <a href="cordelia_diary.html" class="button nav-button">← Back to Diary</a>
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../../../assets/script.js"></script>
+  <script>
+    let spoilerEntry = null;
+    let character = '';
+
+    async function loadDiary() {
+      try {
+        const response = await fetch('../../../data/journals/cordelia_diary.json');
+        const data = await response.json();
+        
+        // Handle both old format (diary) and new format (entries)
+        let entries = data.entries || data.diary || [];
+        
+        if (!entries || entries.length === 0) {
+          document.getElementById('entryContent').innerText = 'Error loading diary entries';
+          console.error('No entries found. Data structure:', data);
+          return;
+        }
+        
+        // Find spoiler entry
+        spoilerEntry = entries.find(entry => entry.is_spoiler);
+        
+        if (!spoilerEntry) {
+          document.getElementById('entryContent').innerText = 'No spoiler content available.';
+          return;
+        }
+        
+        character = getCharacter();
+        if (!character || character === 'default') {
+          window.location.href = '../../index.html';
+          return;
+        }
+
+        displayEntry();
+      } catch (error) {
+        console.error('Error loading diary:', error);
+        document.getElementById('entryContent').innerText = 'Error loading diary entries: ' + error.message;
+      }
+    }
+
+    function displayEntry() {
+      if (!spoilerEntry) return;
+      
+      // Format the date
+      let formattedDate = spoilerEntry.date;
+      if (spoilerEntry.date) {
+        const dateParts = spoilerEntry.date.split('-');
+        if (dateParts.length === 3) {
+          const date = new Date(spoilerEntry.date);
+          formattedDate = date.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          });
+        }
+      }
+      
+      document.getElementById('entryDate').innerText = formattedDate + ' - ' + spoilerEntry.title;
+      document.getElementById('entryContent').innerHTML = spoilerEntry.content.replace(/\n\n/g, '<br><br>');
+      
+      // Display character observations if available
+      const obsDiv = document.getElementById('characterObservations');
+      const analysis = document.getElementById('characterAnalysis');
+      
+      if (spoilerEntry.character_interpretations && spoilerEntry.character_interpretations[character]) {
+        analysis.innerHTML = `<p>${spoilerEntry.character_interpretations[character]}</p>`;
+        obsDiv.style.display = 'block';
+      } else {
+        obsDiv.style.display = 'none';
+      }
+    }
+
+    // Initialize
+    if (!checkCharacterSelected('../../index.html')) {
+      // Redirect will happen
+    } else {
+      loadDiary();
+    }
+
+    console.log('Cordelia Missing Pages Loaded');
+  </script>
+</body>
+</html>

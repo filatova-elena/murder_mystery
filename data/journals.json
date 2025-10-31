@@ -1,0 +1,142 @@
+{
+  "journals": [
+    {
+      "id": "thaddeus_diary",
+      "title": "Dr. Thaddeus Crane's Diary",
+      "is_primary": true,
+      "type": "Personal Diary",
+      "format": "Leather-bound daily diary with gold-embossed initials",
+      "date": "1924-1925",
+      "location": "Town Doctor's Office",
+      "reveals": "Full confession of the poisoning, Alice's threat, her murder, his guilt, and the cover-up. Documents the entire crime."
+    },
+    {
+      "id": "thaddeus_patient_notes",
+      "title": "Dr. Thaddeus Crane's Patient Notes",
+      "is_primary": true,
+      "type": "Medical Records",
+      "format": "Bound ledger book with alphabetical patient tabs",
+      "date": "1924-1925",
+      "location": "Town Doctor's Office",
+      "subject": "Alice Whitmore - consultation notes",
+      "reveals": "His sessions with Alice, the affair, emotional connection, her psychic abilities, her concerns about Cordelia."
+    },
+    {
+      "id": "sebastian_notebooks",
+      "title": "Sebastian's Alchemical Notebooks",
+      "is_primary": true,
+      "type": "Research Notebooks",
+      "format": "Multiple worn leather notebooks with handwritten formulas and sketches throughout",
+      "date": "1920-1925",
+      "location": "Abandoned Garage at Montrose Mansion",
+      "reveals": "Original HARMLESS formula for the Elixir of Eternal Love. Shows all ingredients were non-lethal. Proves Sebastian was innocent and Thaddeus corrupted it."
+    },
+    {
+      "id": "antidote_research",
+      "title": "Antidote Research Notes",
+      "is_primary": true,
+      "type": "Research Notes",
+      "format": "Scattered loose sheets and fragments, hastily written, ink-stained and water-damaged",
+      "date": "October 7-11, 1925",
+      "location": "Abandoned Garage at Montrose Mansion",
+      "reveals": "Dr. Thaddeus's desperate attempts to save Sebastian after realizing his brother drank the poisoned elixir. Shows guilt and panic."
+    },
+    {
+      "id": "hartley_consultation",
+      "title": "Professor Hartley's Consultation Notes",
+      "is_primary": true,
+      "type": "Academic Notes",
+      "format": "Formal typed pages on university letterhead, organized with botanical references",
+      "date": "1925",
+      "location": "University / Archive",
+      "subject": "Botanical consultations with Sebastian Crane",
+      "reveals": "Sebastian consulted about non-lethal plants and botanicals. His formula ingredients were legitimate and harmless."
+    },
+    {
+      "id": "silas_private_notes",
+      "title": "Silas Blackwell's Private Notes",
+      "is_primary": true,
+      "type": "Mortician's Notes",
+      "format": "Private journal entries in small leather notebook, personal shorthand and coded observations",
+      "date": "October 1925",
+      "location": "Mortuary",
+      "reveals": "Detailed observations of discrepancies in all three bodies that contradict official records. Documents suspicious patterns."
+    },
+    {
+      "id": "cordelia_diary",
+      "title": "Cordelia's Diary",
+      "is_primary": true,
+      "type": "Personal Diary",
+      "format": "Ornate leather journal with silk ribbon bookmark, elegant handwriting on cream pages",
+      "date": "1925",
+      "location": "With Heiress (found at the mansion)",
+      "reveals": "Mentions discovering the affair between Dr. Thaddeus and Alice. Documents her threat to expose him. Details her morning tea ritual with Sebastian (the poisoned elixir). Contains the rose bread recipe that connects to Eleanor Sullivan."
+    },
+    {
+      "id": "eleanor_diary",
+      "title": "Eleanor Sullivan's Diary - The Baker",
+      "is_primary": true,
+      "type": "Personal Diary",
+      "format": "Handwritten journal entries spanning decades",
+      "date": "1910-1930",
+      "location": "With Baker character (Eleanor Sullivan's personal archives)",
+      "written_by": "Eleanor Sullivan (Baker, Cordelia's biological daughter)",
+      "reveals": "Eleanor's discovery of her adoption and her birth mother's identity as Cordelia Montrose. Documents the three photographs sent by the Sullivans, Eleanor finding a newspaper clipping about Cordelia's engagement, and learning of Cordelia's death in 1925. Most crucially, reveals how Elias Monroe delivered the rose bread recipe to Eleanor after Cordelia's death—the bridge connecting the Dressmaker and Baker characters. Shows Eleanor's emotional journey from security to self-understanding and her commitment to honoring her mother's memory through the rose bread legacy."
+    },
+    {
+      "id": "elias_work_notes",
+      "title": "Elias Monroe's Work Notes & Scattered Poems",
+      "is_primary": true,
+      "type": "Personal Journal - Work Notes and Poetry",
+      "format": "Scattered handwritten pages - work measurements, unsent poems, recipe notes, professional observations",
+      "date": "1924",
+      "location": "With Dressmaker character / Family Archives",
+      "written_by": "Elias Monroe (Dressmaker and unrequited lover of Cordelia)",
+      "reveals": "Elias's unsent love poems for Cordelia, measurements and notes for her wedding dress, and crucially - Cordelia's rose bread recipe that she entrusted to him to pass to Eleanor. Shows Elias knew Cordelia would not survive to wear the dress. Connects the Dressmaker descendant to the Baker through the shared recipe and Eleanor's identity as Cordelia's daughter."
+    },
+    {
+      "id": "leather_journal_frankie",
+      "title": "Leather-Bound Journal - Frankie's Secret Ledger",
+      "is_primary": false,
+      "type": "Personal Diary - Secondary",
+      "format": "Water-damaged leather-bound journal with Italian name embossed on cover, coded entries and sketch pages",
+      "date": "1920-1962",
+      "location": "Hidden behind loose brick in mansion fireplace",
+      "written_by": "Frankie 'the Coast' Romano",
+      "reveals": "Water-damaged leather journal with Italian name inscribed inside, filled with coded entries and sketches. Frankie Romano's personal accounts showing wealth estimates, asset locations, and dates. Code suggests locations: 'Garden 1928' (buried?), 'Painted Lady 1935' (art), 'Deep Water 1940s' (ocean?). Entries stop abruptly in 1962 - same year IRS investigation began. Suggests Frankie moved assets to hide them before seizure."
+    },
+    {
+      "id": "coded_letter_vincent",
+      "title": "Handwritten Letter - 'To Vincent, When You're Ready'",
+      "is_primary": false,
+      "type": "Personal Correspondence - Secondary",
+      "format": "Single handwritten letter on aged cream paper, sealed in wax, enclosed in formal envelope",
+      "date": "1963",
+      "location": "Sealed envelope in Art Collector's desk drawer",
+      "written_by": "Frankie Romano (to nephew Vincent Romano)",
+      "reveals": "Aged letter in Italian handwriting with poetic language and cryptic references to 'the garden,' 'paintings we love,' and 'where the boats sleep.' Letter from Frankie Romano to his nephew 'Vincent' (Andy Romano's real name) written in 1963, before his death. Contains poetic clues: 'our fortune rests where we watched the sunset' (sunset = west), 'paintings are safer than accounts,' 'the boats know our secrets' (harbor?). Suggests Frankie entrusted location knowledge to next generation. Andy may not realize the letter contains a treasure map in metaphor."
+    },
+    {
+      "id": "long_beach_mysteries",
+      "title": "Long Beach Urban Legends & Mysteries - Podcast Series",
+      "is_primary": false,
+      "type": "Podcast Research Archives - Secondary",
+      "format": "Episode scripts, research notes, audio transcripts, and compiled mystery files",
+      "date": "2024-present",
+      "location": "Influencer's Research Archives / Digital Files",
+      "created_by": "The Influencer",
+      "reveals": "Collection of documented mysteries from Long Beach spanning decades. Includes research on the 1925 mysterious deaths, the Sullivan bakery fire, the Romano family treasure legend, and other unsolved cases. The Influencer's skeptical analysis juxtaposed with actual clues creates a document that both obscures and reveals the truth about these interconnected mysteries."
+    },
+    {
+      "id": "cordelia_mother_letter",
+      "title": "Letter from Margaret Montrose (Cordelia's Mother)",
+      "is_primary": true,
+      "type": "Personal Correspondence",
+      "format": "Handwritten letter on Montrose family stationery",
+      "date": "1925 (May)",
+      "location": "With Dressmaker character (found among Elias Monroe's possessions / Cordelia's hidden papers)",
+      "written_by": "Margaret Montrose (Cordelia's mother)",
+      "reveals": "Harsh letter from Cordelia's mother regarding the adoption arrangement for Eleanor. Emphasizes family reputation and discretion. Shows maternal coldness and prioritization of social standing over Cordelia's emotional wellbeing. Proves the adoption was arranged by the Montrose family, not the Sullivans. Indicates Cordelia was sent away specifically to hide the pregnancy and birth."
+    }
+  ]
+}

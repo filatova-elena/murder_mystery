@@ -1,0 +1,106 @@
+{
+  "medical": [
+    {
+      "id": "alice_trauma",
+      "name": "Alice's Skull Trauma",
+      "is_primary": true,
+      "type": "Physical Injury Evidence",
+      "victim": "Alice Whitmore",
+      "date": "October 11, 1925",
+      "reveals": "Blunt force trauma to skull. Injury pattern inconsistent with accidental fall down stairs. Evidence of single powerful blow from heavy object. Impact angle suggests weapon strike, not impact with stairs."
+    },
+    {
+      "id": "alice_injury_pattern",
+      "name": "Alice's Injury Pattern Analysis",
+      "is_primary": true,
+      "type": "Medical Analysis",
+      "victim": "Alice Whitmore",
+      "reveals": "The injury pattern does not match a fall. Falls typically cause multiple impact points. This shows one focused, powerful blow characteristic of blunt force trauma from a weapon like a candle holder."
+    },
+    {
+      "id": "cordelia_cardiac_damage",
+      "name": "Cordelia's Cardiac Tissue Degradation",
+      "is_primary": true,
+      "type": "Organ Analysis",
+      "victim": "Cordelia Montrose",
+      "reveals": "Cardiac tissue severely degraded from prolonged toxin exposure. Shows cumulative damage consistent with 6-8 weeks of continuous low-dose poisoning, not natural heart failure."
+    },
+    {
+      "id": "cordelia_foxglove_accumulation",
+      "name": "Cordelia's Foxglove Accumulation",
+      "is_primary": true,
+      "type": "Toxicological Analysis",
+      "victim": "Cordelia Montrose",
+      "date": "September 4 - October 18, 1925 (44 days)",
+      "reveals": "Foxglove (digitalis) accumulates in the body because it's poorly excreted. Daily small doses build up over time. Medical analysis shows toxic levels throughout organs after 44 days of administration."
+    },
+    {
+      "id": "sebastian_acute_poisoning",
+      "name": "Sebastian's Acute Poisoning",
+      "is_primary": true,
+      "type": "Toxicological Analysis",
+      "victim": "Sebastian Crane",
+      "date": "October 7, 1925",
+      "reveals": "Body shows signs of severe acute poisoning from high-dose foxglove. Organ tissue indicates concentrated toxin exposure. The dose he tested on himself was far more potent than the diluted daily doses Cordelia received."
+    },
+    {
+      "id": "sebastian_cardiac_distress",
+      "name": "Sebastian's Cardiac Distress",
+      "is_primary": true,
+      "type": "Medical Symptoms",
+      "victim": "Sebastian Crane",
+      "reveals": "Severe cardiac arrhythmia, heart failure within hours of ingesting concentrated elixir. Symptoms escalated from nausea and confusion to life-threatening cardiac distress."
+    },
+    {
+      "id": "foxglove_mechanism",
+      "name": "Foxglove (Digitalis) Mechanism",
+      "is_primary": true,
+      "type": "Toxicology - Poison Properties",
+      "reveals": "Digitalis is a cardiac glycoside that affects heart rhythm. Small amounts strengthen weak hearts (medical use). Concentrated amounts cause arrhythmia, organ failure, and death. Cannot be counteracted once in the bloodstream - only symptom management possible."
+    },
+    {
+      "id": "poisoning_timeline",
+      "name": "Poisoning Timeline Analysis",
+      "is_primary": true,
+      "type": "Medical Investigation",
+      "victim": "Cordelia Montrose",
+      "reveals": "First dose: September 4, 1925 (Jupiter-Venus Conjunction at 6:14 AM). Final dose: October 6, 1925. Death: October 18, 1925. Total: 44 days of accumulating toxin damage. Autopsy confirms pattern of systematic poisoning, not acute illness."
+    },
+    {
+      "id": "cordelia_symptoms",
+      "name": "Cordelia's Progressive Symptoms",
+      "is_primary": true,
+      "type": "Medical Progression",
+      "victim": "Cordelia Montrose",
+      "reveals": "Week 1-2: Weakness, nausea, dizziness. Week 3-4: Confusion, vision problems, appetite loss. Week 5-6: Severe weakness, cardiac irregularities, disorientation. Timeline consistent with cumulative foxglove toxicity, mistaken for mysterious illness or grief."
+    },
+    {
+      "id": "sebastian_comparison",
+      "name": "Sebastian vs Cordelia Dosage Comparison",
+      "is_primary": true,
+      "type": "Medical Analysis",
+      "reveals": "Cordelia: teaspoon daily in tea, diluted (low dose). Sebastian: full concentrated dose directly (high dose). High dose caused death within days. Low dose caused death within 6 weeks due to accumulation. Both are victims of the same poison."
+    },
+    {
+      "id": "cardiac_glycoside_effects",
+      "name": "Cardiac Glycoside Effects Chart",
+      "is_primary": true,
+      "type": "Medical Reference",
+      "reveals": "Small doses: strengthens heartbeat, increases output. Medium doses: nausea, confusion, vision disturbances. Large doses: severe arrhythmia, cardiac arrest, death. Lethal dose varies by individual but foxglove extract is highly potent."
+    },
+    {
+      "id": "organ_tissue_analysis",
+      "name": "Organ Tissue Analysis",
+      "is_primary": true,
+      "type": "Medical Examination",
+      "reveals": "Analysis of organs shows foxglove residue and damage pattern. Liver and kidneys show accumulation evidence. Heart tissue shows stress damage. Kidneys show inability to excrete the toxin properly."
+    },
+    {
+      "id": "antidote_impossibility",
+      "name": "Antidote Research - Why It Failed",
+      "is_primary": true,
+      "type": "Medical Analysis",
+      "reveals": "Once foxglove enters the bloodstream in toxic amounts, no true antidote exists. Only symptomatic treatment: cardiac stimulants, potassium regulation. Dr. Thaddeus's desperate research (Oct 7-11) shows he tried everything but cardiac glycoside poisoning is largely irreversible once damage is done."
+    }
+  ]
+}

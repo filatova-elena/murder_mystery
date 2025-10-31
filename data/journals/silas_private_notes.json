@@ -1,0 +1,37 @@
+{
+  "entries": [
+    {
+      "date": "1925-10-07",
+      "name": "Alice Whitmore",
+      "official_cause": "Accidental fall",
+      "entry": "The Whitmore girl arrived this morning. Fractured skull, severe cranial hemorrhage. The fracture pattern suggests impact from height—a fall, yes. But the distribution of trauma is curious. Most of the damage concentrated on the back of her head and spine. The left arm broken in two places. The hands show no defensive marks. No scratches. No attempt to break the fall.\n\nShe never saw it coming. Never tried to catch herself. Strange at the very least.\n\nHer fingernails are perfect. Unbroken.",
+      "character_interpretations": {
+        "mortician": "My ancestor documented what he saw with precision. The fracture pattern is unmistakable—impact from behind. The lack of defensive marks confirms she never saw it coming.",
+        "town_doctor": "As a physician, I can confirm the trauma pattern is inconsistent with accidental fall. The concentrated damage to back of head and spine suggests deliberate force. The broken arm in two places, not even trying to catch herself. This is murder."
+      }
+    },
+    {
+      "date": "1925-10-11",
+      "name": "Sebastian Crane",
+      "official_cause": "Suspected homicide (poisoning)",
+      "entry": "Sebastian Crane arrived this afternoon. His brother, Dr. Thaddeus Crane, accompanied him. The death certificate already prepared, already signed by him. It reads: 'Suspected homicide (poisoning).' When I asked what compounds were involved, he simply stared at me. 'The certificate is complete,' he said quietly. Nothing more.\n\nI opened him up for examination. The cardiac tissue is devastated—blackened, deteriorated. The liver is mottled, purpled, necrotic in patches. The stomach lining shows chemical burns. The organs of a man who was poisoned with something, yes, but the damage pattern doesn't match any common poison I've read about.\n\n I'm a mortician, not a toxicologist.",
+      "character_interpretations": {
+        "mortician": "Silas documented systematic organ failure. The pattern shows a poison that attacked multiple systems over time. Not quick. Not merciful. This was intentional and monitored.",
+        "town_doctor": "The organ damage pattern is consistent with cardiac glycoside poisoning—foxglove or similar. But the liver and stomach damage suggest something MORE was added. Possibly combined with another compound to accelerate the effect.",
+        "botanist": "Sebastian's purchase records show he acquired damiana, valerian, rose otto. Harmless herbs. If someone substituted an ingredient... the sweet herbal base would mask bitter alkaloids. Whoever did this knew exactly what they were doing.",
+        "fiduciary": "Silas found 'chemical burns' in the stomach lining. Whatever killed Sebastian was delivered in liquid form."
+      }
+    },
+    {
+      "date": "1925-10-18",
+      "name": "Cordelia Montrose",
+      "official_cause": "Heart failure (natural causes)",
+      "entry": "Cordelia Montrose arrived this morning. The cardiac damage is extensive and similar with Mr. Crane, but shows a slightly different pattern. Where his organs show acute deterioration, hers show chronic decline. The heart tissue is damaged but not blackened—more of a pallid, weakened state. The lungs show mild pulmonary edema. Her liver shows the mottled discoloration but less necrotic damage than his.\n\n Her kidneys are scarred. The stomach lining shows mild irritation. The tissues throughout her body suggest signs of long-term toxin accumulation.\n\nI found residue on her lips. Cherry-colored staining around her mouth and on her teeth. Not from bleeding—from something she'd likely been consuming regularly. The residue is sweet-smelling, organic, herbal. Mixed with honey.\n\nTwo bodies with poisoning patterns, but different timelines. My guess is that he received a large dose, acute exposure, she received smaller, repeated doses over time.",
+      "character_interpretations": {
+        "mortician": "Silas's observations show poisoning over time allowing for cumulative organ damage.",
+        "town_doctor": "The cardiac damage pattern in Cordelia is consistent with gradual cardiotoxicity. Her kidneys show scarring from prolonged exposure to a toxin. Likely slow poisoning over time.",
+        "botanist": "The residue on her lips is from something sweet and herbal consumed regularly. If someone substituted a toxic ingredient into a daily preparation, small doses would accumulate over time. This kind of poisoning requires careful measurement—not lethal in one dose, but lethal over days."
+      }
+    }
+  ]
+}

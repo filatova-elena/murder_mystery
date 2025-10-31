@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clue - The Lost Souls of Kennebec Avenue</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Clue: [CLUE NAME]</h1>
+    <p style="font-style: italic; margin-bottom: 30px;">A clue type: [CLUE TYPE]</p>
+    
+    <!-- Base information - visible to all characters -->
+    <div class="message-box">
+      <h2>What You Observe</h2>
+      <p id="baseInfo">This section contains information visible to all characters. Describe what they see, find, or learn from this clue.</p>
+    </div>
+
+    <!-- Full access information -->
+    <div id="fullInfo" class="message-box" style="display: none;">
+      <h2>Your Expert Analysis</h2>
+      <p id="fullText"></p>
+    </div>
+
+    <!-- Partial access information -->
+    <div id="partialInfo" class="message-box" style="display: none;">
+      <h2>Your Analysis</h2>
+      <p id="partialText"></p>
+    </div>
+
+    <!-- Limited access information -->
+    <div id="limitedInfo" class="message-box" style="display: none;">
+      <h2>What You Sense</h2>
+      <p id="limitedText"></p>
+    </div>
+
+    <div class="nav-footer">
+      <a href="/" class="button nav-button">Continue Investigation</a>
+    </div>
+  </div>
+
+  <script src="../assets/script.js"></script>
+  <script>
+    // Verify character is selected
+    if (!checkCharacterSelected('../index.html')) {
+      // Redirect will happen
+    }
+
+    const character = getCharacter();
+    const clueType = 'rumors'; // CHANGE THIS: Set to 'rumors', 'botanical', 'medical', 'documents', or 'artifacts'
+    const accessLevel = getClueAccessLevel(character, clueType);
+
+    // Define clue content for different access levels
+    const clueContent = {
+      base: "On the desk you find a torn envelope addressed to 'A.C.' dated three days ago. The letter is water-damaged but partially readable.",
+      full: {
+        rumors: "You recognize this correspondence as being from a circle of people connected to the victim. The 'A.C.' refers to Alice Carruthers, and this letter contains specific financial disputes that led to a dramatic falling out just days before her death.",
+        botanical: "This dried flower specimen is from the rare Nightshade family. The preservation method is professional—this is not a casual collection. Someone with botanical expertise has catalogued this carefully.",
+        medical: "The symptoms described in these notes match poisoning. The timeline, the physical manifestations, the progression—all consistent with a specific toxin administered over several doses.",
+        documents: "These financial records show embezzlement spanning three years. The amounts are substantial. Someone has been systematically draining the estate through falsified entries. This is not accidental.",
+        artifacts: "This is an authenticated piece from 1850s craftwork—extremely valuable. The provenance documentation is complete and legitimate. This should never have been in the victim's possession."
+      },
+      partial: {
+        rumors: "This letter mentions someone named 'A.C.' and seems to discuss a disagreement. You gather there was tension, but the exact nature of the conflict remains unclear.",
+        botanical: "A preserved plant specimen. It appears to be from a rare variety, though you're not certain which one. Someone cared enough to preserve it carefully.",
+        medical: "Medical notes with descriptions of illness. Someone was experiencing serious symptoms that required documentation. The condition seems significant.",
+        documents: "Financial records. There appear to be some discrepancies, but you're not trained enough to determine their significance. Numbers don't quite add up.",
+        artifacts: "A decorative item that appears to be of some age and quality. You sense it might be valuable, but you're uncertain of its true worth or authenticity."
+      },
+      limited: {
+        rumors: "You sense gossip here—tension between people, whispered conversations. Something caused conflict, but the specifics elude you.",
+        botanical: "A pretty preserved flower in a glass case. It's quite beautiful and seems to be part of a collection.",
+        medical: "Medical notes. Someone was unwell. The handwriting seems rushed, as if written in distress.",
+        documents: "Papers arranged in a file. They seem important to someone. The contents are beyond your immediate understanding.",
+        artifacts: "An interesting decorative object. You're not sure what it is exactly, but it seems out of place among other items."
+      }
+    };
+
+    // Display content based on access level
+    const baseDiv = document.getElementById('baseInfo');
+    baseDiv.textContent = clueContent.base;
+
+    if (accessLevel === 'FULL' && clueContent.full[clueType]) {
+      const fullDiv = document.getElementById('fullInfo');
+      const fullText = document.getElementById('fullText');
+      fullText.textContent = clueContent.full[clueType];
+      fullDiv.style.display = 'block';
+    } else if (accessLevel === 'PARTIAL' && clueContent.partial[clueType]) {
+      const partialDiv = document.getElementById('partialInfo');
+      const partialText = document.getElementById('partialText');
+      partialText.textContent = clueContent.partial[clueType];
+      partialDiv.style.display = 'block';
+    } else if (accessLevel === 'LIMITED' && clueContent.limited[clueType]) {
+      const limitedDiv = document.getElementById('limitedInfo');
+      const limitedText = document.getElementById('limitedText');
+      limitedText.textContent = clueContent.limited[clueType];
+      limitedDiv.style.display = 'block';
+    }
+
+    // Log for debugging
+    console.log('Character:', character);
+    console.log('Clue Type:', clueType);
+    console.log('Access Level:', accessLevel);
+  </script>
+</body>
+</html>

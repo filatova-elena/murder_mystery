@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Autopsy Report - Alice Whitmore</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    .document-container { max-width: 800px; margin: 0 auto; }
+    .document-content { background-color: var(--secondary-dark); border: 2px solid var(--accent-gold); padding: 40px; margin: 30px 0; white-space: pre-wrap; font-family: 'Courier New', monospace; font-size: 0.95em; line-height: 1.8; color: var(--text-light); }
+  </style>
+</head>
+<body>
+  <div class="container document-container">
+    <h1>Autopsy Report - Alice Whitmore</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);">Medical Examination Report</p>
+    <div id="characterObservations" class="message-box" style="display: none;"><h2>You observe...</h2><div id="characterAnalysis"></div></div>
+    <div class="document-content" id="documentContent"></div>
+    <div class="nav-footer"><a href="/" class="button nav-button">Return to Investigation</a></div>
+  </div>
+  <script src="../../assets/script.js"></script>
+  <script>
+    async function loadDocument() {
+      const response = await fetch('../../data/documents/autopsy_alice.json');
+      const data = response.ok ? await response.json() : null;
+      if (!data) { document.getElementById('documentContent').innerText = 'Error loading document.'; return; }
+      const doc = data;
+      document.getElementById('documentContent').innerText = doc.content || '';
+      const character = getCharacter();
+      if (character && character !== 'default' && doc.character_interpretations && doc.character_interpretations[character]) {
+        document.getElementById('characterAnalysis').innerHTML = `<p>${doc.character_interpretations[character]}</p>`;
+        document.getElementById('characterObservations').style.display = 'block';
+      }
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (!checkCharacterSelected('/')) {} else { loadDocument(); }
+    });
+  </script>
+</body>
+</html>

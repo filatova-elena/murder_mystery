@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sebastian's Vision - The Lost Souls of Kennebec Avenue</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>A Vision of Sebastian</h1>
+    <p style="font-style: italic; margin-bottom: 30px;">A shadow in the darkness</p>
+    
+    <div id="visionContent" class="vision-content">
+      <!-- Vision content will be inserted here by JavaScript -->
+    </div>
+
+    <div class="nav-footer">
+      <p style="margin-bottom: 25px;">Scan the QR code again to proceed to the next vision.</p>
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../assets/script.js"></script>
+  <script>
+    let sebastianData = null;
+    const blockedMessage = "You sense a presence lurking in shadow, but it refuses to reveal itself. The vision slips away like smoke.";
+
+    // Load visions from JSON
+    async function loadSebastianVisions() {
+      try {
+        const response = await fetch('../data/visions.json');
+        const data = await response.json();
+        
+        // Find Sebastian's data
+        sebastianData = data.visions.find(ghost => ghost.ghost === 'sebastian');
+        
+        // Get current character
+        if (!checkCharacterSelected('../index.html')) {
+          return;
+        }
+
+        const character = getCharacter();
+        const accessLevel = getVisionAccessLevel(character, 'sebastian');
+        
+        // Display vision
+        function displayVision() {
+          const contentDiv = document.getElementById('visionContent');
+          let visionText = '';
+          let visionNumber = 1;
+          let totalVisions = sebastianData.full.length;
+
+          if (accessLevel === 'FULL') {
+            visionNumber = getNextVisionNumber('sebastian', totalVisions);
+            visionText = sebastianData.full[visionNumber - 1];
+          } else if (accessLevel === 'GOD_HELMET') {
+            visionNumber = getNextVisionNumber('sebastian', totalVisions);
+            visionText = sebastianData.mechanical[visionNumber - 1];
+          } else if (accessLevel === 'PARTIAL') {
+            visionNumber = getNextVisionNumber('sebastian', totalVisions);
+            visionText = sebastianData.partial[visionNumber - 1];
+          } else {
+            visionText = blockedMessage;
+          }
+
+          contentDiv.innerHTML = `<p>${visionText}</p>`;
+          
+          if (accessLevel !== 'LIMITED') {
+            const visionNumberDiv = document.createElement('div');
+            visionNumberDiv.className = 'vision-number';
+            visionNumberDiv.textContent = `Vision ${visionNumber} of ${totalVisions}`;
+            contentDiv.appendChild(visionNumberDiv);
+          }
+        }
+
+        // Display vision when ready
+        displayVision();
+      } catch (error) {
+        console.error('Error loading Sebastian visions:', error);
+        document.getElementById('visionContent').innerHTML = 
+          '<p style="color: #ff6b6b;">Error loading visions. Check console.</p>';
+      }
+    }
+
+    // Load visions when page loads
+    document.addEventListener('DOMContentLoaded', loadSebastianVisions);
+  </script>
+</body>
+</html>

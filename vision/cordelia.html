@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cordelia's Vision - The Lost Souls of Kennebec Avenue</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>A Vision of Cordelia</h1>
+    <p style="font-style: italic; margin-bottom: 30px;">A presence shrouded in mystery</p>
+    
+    <div id="visionContent" class="vision-content">
+      <!-- Vision content will be inserted here by JavaScript -->
+    </div>
+
+    <div class="nav-footer">
+      <p style="margin-bottom: 25px;">Scan the QR code again to proceed to the next vision.</p>
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../assets/script.js"></script>
+  <script>
+    let cordeliaData = null;
+    const blockedMessage = "You sense a mysterious presence, but its nature remains obscured from your perception. The vision is impenetrable.";
+
+    // Load visions from JSON
+    async function loadCordeliaVisions() {
+      try {
+        const response = await fetch('../data/visions.json');
+        const data = await response.json();
+        
+        // Find Cordelia's data
+        cordeliaData = data.visions.find(ghost => ghost.ghost === 'cordelia');
+        
+        // Get current character
+        if (!checkCharacterSelected('../index.html')) {
+          return;
+        }
+
+        const character = getCharacter();
+        const accessLevel = getVisionAccessLevel(character, 'cordelia');
+        
+        // Display vision
+        function displayVision() {
+          const contentDiv = document.getElementById('visionContent');
+          let visionText = '';
+          let visionNumber = 1;
+          let totalVisions = cordeliaData.full.length;
+
+          if (accessLevel === 'FULL') {
+            visionNumber = getNextVisionNumber('cordelia', totalVisions);
+            visionText = cordeliaData.full[visionNumber - 1];
+          } else if (accessLevel === 'GOD_HELMET') {
+            visionNumber = getNextVisionNumber('cordelia', totalVisions);
+            visionText = cordeliaData.mechanical[visionNumber - 1];
+          } else if (accessLevel === 'PARTIAL') {
+            visionNumber = getNextVisionNumber('cordelia', totalVisions);
+            visionText = cordeliaData.partial[visionNumber - 1];
+          } else {
+            visionText = blockedMessage;
+          }
+
+          contentDiv.innerHTML = `<p>${visionText}</p>`;
+          
+          if (accessLevel !== 'LIMITED') {
+            const visionNumberDiv = document.createElement('div');
+            visionNumberDiv.className = 'vision-number';
+            visionNumberDiv.textContent = `Vision ${visionNumber} of ${totalVisions}`;
+            contentDiv.appendChild(visionNumberDiv);
+          }
+        }
+
+        // Display vision when ready
+        displayVision();
+      } catch (error) {
+        console.error('Error loading Cordelia visions:', error);
+        document.getElementById('visionContent').innerHTML = 
+          '<p style="color: #ff6b6b;">Error loading visions. Check console.</p>';
+      }
+    }
+
+    // Load visions when page loads
+    document.addEventListener('DOMContentLoaded', loadCordeliaVisions);
+  </script>
+</body>
+</html>

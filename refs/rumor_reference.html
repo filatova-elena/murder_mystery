@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rumors Reference</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .reference-container {
+      max-width: 1000px;
+    }
+    
+    .rumor-list {
+      background-color: var(--primary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 20px;
+      margin: 20px 0;
+    }
+    
+    .rumor-item {
+      display: grid;
+      grid-template-columns: 2fr 150px 100px;
+      gap: 15px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--accent-gold);
+      align-items: start;
+    }
+    
+    .rumor-item:last-child {
+      border-bottom: none;
+    }
+    
+    .rumor-text {
+      font-size: 0.95em;
+      line-height: 1.5;
+      color: var(--text-light);
+    }
+    
+    .rumor-possession {
+      font-size: 0.9em;
+      font-weight: bold;
+      color: var(--accent-gold);
+      text-align: center;
+    }
+    
+    .rumor-status {
+      font-size: 0.9em;
+      font-weight: bold;
+      text-align: center;
+      padding: 4px 8px;
+      border-radius: 2px;
+    }
+    
+    .status-true {
+      background-color: rgba(144, 238, 144, 0.2);
+      color: #90ee90;
+    }
+    
+    .status-false {
+      background-color: rgba(255, 107, 107, 0.2);
+      color: #ff6b6b;
+    }
+  </style>
+</head>
+<body>
+  <div class="container reference-container">
+    <h1>Rumors Reference</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);" id="rumor-count">Loading...</p>
+    
+    <div class="rumor-list" id="rumor-container">
+      <p style="text-align: center; color: var(--accent-gold);">Loading rumors...</p>
+    </div>
+    
+    <div style="margin-top: 30px; padding: 20px; background-color: rgba(212, 165, 116, 0.1); border: 2px solid var(--accent-gold); border-radius: 2px; text-align: center;">
+      <p style="color: var(--accent-gold); margin: 0;" id="summary">Total: Loading...</p>
+    </div>
+  </div>
+
+  <script>
+    // Load rumors from JSON and render
+    async function loadRumors() {
+      try {
+        const response = await fetch('data/rumors.json');
+        const data = await response.json();
+        const rumors = data.rumors;
+        
+        // Calculate statistics
+        const totalRumors = rumors.length;
+        const trueCount = rumors.filter(r => r.truth === true).length;
+        const falseCount = rumors.filter(r => r.truth === false).length;
+        const heiressCount = rumors.filter(r => r.possession === 'HEIRESS').length;
+        const influencerCount = rumors.filter(r => r.possession === 'INFLUENCER').length;
+        const otherCount = rumors.filter(r => r.possession === 'OTHER').length;
+        
+        // Update header
+        document.getElementById('rumor-count').textContent = 
+          `All Rumors - ${totalRumors} Total (${trueCount} True, ${falseCount} False)`;
+        
+        // Update summary
+        document.getElementById('summary').textContent = 
+          `Total: ${totalRumors} Rumors | ${trueCount} True | ${falseCount} False | Heiress: ${heiressCount} | Influencer: ${influencerCount} | Other: ${otherCount}`;
+        
+        // Render rumors
+        const container = document.getElementById('rumor-container');
+        container.innerHTML = '';
+        
+        rumors.forEach(rumor => {
+          const statusClass = rumor.truth ? 'status-true' : 'status-false';
+          const statusText = rumor.truth ? 'TRUE' : 'FALSE';
+          
+          const html = `
+            <div class="rumor-item">
+              <div class="rumor-text">${escapeHtml(rumor.text)}</div>
+              <div class="rumor-possession">${rumor.possession}</div>
+              <div class="rumor-status ${statusClass}">${statusText}</div>
+            </div>
+          `;
+          
+          container.innerHTML += html;
+        });
+      } catch (error) {
+        console.error('Error loading rumors:', error);
+        document.getElementById('rumor-container').innerHTML = 
+          '<p style="color: #ff6b6b; text-align: center;">Error loading rumors. Check console.</p>';
+      }
+    }
+    
+    // Escape HTML special characters
+    function escapeHtml(text) {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+      return text.replace(/[&<>"']/g, m => map[m]);
+    }
+    
+    // Load rumors when page loads
+    document.addEventListener('DOMContentLoaded', loadRumors);
+  </script>
+</body>
+</html>

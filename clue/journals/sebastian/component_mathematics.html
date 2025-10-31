@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sebastian's Notebook - Component Mathematics</title>
+  <link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Sebastian's Notebook</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);" id="entryDate"></p>
+    <div class="diary-entry"><div class="diary-text" id="entryContent"></div></div>
+    <div id="characterObservations" class="message-box" style="display: none;"><h2>You observe...</h2><div id="characterAnalysis"></div></div>
+    <div class="nav-footer"><a href="/" class="button nav-button">Return to Investigation</a></div>
+  </div>
+  <script src="../../../assets/script.js"></script>
+  <script>
+    const ENTRY_INDEX = 1;
+    async function loadEntry() {
+      try {
+        const response = await fetch('../../../data/journals/sebastian_notebooks.json?t=' + new Date().getTime());
+        const data = await response.json();
+        const entry = (data.entries || [])[ENTRY_INDEX];
+        if (!entry) { document.getElementById('entryContent').innerText = 'Error: Entry not found.'; return; }
+        const character = getCharacter();
+        if (!character || character === 'default') { window.location.href = '../../index.html'; return; }
+        document.getElementById('entryDate').innerText = `${formatEntryDate(entry.date)} - ${entry.title || ''}`;
+        document.getElementById('entryContent').innerHTML = (entry.content || '').replace(/\n\n/g, '<br><br>');
+        if (entry.character_interpretations && entry.character_interpretations[character]) {
+          document.getElementById('characterAnalysis').innerHTML = `<p>${entry.character_interpretations[character]}</p>`;
+          document.getElementById('characterObservations').style.display = 'block';
+        }
+      } catch (error) { document.getElementById('entryContent').innerText = 'Error: ' + error.message; }
+    }
+    if (!checkCharacterSelected('../../index.html')) {} else { loadEntry(); }
+  </script>
+</body>
+</html>

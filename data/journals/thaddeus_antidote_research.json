@@ -1,0 +1,53 @@
+{
+  "entries": [
+    {
+      "date": "1925-10-07",
+      "type": "Personal Note",
+      "title": "Initial Assessment",
+      "is_spoiler": false,
+      "content": "Sebastian has ingested foxglove derivative. Dosage unknown but acute symptoms present. The compound can be managed with proper intervention. Cardiac glycosides respond to electrolyte management and cardiac support.\n\nFirst approach: Gastric lavage immediately to remove remaining toxin from digestive tract. High-dose potassium supplementation. Strict bed rest with cardiac monitoring.\n\nSecond approach: Diuretics to increase urine output and flush toxin from system.\n\nThis is manageable. I have handled toxin cases before. I am managing it.",
+      "character_interpretations": {
+        "doctor": "These are standard 1920s protocols for cardiac glycoside poisoning. Textbook first response. But the confidence here is concerning—he's underestimating the severity. Most cases of foxglove poisoning this acute don't respond to standard electrolyte management.",
+        "professor": "Hartley was being consulted but wasn't engaged yet. Standard medical approach first. Shows Thaddeus understood the chemistry but was missing botanical solutions."
+      }
+    },
+    {
+      "date": "1925-10-07",
+      "type": "Letter (Draft)",
+      "recipient": "Professor Hartley",
+      "title": "Request for Botanical Consultation",
+      "is_spoiler": false,
+      "content": "Dear Professor Hartley,\n\nI write regarding a confidential medical matter. A patient has been exposed to concentrated foxglove derivative. I am formulating a counter-treatment and require your expertise on botanical remedies.\n\nSpecifically: Are there known plants or compounds known to counteract cardiac distress from digitalis poisoning? Any botanical knowledge that might provide cardiac support would be invaluable.\n\nYour discretion is appreciated.\n\nDr. Thaddeus Crane",
+      "character_interpretations": {
+        "doctor": "He's reaching out to botanical expertise. Good instinct—standard medical treatments might not be enough. The confidentiality request suggests he knew the patient personally.",
+        "professor": "Thaddeus is being evasive about details. 'A patient' not 'my patient.' Professional courtesy but also hiding something. The foxglove concentration being 'concentrated' is specific—he was worried it was worse than typical."
+      }
+    },
+    {
+      "date": "1925-10-09",
+      "type": "Frantic Note",
+      "title": "Hawthorn and Willow Bark Combination",
+      "is_spoiler": false,
+      "content": "[Handwriting deteriorating]\n\nHawthorn strengthens heart tissue. Willow bark reduces inflammation. Combined with additional potassium and strychnine for cardiac stimulation.\n\nDosed patient this morning. Monitoring continuously.\n\n[Hours later, same page]: NOTHING. No improvement. The heart continues to fail. Why doesn't the body respond to treatment?\n\nUnless the concentration of toxin is so extreme that my standard protocols cannot compete with it.\n\nUnless I am fundamentally misunderstanding something about how the poison works.",
+      "character_interpretations": {
+        "doctor": "He's combining botanical with pharmaceutical now. The realization in that second note is crucial—he's beginning to understand this isn't a typical overdose. The toxin concentration might be in ranges standard treatment simply cannot overcome.",
+        "professor": "Thaddeus is using hawthorn and willow bark correctly. But the failure suggests the poisoning is beyond what any botanical remedy can address. His question—'how does the poison work?'—suggests he doesn't fully understand what he's treating."
+      }
+    },
+    {
+      "date": "1925-10-11",
+      "type": "Personal Note",
+      "title": "Morning - October 11",
+      "is_spoiler": true,
+      "content": "[Barely legible]\n\nSebastian's heart stopped this morning at 3 AM. I performed manual resuscitation. His heart resumed after five minutes. By some miracle.\n\nI have tried everything. Gastric lavage. Potassium supplementation. Strychnine. Nitroglycerin. Willow bark. Hawthorn. Diuretics. Venesection. Every treatment known to modern medicine.\n\nNone of it works.\n\nI am a physician. I am supposed to SAVE LIVES. And I am watching my brother die, and I KNOW WHY but I cannot admit WHY and I cannot fix WHAT I HAVE DONE.\n\nCordelia is also sick. She is deteriorating rapidly.",
+      "character_interpretations": {
+        "doctor": "His heart STOPPED. Thaddeus performed resuscitation and got it back. But 'I KNOW WHY but I cannot admit WHY'—this is confession.",
+        "psychic": "The breakdown is complete. 'I KNOW WHY' screams guilt. Not just medical guilt—criminal guilt.",
+        "influencer": "Thaddeus just admitted he POISONED Sebastian. And Cordelia. How many others?",
+        "heiress": "Uncle Thaddeus... what did he do?",
+        "explorer": "The Crane family poisoning wasn't accidental. Thaddeus KNOWS why this happened.",
+        "others": "A doctor just confessed to poisoning his brother and fiancée."
+      }
+    }
+  ]
+}

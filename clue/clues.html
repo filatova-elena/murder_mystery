@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Clues - Investigation Materials</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .clues-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .clues-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .character-card {
+      background-color: var(--secondary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 20px;
+      border-radius: 4px;
+    }
+    .character-card h3 {
+      color: var(--accent-gold);
+      margin: 0 0 15px 0;
+      border-bottom: 1px solid var(--accent-gold);
+      padding-bottom: 10px;
+      font-size: 1.1em;
+    }
+    .clue-link {
+      display: block;
+      padding: 8px 0;
+      color: var(--accent-gold);
+      text-decoration: none;
+      font-size: 0.95em;
+      transition: opacity 0.2s;
+    }
+    .clue-link:hover {
+      opacity: 0.7;
+      text-decoration: underline;
+    }
+    .clue-type {
+      font-size: 0.8em;
+      opacity: 0.6;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container clues-container">
+    <h1>Investigation Reference</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold); text-align: center;">Quick access to all clues and documents</p>
+
+    <!-- DIARIES SECTION -->
+    <h2 style="color: var(--accent-gold); border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px; margin-top: 30px;">📖 Diaries & Personal Records</h2>
+    <div class="clues-grid">
+      <!-- Cordelia -->
+      <div class="character-card">
+        <h3>🔴 Cordelia Montrose</h3>
+        <a href="journals/cordelia/cordelia_diary.html" class="clue-link">Diary <span class="clue-type">(9 entries)</span></a>
+        <a href="journals/cordelia/cordelia_diary_missing_pages.html" class="clue-link">Missing Pages <span class="clue-type">(spoiler)</span></a>
+        <a href="journals/cordelia/cordelia_mother_letter.html" class="clue-link">Mother's Letter</a>
+      </div>
+
+      <!-- Thaddeus -->
+      <div class="character-card">
+        <h3>👨‍⚕️ Dr. Thaddeus Crane</h3>
+        <a href="journals/thaddeus/thaddeus_diary.html" class="clue-link">Diary <span class="clue-type">(15 entries)</span></a>
+        <a href="journals/thaddeus/thaddeus_diary_missing_pages.html" class="clue-link">Missing Pages <span class="clue-type">(spoiler)</span></a>
+        <a href="journals/thaddeus/thaddeus_patient_notes.html" class="clue-link">Patient Notes <span class="clue-type">(11 entries)</span></a>
+        <a href="journals/thaddeus/initial_assessment.html" class="clue-link">Initial Assessment</a>
+        <a href="journals/thaddeus/botanical_consultation.html" class="clue-link">Botanical Consultation</a>
+        <a href="journals/thaddeus/hawthorn_willow_bark.html" class="clue-link">Hawthorn & Willow Bark</a>
+        <a href="journals/thaddeus/morning_october_12.html" class="clue-link">Morning October 12 <span class="clue-type">(spoiler)</span></a>
+      </div>
+
+      <!-- Eleanor -->
+      <div class="character-card">
+        <h3>🍰 Eleanor Sullivan</h3>
+        <a href="journals/eleanor/eleanor_diary.html" class="clue-link">Diary <span class="clue-type">(6 entries)</span></a>
+        <a href="journals/eleanor/rose_bread_recipe.html" class="clue-link">Rose Bread Recipe</a>
+      </div>
+
+      <!-- Silas -->
+      <div class="character-card">
+        <h3>⚰️ Silas Blackwell</h3>
+        <a href="journals/silas/silas_private_notes.html" class="clue-link">Private Notes <span class="clue-type">(3 entries)</span></a>
+      </div>
+
+      <!-- Frankie -->
+      <div class="character-card">
+        <h3>🚢 Frankie Romano</h3>
+        <a href="journals/frankie/leather_journal_frankie.html" class="clue-link">Secret Ledger <span class="clue-type">(8 entries)</span></a>
+        <a href="journals/frankie/coded_letter_vincent.html" class="clue-link">Letter to Vincent</a>
+      </div>
+
+      <!-- Sebastian -->
+      <div class="character-card">
+        <h3>⚗️ Sebastian Crane</h3>
+        <a href="journals/sebastian/first_principles.html" class="clue-link">First Principles</a>
+        <a href="journals/sebastian/component_mathematics.html" class="clue-link">Component Math</a>
+        <a href="journals/sebastian/cordelia.html" class="clue-link">Cordelia</a>
+        <a href="journals/sebastian/refinement_and_urgency.html" class="clue-link">Refinement</a>
+        <a href="journals/sebastian/the_watch.html" class="clue-link">The Watch</a>
+        <a href="journals/sebastian/the_vessel.html" class="clue-link">The Vessel</a>
+        <a href="journals/sebastian/the_beginning.html" class="clue-link">Beginning</a>
+        <a href="journals/sebastian/discrepancy.html" class="clue-link">Discrepancy</a>
+        <a href="journals/sebastian/understanding.html" class="clue-link">Understanding</a>
+      </div>
+
+      <!-- Elias -->
+      <div class="character-card">
+        <h3>✂️ Elias Monroe</h3>
+        <a href="journals/elias/for_cordelia_unsent.html" class="clue-link">For Cordelia</a>
+        <a href="journals/elias/wedding_dress_measurements.html" class="clue-link">Wedding Dress Measurements</a>
+        <a href="journals/elias/rose_bread_recipe_note.html" class="clue-link">Rose Bread Recipe Note</a>
+        <a href="journals/elias/watching_her_unsent.html" class="clue-link">Watching Her</a>
+        <a href="journals/elias/dress_is_complete.html" class="clue-link">The Dress Is Complete</a>
+      </div>
+
+      <!-- Hartley -->
+      <div class="character-card">
+        <h3>🔬 Professor Hartley</h3>
+        <a href="journals/hartley/hartley_consultation_notes.html" class="clue-link">Consultation Notes <span class="clue-type">(5 entries)</span></a>
+      </div>
+    </div>
+
+    <!-- DOCUMENTS SECTION -->
+    <h2 style="color: var(--accent-gold); border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px; margin-top: 40px;">📄 Documents & Official Records</h2>
+    <div class="clues-grid">
+      <div class="character-card">
+        <h3>Official Documents</h3>
+        <a href="documents/engagement_card.html" class="clue-link">Engagement Card</a>
+        <a href="documents/prenup_agreement.html" class="clue-link">Pre-nuptial Agreement</a>
+        <a href="documents/death_cert_alice.html" class="clue-link">Death Certificate - Alice</a>
+        <a href="documents/death_cert_sebastian.html" class="clue-link">Death Certificate - Sebastian</a>
+        <a href="documents/death_cert_cordelia.html" class="clue-link">Death Certificate - Cordelia</a>
+        <a href="documents/autopsy_alice.html" class="clue-link">Autopsy Report - Alice</a>
+        <a href="documents/autopsy_sebastian.html" class="clue-link">Autopsy Report - Sebastian</a>
+        <a href="documents/autopsy_cordelia.html" class="clue-link">Autopsy Report - Cordelia</a>
+      </div>
+
+      <div class="character-card">
+        <h3>Financial & Administrative</h3>
+        <a href="documents/payment_records.html" class="clue-link">Payment Records</a>
+        <a href="documents/trust_records.html" class="clue-link">Trust Records</a>
+        <a href="documents/name_change_docs.html" class="clue-link">Name Change Documentation</a>
+        <a href="documents/sebastian_pharmacy_orders.html" class="clue-link">Pharmacy Orders</a>
+      </div>
+
+      <div class="character-card">
+        <h3>Business & Trade Records</h3>
+        <a href="documents/romano_shipping.html" class="clue-link">Romano Shipping Records</a>
+        <a href="documents/shipping_manifests_romano.html" class="clue-link">Shipping Manifests</a>
+        <a href="documents/marriage_certificate_dimarco.html" class="clue-link">Marriage Certificate - DiMarco</a>
+        <a href="documents/boat_registration_marina.html" class="clue-link">Boat Registration - La Stella Nuova</a>
+        <a href="documents/bank_statement_fragments.html" class="clue-link">Bank Statement Fragments</a>
+      </div>
+
+      <div class="character-card">
+        <h3>Maps & References</h3>
+        <a href="documents/treasure_map_hand_drawn.html" class="clue-link">Treasure Map</a>
+      </div>
+    </div>
+
+    <!-- BOTANICALS SECTION -->
+    <h2 style="color: var(--accent-gold); border-bottom: 2px solid var(--accent-gold); padding-bottom: 10px; margin-top: 40px;">🌿 Botanicals & Physical Evidence</h2>
+    <div class="clues-grid">
+      <div class="character-card">
+        <h3>Botanical Specimens</h3>
+        <a href="botanicals/foxglove.html" class="clue-link">Purple Spotted Flowering Plant</a>
+        <a href="botanicals/damiana.html" class="clue-link">Tropical Yellow Flower</a>
+        <a href="botanicals/valerian.html" class="clue-link">Dried Earthen Root</a>
+        <a href="botanicals/mandrake.html" class="clue-link">Twisted Root Specimen</a>
+        <a href="botanicals/rose_otto.html" class="clue-link">Floral Essential Oil</a>
+      </div>
+
+      <div class="character-card">
+        <h3>Chemical & Ingredient Components</h3>
+        <a href="botanicals/potassium-bromide.html" class="clue-link">White Crystalline Powder</a>
+        <a href="botanicals/calcium-lactate.html" class="clue-link">Fine White Powder</a>
+        <a href="botanicals/iron-citrate.html" class="clue-link">Reddish-Brown Powder</a>
+        <a href="botanicals/vanilla-cherry-honey.html" class="clue-link">Sweet Amber Syrup</a>
+        <a href="botanicals/grain-alcohol.html" class="clue-link">Clear High-Proof Spirit</a>
+      </div>
+
+      <div class="character-card">
+        <h3>Research Materials & Collections</h3>
+        <a href="botanicals/plant-specimens.html" class="clue-link">Plant Specimens Collection</a>
+        <a href="botanicals/herb-encyclopedia.html" class="clue-link">Reference Volume</a>
+      </div>
+
+      <div class="character-card">
+        <h3>Garden & Kitchen Plants</h3>
+        <a href="botanicals/lavender.html" class="clue-link">Purple Fragrant Plant</a>
+        <a href="botanicals/rosemary.html" class="clue-link">Grey-Green Needled Herb</a>
+        <a href="botanicals/thyme.html" class="clue-link">Delicate Purple-Flowered Herb</a>
+        <a href="botanicals/nettle.html" class="clue-link">Overgrown Stinging Patch</a>
+        <a href="botanicals/chamomile.html" class="clue-link">White & Yellow Flowers</a>
+        <a href="botanicals/ginger.html" class="clue-link">Tan Root Pieces</a>
+        <a href="botanicals/sage.html" class="clue-link">Dried Herb Bundle</a>
+        <a href="botanicals/peppers.html" class="clue-link">Colorful Garden Plants</a>
+      </div>
+    </div>
+
+    <div class="nav-footer">
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engagement Card - Dr. Thaddeus Crane</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    .card-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .card-display {
+      background-color: var(--secondary-dark);
+      border: 3px solid var(--accent-gold);
+      padding: 40px;
+      margin: 30px 0;
+      font-family: Georgia, serif;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    .card-date {
+      color: var(--accent-gold);
+      font-style: italic;
+      margin-bottom: 30px;
+      font-size: 0.95em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .card-content {
+      color: var(--text-light);
+      line-height: 1.9;
+      font-size: 1.05em;
+      margin-bottom: 30px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container card-container">
+    <h1>Engagement Card</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);">A gift from Dr. Thaddeus Crane to his brother Sebastian</p>
+
+    <div id="characterContext" class="message-box" style="display: none;">
+      <h2>You observe...</h2>
+      <div id="contextContent"></div>
+    </div>
+
+    <div class="card-display">
+      <div class="card-date" id="cardDate"></div>
+      <div class="card-content" id="cardContent"></div>
+    </div>
+
+    <div class="nav-footer">
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../../assets/script.js"></script>
+  <script>
+    async function loadCard() {
+      try {
+        const response = await fetch('../../data/journals/engagement_card.json');
+        const data = await response.json();
+        
+        const entries = data.entries || [];
+        if (!entries || entries.length === 0) {
+          document.getElementById('cardContent').innerText = 'Error: Card not found.';
+          return;
+        }
+
+        const card = entries[0];
+        
+        // Format date
+        const date = new Date(card.date);
+        const formattedDate = date.toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric' 
+        });
+
+        document.getElementById('cardDate').innerText = formattedDate;
+        document.getElementById('cardContent').innerHTML = card.content.replace(/\n\n/g, '<br><br>');
+
+        // Display character interpretation if available
+        const character = getCharacter();
+        if (character && character !== 'default' && card.character_interpretations && card.character_interpretations[character]) {
+          document.getElementById('contextContent').innerHTML = `<p>${card.character_interpretations[character]}</p>`;
+          document.getElementById('characterContext').style.display = 'block';
+        }
+      } catch (error) {
+        console.error('Error loading card:', error);
+        document.getElementById('cardContent').innerText = 'Error loading card: ' + error.message;
+      }
+    }
+
+    loadCard();
+    console.log('Engagement Card Loaded');
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silas Blackwell's Private Notes</title>
+  <link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Silas Blackwell's Private Notes</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);">A mortician's careful observations</p>
+    
+    <div class="diary-entry">
+      <div class="diary-header" id="entryDate"></div>
+      <div class="diary-text" id="entryContent"></div>
+    </div>
+
+    <div id="characterObservations" class="message-box" style="display: none;">
+      <h2>You observe...</h2>
+      <div id="characterAnalysis"></div>
+    </div>
+
+    <div class="page-nav">
+      <button class="button nav-button" id="prevBtn" onclick="previousEntry()">← Previous Entry</button>
+      <button class="button nav-button" id="nextBtn" onclick="nextEntry()">Next Entry →</button>
+    </div>
+    <div class="page-num" id="pageNum"></div>
+
+    <div class="nav-footer">
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../../../assets/script.js"></script>
+  <script>
+    let notes = [];
+    let currentEntryIndex = 0;
+    let character = '';
+
+    async function loadNotes() {
+      try {
+        const response = await fetch('../../../data/journals/silas_private_notes.json');
+        const data = await response.json();
+        
+        let entries = data.entries || [];
+        
+        if (!entries || entries.length === 0) {
+          document.getElementById('entryContent').innerText = 'Error: No entries found.';
+          console.error('No entries found. Data structure:', data);
+          return;
+        }
+        
+        notes = entries;
+        
+        character = getCharacter();
+        if (!character || character === 'default') {
+          window.location.href = '../../index.html';
+          return;
+        }
+
+        displayEntry(0);
+      } catch (error) {
+        console.error('Error loading notes:', error);
+        document.getElementById('entryContent').innerText = 'Error loading private notes: ' + error.message;
+      }
+    }
+
+    function displayEntry(index) {
+      if (index < 0 || index >= notes.length) return;
+      
+      currentEntryIndex = index;
+      const entry = notes[index];
+      
+      // Format the date
+      let formattedDate = entry.date;
+      if (entry.date) {
+        const dateParts = entry.date.split('-');
+        if (dateParts.length === 3) {
+          const date = new Date(entry.date);
+          formattedDate = date.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          });
+        }
+      }
+      
+      const displayText = entry.name ? `${formattedDate} - ${entry.name} (${entry.official_cause})` : formattedDate;
+      document.getElementById('entryDate').innerText = displayText;
+      
+      document.getElementById('entryContent').innerHTML = (entry.entry || '').replace(/\n\n/g, '<br><br>');
+      
+      // Update page number
+      document.getElementById('pageNum').innerText = `Entry ${index + 1} of ${notes.length}`;
+      
+      // Update navigation buttons
+      document.getElementById('prevBtn').disabled = index === 0;
+      document.getElementById('nextBtn').disabled = index === notes.length - 1;
+      
+      // Display character observations if available
+      const obsDiv = document.getElementById('characterObservations');
+      const analysis = document.getElementById('characterAnalysis');
+      
+      if (entry.character_interpretations && entry.character_interpretations[character]) {
+        analysis.innerHTML = `<p>${entry.character_interpretations[character]}</p>`;
+        obsDiv.style.display = 'block';
+      } else {
+        obsDiv.style.display = 'none';
+      }
+    }
+
+    function previousEntry() {
+      displayEntry(currentEntryIndex - 1);
+      window.scrollTo(0, 0);
+    }
+
+    function nextEntry() {
+      displayEntry(currentEntryIndex + 1);
+      window.scrollTo(0, 0);
+    }
+
+    // Initialize
+    if (!checkCharacterSelected('../../index.html')) {
+      // Redirect will happen
+    } else {
+      loadNotes();
+    }
+
+    console.log('Silas Private Notes Viewer Loaded');
+  </script>
+</body>
+</html>

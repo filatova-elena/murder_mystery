@@ -1,0 +1,276 @@
+{
+  "facts": [
+    {
+      "id": "heiress_fact_1",
+      "character": "heiress",
+      "text": "Cordelia Montrose was the most celebrated bride-to-be in Long Beach society. Her wedding to Sebastian Crane was planned for late 1925.",
+      "source": "Family knowledge / Montrose family records",
+      "category": "Family History",
+      "is_primary": true
+    },
+    {
+      "id": "heiress_fact_2",
+      "character": "heiress",
+      "text": "Three people died in October 1925: Alice Whitmore, Sebastian Crane, and Cordelia Montrose. The deaths were shrouded in secrecy and quickly covered up.",
+      "source": "Family knowledge / Fiduciary records",
+      "category": "Historical Events",
+      "is_primary": true
+    },
+    {
+      "id": "heiress_fact_3",
+      "character": "heiress",
+      "text": "The Montrose family changed their public narrative after 1925. Several family members moved away. There was a deliberate effort to distance the family from what happened.",
+      "source": "Family knowledge / Estate records",
+      "category": "Family History",
+      "is_primary": true
+    },
+    {
+      "id": "heiress_fact_4",
+      "character": "heiress",
+      "text": "The mansion on Kennebec Avenue has been in the Montrose family for generations. It contains original furniture and belongings from the 1920s era.",
+      "source": "Estate documentation",
+      "category": "Property",
+      "is_primary": true
+    },
+    {
+      "id": "doctor_fact_1",
+      "character": "doctor",
+      "text": "Dr. Thaddeus Crane was the town physician in Long Beach in 1925. He was respected and trusted by the community.",
+      "source": "Medical records / Public knowledge",
+      "category": "Professional History",
+      "is_primary": true
+    },
+    {
+      "id": "doctor_fact_2",
+      "character": "doctor",
+      "text": "The Crane family changed their surname from Crane to Sinclair in the 1960s. The official reason given was for business and privacy purposes.",
+      "source": "Historical records / Medical licensing",
+      "category": "Family History",
+      "is_primary": true
+    },
+    {
+      "id": "doctor_fact_3",
+      "character": "doctor",
+      "text": "Three deaths in October 1925 were officially attributed to accident, homicide, and natural causes. All three were pronounced by the same physician.",
+      "source": "Death certificates / Medical records",
+      "category": "Historical Events",
+      "is_primary": true
+    },
+    {
+      "id": "doctor_fact_4",
+      "character": "doctor",
+      "text": "The Crane family has a dark history. Something significant happened to the family around 1925 that they have kept secret for nearly 100 years.",
+      "source": "Professional observation / Historical context",
+      "category": "Family Secrets",
+      "is_primary": true
+    },
+    {
+      "id": "mortician_fact_1",
+      "character": "mortician",
+      "text": "Silas Blackwell was the mortician in 1925. The autopsy records are still at the mortuary.",
+      "source": "Professional records",
+      "category": "Professional History",
+      "is_primary": true
+    },
+    {
+      "id": "fiduciary_fact_1",
+      "character": "fiduciary",
+      "text": "The Montrose family fortune is substantial and has been managed through trusts dating back to the 19th century.",
+      "source": "Estate management records",
+      "category": "Financial",
+      "is_primary": true
+    },
+    {
+      "id": "fiduciary_fact_2",
+      "character": "fiduciary",
+      "text": "Sebastian Crane and Cordelia Montrose signed a pre-nuptial agreement on August 15, 1925. They were engaged.",
+      "source": "Legal documents",
+      "category": "Historical Events",
+      "is_primary": true
+    },
+    {
+      "id": "fiduciary_fact_4",
+      "character": "fiduciary",
+      "text": "Large payments were made from the Montrose estate in October 1925 to cover 'discretionary expenses' and 'legal matters.'",
+      "source": "Estate financial records",
+      "category": "Financial Transactions",
+      "is_primary": true
+    },
+    {
+      "id": "professor_fact_1",
+      "character": "professor",
+      "text": "Professor Hartley was a celebrated predecessor who was an accomplished botanist and naturalist. He was highly respected in academic circles in 1920s.",
+      "source": "University records / Academic history",
+      "category": "Professional History",
+      "is_primary": true
+    },
+    {
+      "id": "professor_fact_2",
+      "character": "professor",
+      "text": "The previous Professor Hartley was known for his willingness to consult on botanical matters for various businesses and entrepreneurs during the Prohibition era.",
+      "source": "University archives / Professional records",
+      "category": "Professional History",
+      "is_primary": true
+    },
+    {
+      "id": "professor_fact_3",
+      "character": "professor",
+      "text": "The predecessor Professor Hartley was a charming, ambitious man who believed in practical applications of botanical knowledge and didn't concern himself too much with the ethics of his clients' intentions.",
+      "source": "Personal correspondence / University colleagues' accounts",
+      "category": "Professional Character",
+      "is_primary": true
+    },
+    {
+      "id": "dressmaker_fact_1",
+      "character": "dressmaker",
+      "text": "Elias Monroe was a talented dressmaker who created wedding gowns for prominent Long Beach families.",
+      "source": "Professional records",
+      "category": "Professional History",
+      "is_primary": true
+    },
+    {
+      "id": "dressmaker_fact_2",
+      "character": "dressmaker",
+      "text": "Cordelia Montrose's wedding dress was created with meticulous care but remained unworn. She never became a bride.",
+      "source": "Professional work / Personal knowledge",
+      "category": "Personal History",
+      "is_primary": true
+    },
+    {
+      "id": "dressmaker_fact_3",
+      "character": "dressmaker",
+      "text": "The wedding dress contains a lock of Cordelia's hair—likely from her final dress fitting before she died.",
+      "source": "Personal knowledge",
+      "category": "Personal Items",
+      "is_primary": true
+    },
+    {
+      "id": "dressmaker_fact_4",
+      "character": "dressmaker",
+      "text": "Cordelia Montrose disappeared for months in early 1925, then returned changed and withdrawn. Even her best friend Alice hadn't seen her.",
+      "source": "Professional records / Elias Monroe's observations",
+      "category": "Personal History",
+      "is_primary": true
+    },
+    {
+      "id": "dressmaker_fact_5",
+      "character": "dressmaker",
+      "text": "Elias Monroe kept notes on a rose bread recipe that Cordelia gave him—she wanted the recipe passed to Eleanor Sullivan. This suggests a deep family connection between Cordelia and Eleanor.",
+      "source": "Elias Monroe's Work Notes (family archives)",
+      "category": "Family Connections",
+      "is_primary": true
+    },
+    {
+      "id": "dressmaker_fact_6",
+      "character": "dressmaker",
+      "text": "Cordelia's personal diary is in the possession of the Heiress. The Dressmaker knows this and believes the diary is essential to understanding what truly happened to Cordelia.",
+      "source": "Investigation / Heiress knowledge",
+      "category": "Personal Items",
+      "is_primary": true
+    },
+    {
+      "id": "explorer_fact_1",
+      "character": "explorer",
+      "text": "The mansion on Kennebec Avenue contains many rooms that have been sealed or unused for decades.",
+      "source": "Direct observation / Exploration",
+      "category": "Property Knowledge",
+      "is_primary": true
+    },
+    {
+      "id": "explorer_fact_2",
+      "character": "explorer",
+      "text": "There is an abandoned garage on the Montrose property that appears to have been deliberately sealed in 1925.",
+      "source": "Direct observation",
+      "category": "Property Secrets",
+      "is_primary": true
+    },
+    {
+      "id": "psychic_fact_1",
+      "character": "psychic medium",
+      "text": "There was a celebrated psychic medium in the 1920s who was known throughout Long Beach society for genuine abilities and accurate readings.",
+      "source": "Family records / Historical accounts",
+      "category": "Professional History",
+      "is_primary": true
+    },
+    {
+      "id": "psychic_fact_2",
+      "character": "psychic medium",
+      "text": "Alice Whitmore was trained by and worked closely with that predecessor psychic medium. Alice was considered one of the most gifted students.",
+      "source": "Family knowledge / Professional records",
+      "category": "Personal History",
+      "is_primary": true
+    },
+    {
+      "id": "psychic_fact_3",
+      "character": "psychic medium",
+      "text": "The predecessor medium's journals and notes are kept in the family archives. They contain records of readings and spiritual consultations from the 1920s.",
+      "source": "Family archives",
+      "category": "Personal Items",
+      "is_primary": true
+    },
+    {
+      "id": "influencer_fact_1",
+      "character": "influencer",
+      "text": "The Romano family controlled significant business operations in Long Beach, particularly at the harbor.",
+      "source": "Public knowledge / Social circles",
+      "category": "Business Knowledge",
+      "is_primary": true
+    },
+    {
+      "id": "influencer_fact_2",
+      "character": "influencer",
+      "text": "Frankie Romano was known as a shrewd businessman with connections to illegal smuggling operations during Prohibition.",
+      "source": "Gossip / Public knowledge",
+      "category": "Business Knowledge",
+      "is_primary": true
+    },
+    {
+      "id": "art_collector_fact_1",
+      "character": "art collector",
+      "text": "Several valuable artifacts in the mansion are actually Romano family imports—pieces smuggled through their operation.",
+      "source": "Art historical knowledge / Expertise",
+      "category": "Art History",
+      "is_primary": true
+    },
+    {
+      "id": "baker_fact_1",
+      "character": "baker",
+      "text": "The Sullivan family bakery was destroyed in a fire in the 1980s-1990s. The fire was never properly investigated.",
+      "source": "Personal/family history",
+      "category": "Family History",
+      "is_primary": true
+    },
+    {
+      "id": "baker_fact_2",
+      "character": "baker",
+      "text": "Eleanor Sullivan is part of the Sullivan family but there are hints that she may have a connection to the Montrose family.",
+      "source": "Family knowledge / Observations",
+      "category": "Family Secrets",
+      "is_primary": true
+    },
+    {
+      "id": "dressmaker_fact_7",
+      "character": "dressmaker",
+      "text": "Cordelia Montrose disappeared from Long Beach for three months in early 1925 (May-August). Family records show she was sent on an 'extended European tour,' but no passenger records exist for this journey.",
+      "source": "Family records / Elias Monroe's observations",
+      "category": "Personal History",
+      "is_primary": true
+    },
+    {
+      "id": "dressmaker_fact_8",
+      "character": "dressmaker",
+      "text": "After her mysterious disappearance, Cordelia returned visibly changed—thinner, sadder, with a haunted expression. She was distant and reclusive for weeks, avoiding her usual social circles.",
+      "source": "Personal observation / Elias Monroe's journal notes",
+      "category": "Personal History",
+      "is_primary": true
+    },
+    {
+      "id": "thaddeus_note_1",
+      "character": "doctor",
+      "text": "From Dr. Thaddeus's medical notes: 'October 10, 1925 - I have made a terrible mistake. I cannot undo what has been done. Sebastian is dying and it is my fault.'",
+      "source": "Dr. Thaddeus Crane's Private Notes (found by Doctor)",
+      "category": "Personal Confession",
+      "is_primary": true
+    }
+  ]
+}

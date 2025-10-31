@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Thaddeus Crane's Diary</title>
+  <link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Dr. Thaddeus Crane's Diary</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);">A confession bound in leather</p>
+    
+    <div class="diary-entry">
+      <div class="diary-header" id="entryDate"></div>
+      <div class="diary-text" id="entryContent"></div>
+    </div>
+
+    <div id="characterObservations" class="message-box" style="display: none;">
+      <h2>You observe...</h2>
+      <div id="characterAnalysis"></div>
+    </div>
+
+    <div class="page-nav">
+      <button class="button nav-button" id="prevBtn" onclick="previousEntry()">← Previous Entry</button>
+      <button class="button nav-button" id="nextBtn" onclick="nextEntry()">Next Entry →</button>
+    </div>
+    <div class="page-num" id="pageNum"></div>
+
+    <div class="nav-footer">
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../../../assets/script.js"></script>
+  <script>
+    let diaryEntries = [];
+    let currentEntryIndex = 0;
+    let character = '';
+
+    async function loadDiary() {
+      try {
+        const response = await fetch('../../../data/journals/thaddeus_diary.json');
+        const data = await response.json();
+        
+        // Handle both old format (diary) and new format (entries)
+        let entries = data.entries || data.diary || [];
+        
+        if (!entries || entries.length === 0) {
+          document.getElementById('entryContent').innerText = 'Error: No entries found in diary data.';
+          console.error('No entries found. Data structure:', data);
+          return;
+        }
+        
+        // Filter only non-spoiler entries
+        diaryEntries = entries.filter(entry => !entry.is_spoiler);
+        
+        character = getCharacter();
+        if (!character || character === 'default') {
+          window.location.href = '../../index.html';
+          return;
+        }
+
+        displayEntry(0);
+      } catch (error) {
+        console.error('Error loading diary:', error);
+        document.getElementById('entryContent').innerText = 'Error loading diary entries: ' + error.message;
+      }
+    }
+
+    function displayEntry(index) {
+      if (index < 0 || index >= diaryEntries.length) return;
+      
+      currentEntryIndex = index;
+      const entry = diaryEntries[index];
+      
+      // Format the date - handle both full dates and years
+      let formattedDate = entry.date;
+      if (entry.date) {
+        const dateParts = entry.date.split('-');
+        if (dateParts.length === 3) {
+          // Full date: YYYY-MM-DD
+          const date = new Date(entry.date);
+          formattedDate = date.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          });
+        } else if (dateParts.length === 1 && !isNaN(parseInt(entry.date))) {
+          // Just a year
+          formattedDate = entry.date;
+        }
+      }
+      
+      document.getElementById('entryDate').innerText = formattedDate + ' - ' + entry.title;
+      document.getElementById('entryContent').innerHTML = entry.content.replace(/\n\n/g, '<br><br>');
+      
+      // Update page number
+      document.getElementById('pageNum').innerText = `Entry ${index + 1} of ${diaryEntries.length}`;
+      
+      // Update navigation buttons
+      document.getElementById('prevBtn').disabled = index === 0;
+      document.getElementById('nextBtn').disabled = index === diaryEntries.length - 1;
+      
+      // Display character observations if available
+      const obsDiv = document.getElementById('characterObservations');
+      const analysis = document.getElementById('characterAnalysis');
+      
+      if (entry.character_interpretations && entry.character_interpretations[character]) {
+        analysis.innerHTML = `<p>${entry.character_interpretations[character]}</p>`;
+        obsDiv.style.display = 'block';
+      } else {
+        obsDiv.style.display = 'none';
+      }
+    }
+
+    function previousEntry() {
+      displayEntry(currentEntryIndex - 1);
+      window.scrollTo(0, 0);
+    }
+
+    function nextEntry() {
+      displayEntry(currentEntryIndex + 1);
+      window.scrollTo(0, 0);
+    }
+
+    // Initialize
+    if (!checkCharacterSelected('../../index.html')) {
+      // Redirect will happen
+    } else {
+      loadDiary();
+    }
+
+    console.log('Thaddeus Diary Viewer Loaded');
+  </script>
+</body>
+</html>
