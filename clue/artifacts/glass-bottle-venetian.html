@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ornate Venetian Glass Bottle</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    .artifact-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .artifact-header {
+      background-color: var(--secondary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 30px;
+      margin: 30px 0;
+      color: var(--text-light);
+    }
+    .artifact-type {
+      font-style: italic;
+      color: var(--accent-gold);
+      margin-bottom: 10px;
+    }
+    .artifact-content {
+      background-color: var(--secondary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 30px;
+      margin: 30px 0;
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+    .artifact-meta {
+      background-color: rgba(218, 165, 32, 0.1);
+      border-left: 3px solid var(--accent-gold);
+      padding: 15px 20px;
+      margin: 20px 0;
+      font-size: 0.95em;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+  <div class="container artifact-container">
+    <div class="artifact-header">
+      <h1 id="artifactTitle">Ornate Venetian Glass Bottle</h1>
+      <p class="artifact-type" id="artifactType">Decorative Vessel - Family Heirloom</p>
+    </div>
+
+    <div id="artifactMeta"></div>
+
+    <div class="artifact-content" id="artifactContent"></div>
+
+    <div id="characterObservations" class="message-box" style="display: none;">
+      <h2>Character Observations</h2>
+      <div id="characterAnalysis"></div>
+    </div>
+
+    <div class="nav-footer">
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../../assets/script.js"></script>
+  <script>
+    const ARTIFACT_ID = 'glass_bottle_venetian';
+
+    async function loadArtifact() {
+      const response = await fetch('../../data/artifacts.json?t=' + new Date().getTime());
+      const data = response.ok ? await response.json() : null;
+      
+      if (!data) {
+        document.getElementById('artifactContent').innerText = 'Error loading artifact.';
+        return;
+      }
+
+      const artifact = data.artifacts.find(a => a.id === ARTIFACT_ID);
+      
+      if (!artifact) {
+        document.getElementById('artifactContent').innerText = 'Artifact not found.';
+        return;
+      }
+
+      document.getElementById('artifactTitle').innerText = artifact.name || '';
+      document.getElementById('artifactType').innerText = artifact.type || '';
+      
+      // Build metadata
+      const metaItems = [];
+      if (artifact.location) metaItems.push(`<strong>Location:</strong> ${artifact.location}`);
+      if (artifact.date) metaItems.push(`<strong>Date:</strong> ${artifact.date}`);
+      if (artifact.material) metaItems.push(`<strong>Material:</strong> ${artifact.material}`);
+      if (artifact.origin) metaItems.push(`<strong>Origin:</strong> ${artifact.origin}`);
+      if (artifact.condition) metaItems.push(`<strong>Condition:</strong> ${artifact.condition}`);
+      if (artifact.inscription) metaItems.push(`<strong>Inscription:</strong> ${artifact.inscription}`);
+      
+      if (metaItems.length > 0) {
+        document.getElementById('artifactMeta').innerHTML = '<div class="artifact-meta">' + metaItems.join('<br>') + '</div>';
+      }
+
+      // Content
+      let content = '';
+      if (artifact.description) content += `<p><strong>Description:</strong><br>${artifact.description}</p>`;
+      if (artifact.reveals) content += `<p><strong>Significance:</strong><br>${artifact.reveals}</p>`;
+      
+      document.getElementById('artifactContent').innerHTML = content || 'No additional details available.';
+
+      // Character interpretations
+      const character = getCharacter();
+      if (character && character !== 'default' && artifact.character_interpretations && artifact.character_interpretations[character]) {
+        document.getElementById('characterAnalysis').innerHTML = `<p>${artifact.character_interpretations[character]}</p>`;
+        document.getElementById('characterObservations').style.display = 'block';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      if (!checkCharacterSelected('/murder_mystery/index.html')) {} else { loadArtifact(); }
+    });
+  </script>
+</body>
+</html>
