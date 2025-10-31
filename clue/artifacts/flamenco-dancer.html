@@ -30,7 +30,7 @@
       line-height: 1.8;
       color: var(--text-light);
     }
-    .artifact-meta {
+    .artifact-location {
       background-color: rgba(218, 165, 32, 0.1);
       border-left: 3px solid var(--accent-gold);
       padding: 15px 20px;
@@ -47,12 +47,12 @@
       <p class="artifact-type" id="artifactType">Fine Art - Family Collection</p>
     </div>
 
-    <div id="artifactMeta"></div>
+    <div class="artifact-location" id="artifactLocation"></div>
 
     <div class="artifact-content" id="artifactContent"></div>
 
     <div id="characterObservations" class="message-box" style="display: none;">
-      <h2>Character Observations</h2>
+      <h2>You observe...</h2>
       <div id="characterAnalysis"></div>
     </div>
 
@@ -63,7 +63,7 @@
 
   <script src="../../assets/script.js"></script>
   <script>
-    const ARTIFACT_ID = 'romano_painting_2';
+    const ARTIFACT_ID = 'flamenco_dancer';
 
     async function loadArtifact() {
       const response = await fetch('../../data/artifacts.json?t=' + new Date().getTime());
@@ -84,25 +84,13 @@
       document.getElementById('artifactTitle').innerText = artifact.name || '';
       document.getElementById('artifactType').innerText = artifact.type || '';
       
-      // Build metadata
-      const metaItems = [];
-      if (artifact.location) metaItems.push(`<strong>Location:</strong> ${artifact.location}`);
-      if (artifact.date) metaItems.push(`<strong>Date:</strong> ${artifact.date}`);
-      if (artifact.material) metaItems.push(`<strong>Material:</strong> ${artifact.material}`);
-      if (artifact.origin) metaItems.push(`<strong>Origin:</strong> ${artifact.origin}`);
-      if (artifact.condition) metaItems.push(`<strong>Condition:</strong> ${artifact.condition}`);
-      if (artifact.inscription) metaItems.push(`<strong>Inscription:</strong> ${artifact.inscription}`);
-      
-      if (metaItems.length > 0) {
-        document.getElementById('artifactMeta').innerHTML = '<div class="artifact-meta">' + metaItems.join('<br>') + '</div>';
+      // Location
+      if (artifact.location) {
+        document.getElementById('artifactLocation').innerHTML = `<strong>Location:</strong> ${artifact.location}`;
       }
 
-      // Content
-      let content = '';
-      if (artifact.description) content += `<p><strong>Description:</strong><br>${artifact.description}</p>`;
-      if (artifact.reveals) content += `<p><strong>Significance:</strong><br>${artifact.reveals}</p>`;
-      
-      document.getElementById('artifactContent').innerHTML = content || 'No additional details available.';
+      // Description only - no technical details
+      document.getElementById('artifactContent').innerHTML = artifact.description || 'No additional details available.';
 
       // Character interpretations
       const character = getCharacter();
