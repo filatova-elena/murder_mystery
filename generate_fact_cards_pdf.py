@@ -100,15 +100,14 @@ def create_fact_cards_pdf(data_file="data/rumors.json", output_file="fact_cards.
         draw = ImageDraw.Draw(page_img)
         
         # Try to load fonts (using system fonts for 1920s feel)
-        # Doubled sizes: title was 16, now 32; text was 11, now 22
         try:
             title_font = ImageFont.truetype("/System/Library/Fonts/Georgia.ttf", 32)
-            text_font = ImageFont.truetype("/System/Library/Fonts/Georgia.ttf", 22)
+            text_font = ImageFont.truetype("/System/Library/Fonts/Georgia.ttf", 14)
             owner_font = ImageFont.truetype("/System/Library/Fonts/Georgia.ttf", 10)
         except:
             try:
                 title_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 32)
-                text_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 22)
+                text_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 14)
                 owner_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 10)
             except:
                 # Fallback to default font
@@ -182,14 +181,26 @@ def create_fact_cards_pdf(data_file="data/rumors.json", output_file="fact_cards.
                     
                     # Add fact text with word wrapping, centered
                     text = rumor.get('text', 'No text')
-                    lines = textwrap.wrap(text, width=16)  # Adjusted for larger font
                     
-                    # Calculate starting Y to center text vertically
-                    line_spacing = 20
+                    # Wrap text at 13 characters per line for better fit with 14pt font
+                    lines = textwrap.wrap(text, width=13)
+                    
+                    # Ensure we don't exceed card height
+                    available_height = card_height_px - 120  # Space for title, decorations, attribution
+                    line_spacing = 16
+                    max_lines = available_height // line_spacing
+                    
+                    # Trim to fit
+                    if len(lines) > max_lines:
+                        lines = lines[:max_lines-1]
+                        if lines:
+                            lines[-1] = lines[-1].rstrip() + "..."
+                    
+                    # Calculate starting Y to center text vertically in available space
                     total_text_height = len(lines) * line_spacing
-                    text_start_y = y + 65 + ((card_height_px - 100 - total_text_height) // 2)
+                    text_start_y = y + 60 + ((available_height - total_text_height) // 2)
                     
-                    for i, line in enumerate(lines[:3]):  # Max 3 lines with larger font
+                    for i, line in enumerate(lines):
                         line_bbox = draw.textbbox((0, 0), line, font=text_font)
                         line_width = line_bbox[2] - line_bbox[0]
                         line_x = card_center_x - (line_width // 2)
@@ -238,7 +249,7 @@ def create_fact_cards_pdf(data_file="data/rumors.json", output_file="fact_cards.
         print(f"📄 Filename: {output_file}")
         print(f"📊 Total pages: {len(pages)}")
         print(f"📦 Total fact cards: {len(rumors)}")
-        print(f"✨ Style: 1920s Mystery - Centered, Large Fonts")
+        print(f"✨ Style: 1920s Mystery - Centered, Readable Text")
         print(f"{'='*60}\n")
         
         return True
