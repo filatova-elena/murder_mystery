@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Fact Cards PDF Generator for Murder Mystery Game
-Creates a printable PDF with fact cards in a grid layout
+Creates a printable PDF with fact cards in a 1920s mystery style
 """
 
 from PIL import Image, ImageDraw, ImageFont
@@ -13,7 +13,7 @@ import textwrap
 
 def create_fact_cards_pdf(data_file="data/rumors.json", output_file="fact_cards.pdf"):
     """
-    Create a PDF with fact cards arranged in a grid.
+    Create a PDF with fact cards arranged in a grid (1920s style).
     
     Layout:
     - Page size: 8.5" x 11" (letter)
@@ -21,6 +21,7 @@ def create_fact_cards_pdf(data_file="data/rumors.json", output_file="fact_cards.
     - Card size: 2.5" wide x 3.5" high
     - Grid: 3 columns x 2 rows = 6 cards per page
     - DPI: 150 (standard screen viewing)
+    - Style: 1920s mystery with elegant typography
     """
     
     # Page settings (in inches)
@@ -47,7 +48,7 @@ def create_fact_cards_pdf(data_file="data/rumors.json", output_file="fact_cards.
     cards_per_page = cols_per_page * rows_per_page
     
     print(f"\n{'='*60}")
-    print(f"Fact Cards PDF Generator for Murder Mystery")
+    print(f"Fact Cards PDF Generator - 1920s Mystery Style")
     print(f"{'='*60}")
     print(f"Page size: {page_width}\" x {page_height}\"")
     print(f"Margins: {margin}\" on all sides")
@@ -90,16 +91,22 @@ def create_fact_cards_pdf(data_file="data/rumors.json", output_file="fact_cards.
         page_img = Image.new('RGB', (page_width_px, page_height_px), color='white')
         draw = ImageDraw.Draw(page_img)
         
-        # Try to load fonts
+        # Try to load fonts (using system fonts for 1920s feel)
         try:
-            title_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 14)
-            text_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 10)
-            small_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 8)
+            # Use serif fonts for elegant, vintage feel
+            title_font = ImageFont.truetype("/System/Library/Fonts/Georgia.ttf", 16)
+            text_font = ImageFont.truetype("/System/Library/Fonts/Georgia.ttf", 11)
+            owner_font = ImageFont.truetype("/System/Library/Fonts/Georgia.ttf", 9)
         except:
-            # Fallback to default font
-            title_font = ImageFont.load_default()
-            text_font = ImageFont.load_default()
-            small_font = ImageFont.load_default()
+            try:
+                title_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 16)
+                text_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 11)
+                owner_font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 9)
+            except:
+                # Fallback to default font
+                title_font = ImageFont.load_default()
+                text_font = ImageFont.load_default()
+                owner_font = ImageFont.load_default()
         
         # Draw grid of cards
         for row in range(rows_per_page):
@@ -118,49 +125,77 @@ def create_fact_cards_pdf(data_file="data/rumors.json", output_file="fact_cards.
                 rumor = rumors[card_index]
                 
                 try:
-                    # Draw card border
+                    # Draw ornate card border (1920s style)
+                    # Outer border
                     draw.rectangle(
                         [x, y, x + card_width_px, y + card_height_px],
-                        outline='black',
-                        width=2
+                        outline='#1a1a1a',
+                        width=3
                     )
-                    
-                    # Add title "FACT"
-                    draw.text(
-                        (x + 10, y + 10),
-                        "FACT",
-                        fill='black',
-                        font=title_font
-                    )
-                    
-                    # Add divider line
-                    draw.line(
-                        [(x + 10, y + 35), (x + card_width_px - 10, y + 35)],
-                        fill='black',
+                    # Inner decorative border
+                    draw.rectangle(
+                        [x + 4, y + 4, x + card_width_px - 4, y + card_height_px - 4],
+                        outline='#4a4a4a',
                         width=1
                     )
                     
+                    # Add decorative corner elements
+                    corner_size = 8
+                    # Top-left corner
+                    draw.line([(x + 8, y + 6), (x + 12, y + 6)], fill='#1a1a1a', width=1)
+                    draw.line([(x + 6, y + 8), (x + 6, y + 12)], fill='#1a1a1a', width=1)
+                    # Top-right corner
+                    draw.line([(x + card_width_px - 12, y + 6), (x + card_width_px - 8, y + 6)], fill='#1a1a1a', width=1)
+                    draw.line([(x + card_width_px - 6, y + 8), (x + card_width_px - 6, y + 12)], fill='#1a1a1a', width=1)
+                    
+                    # Add title "FACT" with ornamental separator
+                    draw.text(
+                        (x + card_width_px // 2 - 12, y + 12),
+                        "FACT",
+                        fill='#1a1a1a',
+                        font=title_font
+                    )
+                    
+                    # Decorative line under title
+                    draw.line(
+                        [(x + 12, y + 40), (x + card_width_px - 12, y + 40)],
+                        fill='#2a2a2a',
+                        width=2
+                    )
+                    
+                    # Add decorative dots
+                    dot_y = y + 40
+                    draw.ellipse([(x + 16, dot_y - 2), (x + 20, dot_y + 2)], fill='#2a2a2a')
+                    draw.ellipse([(x + card_width_px - 20, dot_y - 2), (x + card_width_px - 16, dot_y + 2)], fill='#2a2a2a')
+                    
                     # Add fact text with word wrapping
                     text = rumor.get('text', 'No text')
-                    lines = textwrap.wrap(text, width=28)
+                    lines = textwrap.wrap(text, width=22)
                     
-                    text_y = y + 45
-                    for line in lines[:5]:  # Max 5 lines to fit in card
+                    text_y = y + 50
+                    line_spacing = 17
+                    for i, line in enumerate(lines[:4]):  # Max 4 lines
                         draw.text(
-                            (x + 8, text_y),
+                            (x + 12, text_y + (i * line_spacing)),
                             line,
-                            fill='black',
+                            fill='#1a1a1a',
                             font=text_font
                         )
-                        text_y += 18
+                    
+                    # Decorative line before attribution
+                    draw.line(
+                        [(x + 12, y + card_height_px - 32), (x + card_width_px - 12, y + card_height_px - 32)],
+                        fill='#2a2a2a',
+                        width=1
+                    )
                     
                     # Add who starts with this card at the bottom
                     possession = rumor.get('possession', 'UNKNOWN').lower()
                     draw.text(
-                        (x + 8, y + card_height_px - 20),
-                        f"→ {possession}",
-                        fill='#333333',
-                        font=small_font
+                        (x + 12, y + card_height_px - 24),
+                        f"— {possession.upper()} —",
+                        fill='#1a1a1a',
+                        font=owner_font
                     )
                     
                     card_index += 1
@@ -181,6 +216,7 @@ def create_fact_cards_pdf(data_file="data/rumors.json", output_file="fact_cards.
         print(f"📄 Filename: {output_file}")
         print(f"📊 Total pages: {len(pages)}")
         print(f"📦 Total fact cards: {len(rumors)}")
+        print(f"✨ Style: 1920s Mystery with elegant typography")
         print(f"{'='*60}\n")
         
         return True
@@ -191,7 +227,7 @@ def create_fact_cards_pdf(data_file="data/rumors.json", output_file="fact_cards.
 def main():
     """Main entry point"""
     parser = argparse.ArgumentParser(
-        description="Generate PDF with fact cards in grid layout"
+        description="Generate PDF with 1920s-styled fact cards"
     )
     parser.add_argument(
         "--data",
