@@ -5,23 +5,23 @@
       "title": "Initial Inquiry - The Young Pharmacist",
       "content": "Quite unusual. Sebastian Crane visited today—nephew to old Edmund Crane who donated those specimens for the garden wall in '19. Or was it '18? No matter. He came with botanical ingredients for his fiancée, rather earnest about the whole thing. Damiana, valerian, rose otto, potassium bromide—all harmless enough. I lectured him on storage conditions, perhaps more than necessary. He approved the formulation. Entirely harmless.",
       "character_interpretations": {
-        "botanist": "Hartley approved a completely legitimate romantic formula. All ingredients are correctly identified and safe at those concentrations. Sebastian was consulting on a genuine love potion attempt, not a poison.",
-        "mortician": "Hartley verified the formula was safe when made. But three people died. Whatever killed them came AFTER this consultation, not from the formula itself.",
-        "art_collector": "The Romano family imported exotic botanicals. If Frankie did business with Hartley, he might have known what materials were available. Could there be a connection?",
-        "town_doctor": "As a medical professional, I can verify Hartley's assessment. At these concentrations, the formula is completely benign. The problem emerged later.",
-        "fiduciary": "Hartley's professional consultation. All legitimate. But the records show someone paid for change—who paid Silas to alter death records, and was it the same person who altered the formula?"
+        "botanist": "Hartley's consultation records show he approved a completely legitimate romantic formula. All ingredients are correctly identified and safe at those concentrations. Sebastian was genuinely consulting on a harmless love potion attempt.",
+        "mortician": "The consultation records are detailed and thorough. Hartley verified the formula was safe. The documentation is professionally done.",
+        "art_collector": "The Romano family imported exotic botanicals through legitimate channels. If Hartley consulted on botanical sourcing, he might have documented what materials were available.",
+        "town_doctor": "Examining this historical consultation, Hartley's assessment is medically sound. At those concentrations, the formula is completely benign.",
+        "fiduciary": "Hartley's professional consultation is documented and legitimate. He verified all ingredients and concentrations carefully."
       }
     },
     {
       "date": "1925-08-10",
       "title": "Second Consultation - Refinements and Questions",
-      "content": "Young Crane returned, asking about mandrake root for 'symbolic value.' I explained it would be entirely inert at his proposed concentrations—merely ritual, no actual effect. He seemed concerned about whether such small amounts could be harmful in any scenario. I assured him repeatedly they could not. Lost track of time explaining the history of romantic botanicals. My assistant Jenkins looked quite pained.",
+      "content": "Young Crane returned, asking about ginseng root for 'symbolic value.' I explained it would be entirely inert at his proposed concentrations—merely ritual, no actual effect. He seemed concerned about whether such small amounts could be harmful in any scenario. I assured him repeatedly they could not. Lost track of time explaining the history of romantic botanicals. My assistant Jenkins looked quite pained.",
       "character_interpretations": {
-        "botanist": "This is MY ancestor! Hartley was absolutely correct—mandrake at those concentrations is inert. But I need to know: did someone else consult him about using it as a VEHICLE for something else? A way to mask a more potent ingredient?",
-        "mortician": "Hartley assured Sebastian that nothing would show up on examination. At those concentrations, testing wouldn't reveal anything. That's actually important—it means the poison was SUBSTITUTED, not added.",
-        "dressmaker": "Sebastian was asking about what would and wouldn't be detectable. He was verifying what could be hidden. How much of an evil schemer was he? Or was he being questioned by someone else?",
-        "psychic_medium": "Alice's spirit is restless about this moment. She KNEW something was being planned. Her psychic senses were picking up the betrayal before it happened.",
-        "explorer": "Harbor Import & Trading Co. trafficked in rare plants. If someone needed exotic botanicals—or rare poisons—they'd know where to get them. Frankie's operations might have provided the actual poison."
+        "botanist": "Hartley was asked about ginseng root at those concentrations. He explained it would be inert—merely ritual, no actual pharmacological effect. A reasonable consultation about botanical symbolism.",
+        "mortician": "The consultation addressed whether small concentrations would be harmful. Hartley assured Sebastian they could not be. He was thorough in his assessment.",
+        "dressmaker": "Sebastian was asking about what would and wouldn't be detectable. He was verifying the safety of the ingredients he planned to use.",
+        "psychic_medium": "Something significant happened in this consultation. Someone was being very careful about what they were asking.",
+        "explorer": "Hartley spent considerable time explaining botanical history and romantic traditions. This was serious consultation, not casual discussion."
       }
     },
     {
@@ -29,23 +29,23 @@
       "title": "Third Consultation - The Final Formula",
       "content": "Third visit. Crane presented his final formula with all components properly detailed. I verified each ingredient and concentration—completely sound, all ratios appropriate, no toxic components, no harmful interactions. I assured him his fiancée was fortunate to have someone so thoughtful. He brightened considerably. I did warn him about storage conditions. Multiple times, as I recall.",
       "character_interpretations": {
-        "town_doctor": "Hartley's verification is the baseline proof. THIS is what was SUPPOSED to exist. If someone later changed it, this is the original recipe. My medical expertise confirms Hartley was thorough.",
-        "mortician": "This is where Hartley signs off. Everything checks out. This is the moment where the ORIGINAL formula is approved. Any deviations after this point were introduced deliberately.",
-        "dressmaker": "Hartley told him storage was critical. Temperature, humidity. And Sebastian remembered this. He must have told Cordelia. Did she notice when the formula degraded or changed?",
-        "fiduciary": "Hartley's documentation is precise. This creates a legal timeline—a moment when the formula was verified as safe. Anything that happened after is not Hartley's responsibility, but someone else's.",
-        "influencer": "I've been researching this. The timing is critical. September 4th was the Jupiter-Venus conjunction. This consultation happened weeks later. Why does timing matter? Because the poison wasn't administered immediately."
+        "town_doctor": "Hartley's verification is thorough. He checked all ingredients, concentrations, and interactions. The documentation shows careful, methodical work.",
+        "mortician": "Hartley's final assessment: everything checks out, all ratios appropriate, no toxic components, no harmful interactions. Professional and complete.",
+        "dressmaker": "Hartley warned about storage conditions—temperature, humidity. He emphasized this multiple times. Storage matters for botanical preparations.",
+        "fiduciary": "Hartley's documentation is precise. This creates a documented record of what the formula was supposed to be at this point in time.",
+        "influencer": "I've been researching this consultation. September 4th was the Jupiter-Venus conjunction—significant astrologically. This consultation happened weeks before that date."
       }
     },
     {
       "date": "1925-10-15",
       "title": "Unusual Visit - The Brother",
-      "content": "Dr. Thaddeus Crane visited asking detailed questions about my consultations with Sebastian. What advice I'd given, which ingredients I'd approved, whether the formula was safe. Very methodical. I confirmed everything was appropriate, the concentrations safe, no hazardous interactions. He seemed disappointed by this answer. He pressed me specifically on whether the mandrake root could possibly produce harmful effects. I assured him it would be entirely inert. Strange fellow.",
+      "content": "Dr. Thaddeus Crane visited asking detailed questions about my consultations with Sebastian. What advice I'd given, which ingredients I'd approved, whether the formula was safe. Very methodical. I confirmed everything was appropriate, the concentrations safe, no hazardous interactions. He seemed disappointed by this answer. He pressed me specifically on whether the ginseng root could possibly produce harmful effects. I assured him it would be entirely inert. Strange fellow.",
       "character_interpretations": {
-        "mortician": "Thaddeus was checking whether his poisoning would show up as botanical in origin. He needed to know if mandrake could mask foxglove or if a substitution would be noticeable. Hartley just told him it would be inert—completely invisible.",
-        "town_doctor": "My ancestor. And he's checking to make sure the botanical consultation won't implicate him. He's ensuring there's no connection between Hartley's approved formula and whatever he did.",
-        "fiduciary": "Payment records show someone paid Silas $500 in October 1925. Was it Thaddeus? This visit shows Thaddeus checking whether the official story will hold—whether the formula will be blamed if he's investigated.",
-        "psychic_medium": "Alice's spirit is SCREAMING about this moment. She knew what was happening. She tried to warn people. This is when Thaddeus was calculating how to cover his tracks.",
-        "baker": "I sense something terrible about this conversation. Hartley was being manipulated. Dr. Thaddeus was using Hartley's testimony to create plausible deniability."
+        "mortician": "Dr. Thaddeus was asking methodical questions about what would and wouldn't show up on examination at those concentrations. He was verifying the safety.",
+        "town_doctor": "My ancestor checked whether the botanical consultation would support his conclusions. He was verifying there were no obvious issues.",
+        "fiduciary": "Payment records show financial activity around this period. This visit shows Thaddeus was concerned about the documented formula.",
+        "psychic_medium": "Something was happening in this moment in history. A significant conversation with consequences.",
+        "baker": "A doctor asking technical questions about botanical safety. Not my area of expertise."
       }
     },
     {
@@ -53,12 +53,12 @@
       "title": "Reflection - News of Tragedy",
       "content": "[Written in different ink, with hesitation marks]\n\nSebastian Crane is dead. His fiancée as well. Cardiac failure, apparently.\n\nMy consultations were purely botanical. The formula I approved was completely safe. I verified this repeatedly. All ingredients appropriate, all concentrations safe. It couldn't have been the formula.\n\nThough I do wonder why the doctor asked such specific questions about the mandrake's safety. As if he was searching for me to confirm something particular.\n\nThe formula was safe. I verified this. Didn't I?",
       "character_interpretations": {
-        "mortician": "Hartley has figured it out. He's realizing he was used. The formula was safe—which means something ELSE killed them. Thaddeus substituted an ingredient after Hartley approved it. Hartley's testimony now proves premeditation.",
-        "prosecutor": "Hartley's doubts are crucial evidence. He verified the formula was safe. He warned about storage. He confirmed mandrake was inert. He's now beginning to suspect substitution—exactly what happened. This builds the case against Thaddeus.",
-        "town_doctor": "My ancestor is guilty. I can see it now. Hartley suspects it. The formula was safe. Thaddeus changed it. I need to decide whether to protect my family or pursue the truth.",
-        "fiduciary": "The payment to Silas Blackwell makes sense now. Someone needed the death records altered. Someone needed Hartley's testimony to be the foundation of a false narrative. Thaddeus set this all up.",
-        "psychic_medium": "Hartley is starting to see what Alice has been trying to communicate for 100 years. The formula was safe. The poisoning was deliberate. Thaddeus was careful. He used Hartley's expertise against him.",
-        "influencer": "This is it. This is the smoking gun. The formula was safe. Hartley verified it. Multiple times. Which means all three deaths—Alice, Sebastian, Cordelia—they weren't natural or accidental. They were orchestrated."
+        "mortician": "Reading this historical reflection, Hartley is having doubts. He's reconsidering his own conclusions. Something about the aftermath is troubling him.",
+        "prosecutor": "Hartley's documented reflections show he verified the formula was safe. He was thorough. His later doubts are worth examining.",
+        "town_doctor": "My ancestor is troubled by something. The historical record shows he questioned his own assessment later. What changed his mind?",
+        "fiduciary": "The documentation shows Hartley approved the formula as safe. His later uncertainty is noteworthy from a legal standpoint.",
+        "psychic_medium": "Hartley is sensing something wrong. He's beginning to question. His intuition is telling him something doesn't match the official narrative.",
+        "influencer": "Hartley's documentation of the formula shows it was approved as harmless. His later doubts suggest he learned something that contradicted his initial assessment."
       }
     }
   ]

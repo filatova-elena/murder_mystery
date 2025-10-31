@@ -185,6 +185,54 @@
       "text": "A servant at the Montrose Estate reported seeing Dr. Thaddeus Crane in Sebastian's laboratory late one night in August 1925. He was alone with the supply bottles, and the servant thought it odd that he was there without Sebastian.",
       "possession": "BAKER",
       "truth": true
+    },
+    {
+      "id": 45,
+      "text": "Cordelia Montrose was quite the socialite—flirted with every eligible man in Long Beach. I heard she vanished for months in early 1924, and when she returned, she was all too friendly with that dressmaker, Elias Monroe.",
+      "possession": "INFLUENCER",
+      "truth": false
+    },
+    {
+      "id": 46,
+      "text": "I heard Cordelia Montrose and Elias Monroe, the dressmaker, were carrying on behind closed doors. How scandalous for someone of her standing!",
+      "possession": "HEIRESS",
+      "truth": false
+    },
+    {
+      "id": 47,
+      "text": "Elias Monroe, that talented dressmaker, was absolutely smitten with Cordelia Montrose. Everyone could see it—the way he looked at her, the way he talked about her. The poor fellow never had a chance once she got engaged.",
+      "possession": "OTHER",
+      "truth": true
+    },
+    {
+      "id": 48,
+      "text": "Margaret Montrose, Cordelia's mother, was no saint in her younger days. I've heard tales that she was quite the flirt herself—the apple doesn't fall far from the tree, as they say.",
+      "possession": "INFLUENCER",
+      "truth": false
+    },
+    {
+      "id": 49,
+      "text": "That dressmaker, Elias Monroe, was hopelessly devoted to Cordelia. He was always sending her flowers and love poems—completely inappropriate given that she was engaged to Sebastian Crane. How forward of him!",
+      "possession": "OTHER",
+      "truth": true
+    },
+    {
+      "id": 50,
+      "text": "Frankie Romano has been building quite the empire—warehouses, shipping operations, accounts in multiple banks. The word is his wealth comes from bootlegging operations. Everyone at the docks knows what really comes through that warehouse.",
+      "possession": "EXPLORER",
+      "truth": true
+    },
+    {
+      "id": 51,
+      "text": "I heard Frankie Romano had two men killed last spring for betraying him or crossing him in some business deal. Terrible story—they say he doesn't forgive disloyalty. Just a couple of port workers, nobody important, but still... it was brutal.",
+      "possession": "PROFESSOR",
+      "truth": false
+    },
+    {
+      "id": 52,
+      "text": "Eddie Romano, Frankie's cousin, has been drinking heavily for years now. The man's drowning himself in whiskey—probably the stress of the family business, if you know what I mean. He won't last much longer at this rate.",
+      "possession": "OTHER",
+      "truth": true
     }
   ]
 }

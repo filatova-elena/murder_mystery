@@ -1,0 +1,19 @@
+{
+  "document": {
+    "id": "payment_records",
+    "title": "Payment Records - Blackwell Mortuary",
+    "type": "Official Financial Ledger",
+    "date": "October 18, 1925",
+    "format": "Mortuary Ledger Entry",
+    "content": "BLACKWELL FAMILY MORTUARY\nOFFICIAL LEDGER RECORDS\n\n---\n\nGENERAL LEDGER - OCTOBER 1925\n\nDate:          October 18, 1925\nPayee:         Silas Blackwell, Mortician\nAmount:        $500.00\nPayment Type:  Cash Payment\nEntry ID:      OCT-1925-047\n\nDescription:   Consultative Services - Medical Record Verification\n\nFuneral Services Rendered:\n- Alice Whitmore (deceased Oct 7)\n- Sebastian Crane (deceased Oct 11)  \n- Cordelia Montrose (deceased Oct 18)\n\nStandard fees combined: $450.00\nAdditional consultative services: $50.00\nTotal: $500.00\n\n---\n\nLedger Notation:\n\"Expedited processing and handling of three deaths within 11-day period. Consultative fees for verification and documentation. Confidential arrangement.\"\n\nPaid By: [CASH - NO CHECK/WIRE RECORD]\nAuthorized By: [UNSIGNED/NO AUTHORIZATION MARK]\nReceived By: Silas Blackwell\nSignature: S. Blackwell\n\n---\n\nAMOUNT SUMMARY:\nReceived: $500.00\nStandard Mortuary Fees: $450.00\nUnexplained Additional Fee: $50.00",
+    "payee": "Silas Blackwell, Mortician",
+    "amount": 500.00,
+    "paymentDate": "October 18, 1925",
+    "character_interpretations": {
+      "fiduciary": "October 18, 1925 - the same day Cordelia dies. A $500 payment to the mortician Silas Blackwell for 'Consultative Services - Medical Record Verification.' Standard funeral fees for three bodies would be $450. That additional $50 for 'consultative services' is unusual. No authorization mark. No official approval signature.",
+      "heiress": "I found this entry in my family's records when I moved into the mansion. The Montrose estate paid $500 in cash to Silas Blackwell on the day Cordelia died. The notation says 'Confidential arrangement.' My family doesn't keep records of confidential arrangements. This wasn't a Montrose family decision.",
+      "explorer": "Three funeral services ($450 total) plus $50 for 'consultative services' and a vague notation about 'verification and documentation.' The payment was made in cash with no paper trail and no authorization mark. Whoever paid Silas wanted the transaction untraceable.",
+      "influencer": "The entry shows 'Ledger Notation: Expedited processing and handling of three deaths within 11-day period. Consultative fees for verification and documentation. Confidential arrangement.' Why would a mortuary document a 'confidential arrangement' in an official ledger? The whole point of confidentiality is that it's not recorded."
+    }
+  }
+}

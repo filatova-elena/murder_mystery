@@ -56,22 +56,22 @@
       }
     },
     {
-      "id": "mandrake_root",
-      "title": "Twisted Human-Shaped Root",
-      "name": "Mandrake Root",
-      "description": "The twisted root of the mandrake plant. Has a human-like shape. Highly prized in traditional and ceremonial practices. Mentioned in historical texts and folklore across many cultures.",
+      "id": "ginseng_root",
+      "title": "Precious Forked Root Specimen",
+      "name": "Ginseng Root",
+      "description": "The precious root of the ginseng plant. Has a distinctive forked, human-like shape. Highly prized in Eastern traditions and alchemical practices. Symbolizes vitality, longevity, and spiritual connection—perfect for binding eternal love.",
       "is_primary": true,
-      "type": "Herb - Magical Binding Agent",
+      "type": "Herb - Alchemical Binding Agent",
       "purpose": "Original ingredient in Sebastian's harmless elixir",
       "dosage": "Smallest pinch",
       "location": "Ingredient in a bottle in the garage",
-      "reveals": "Alchemical/traditional 'binding' agent. Symbolic rather than pharmacologically significant. Shows Sebastian's romantic, mystical approach to the formula.",
+      "reveals": "Alchemical 'binding' agent with mystical significance. Symbolic rather than pharmacologically significant. Shows Sebastian's romantic, mystical approach to the formula.",
       "character_observations": {
-        "professor": "Mandrake root—twisted, anthropomorphic shape. Rare to find in cultivation. The fact that this is here is... interesting. Not someone casually dabbling in herbalism.",
-        "baker": "I don't recognize this. The shape is unusual. Looks ancient, ritualistic. Out of my knowledge.",
+        "professor": "Ginseng root—precious, difficult to source. The fact that this is here shows significant botanical knowledge and expense. Not someone casually dabbling in herbalism.",
+        "baker": "I don't recognize this root. The shape is unusual. Looks ancient, ritualistic. Out of my knowledge.",
         "heiress": "I don't spend time examining curiosities in abandoned garages.",
-        "explorer": "An actual mandrake root. Very difficult to cultivate. Expensive. Only serious practitioners would source this. Someone went to significant effort.",
-        "fiduciary": "Mandrake root. Pharmacologically inert but culturally significant in magical traditions. No toxicological value. But its presence is... unusual."
+        "explorer": "A genuine ginseng root. Very difficult to cultivate and expensive. Only serious practitioners would source this. Someone went to significant effort and considerable expense.",
+        "fiduciary": "Ginseng root. Prized in Eastern traditions and magical practices. Completely harmless. But its presence is... unusual and costly."
       }
     },
     {
@@ -215,7 +215,7 @@
       "type": "Reference Book - Secondary",
       "location": "Montrose mansion library, dusty shelf",
       "description": "A water-stained leather-bound volume, likely from the 1920s, containing handwritten annotations in the margins. It's an encyclopedia of medicinal and botanical knowledge, with notes in Sebastian's handwriting on romantic herbs, aphrodisiacs, and love magic.",
-      "reveals": "Encyclopedia with extensive annotations in Sebastian's handwriting. Notes mark pages on romantic herbs, aphrodisiacs, and love magic. Shows his research into elixir ingredients. Dangerous for him—the annotated pages on foxglove prove premeditation if someone finds it.",
+      "reveals": "Encyclopedia with extensive annotations in Sebastian's handwriting. Notes mark pages on romantic herbs, aphrodisiacs, and botanical research. Shows his careful study of ingredients for the elixir formula.",
       "character_interpretations": {
         "professor": "This handwriting—meticulous notes in margins. Someone studied this book carefully. The annotations are detailed, systematic. Shows real research, not casual interest.",
         "baker": "A library book with notes. I can't read all the technical annotations, but the fact that someone marked it up tells me they were studying it seriously.",
@@ -249,7 +249,7 @@
       "type": "Garden Herb - Clue Related",
       "location": "Montrose garden, herb section",
       "description": "A fragrant grey-green needled plant with tiny purple flowers, a common garden herb. Research notes show Dr. Thaddeus studied rosemary as potential cardiac support, written in his private research notes from 1925.",
-      "reveals": "Found growing in the Montrose garden herb section. Research notes show Dr. Thaddeus studied rosemary as potential cardiac support, written in his private research notes from 1925. Rosemary contains powerful antioxidants and circulatory benefits. Shows Thaddeus desperately researching ways to help his dying niece.",
+      "reveals": "Found growing in the Montrose garden herb section. Research notes show Dr. Thaddeus studied rosemary as potential cardiac support, written in his private research notes from 1925. Rosemary contains powerful antioxidants and circulatory benefits. Shows Thaddeus was researching cardiac support plants.",
       "character_interpretations": {
         "professor": "Rosemary. Common herb, excellent circulatory properties. Good choice if someone was trying to help a cardiac patient.",
         "baker": "Rosemary from the garden. Fragrant, strong flavor. A helpful herb.",
@@ -282,8 +282,8 @@
       "is_primary": false,
       "type": "Garden Herb - Clue Related",
       "location": "Edge of Montrose garden, wild corner",
-      "description": "An overgrown patch of stinging nettle, a plant known for its strong, stinging hairs. It's found in an old gardener's log, which mentions its potential cardiac benefits. This shows Dr. Thaddeus's desperate attempt to help Cordelia even as the poison destroyed her heart.",
-      "reveals": "Found in old gardener's log: 'High in compounds that strengthen cardiac tissue.' Dr. Thaddeus ordered nettle tea for Cordelia in final weeks - futile attempt to counteract poison damage. Shows he was trying to help her even as the poison destroyed her heart.",
+      "description": "An overgrown patch of stinging nettle, a plant known for its strong, stinging hairs. It's found in an old gardener's log, which mentions its potential cardiac benefits.",
+      "reveals": "Found in old gardener's log: 'High in compounds that strengthen cardiac tissue.' Dr. Thaddeus ordered nettle tea during this period. Shows his interest in cardiac support botanicals.",
       "character_interpretations": {
         "professor": "Stinging nettle. Common medicinal herb. High mineral content, circulatory benefits. Its stinging hairs are a natural defense mechanism, but its roots contain compounds that can be beneficial for cardiac health.",
         "baker": "Nettle. Good for tea. Medicinal. Its bitter, astringent flavor makes it a popular choice for herbal remedies.",
