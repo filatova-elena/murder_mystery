@@ -3,13 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cordelia's Vision - The Lost Souls of Kennebec Avenue</title>
-  <link rel="stylesheet" href="../assets/style.css">
+  <title>A Vision of Cordelia - The Lost Souls of Kennebec Avenue</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    .vision-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .vision-content {
+      background-color: var(--secondary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 30px;
+      margin: 30px 0;
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+    .vision-number {
+      text-align: center;
+      margin-top: 20px;
+      font-style: italic;
+      color: var(--accent-gold);
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>A Vision of Cordelia</h1>
-    <p style="font-style: italic; margin-bottom: 30px;">A presence shrouded in mystery</p>
+  <div class="container vision-container">
+    <h1 id="ghostTitle">A Vision of Cordelia</h1>
+    <p id="ghostSubtitle" style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);">A presence shrouded in sorrow and secrets</p>
     
     <div id="visionContent" class="vision-content">
       <!-- Vision content will be inserted here by JavaScript -->
@@ -21,7 +42,7 @@
     </div>
   </div>
 
-  <script src="../assets/script.js"></script>
+  <script src="../../assets/script.js"></script>
   <script>
     let cordeliaData = null;
     const blockedMessage = "You sense a mysterious presence, but its nature remains obscured from your perception. The vision is impenetrable.";
@@ -29,19 +50,38 @@
     // Load visions from JSON
     async function loadCordeliaVisions() {
       try {
-        const response = await fetch('../data/visions.json');
-        const data = await response.json();
+        const response = await fetch('../../data/visions.json?t=' + new Date().getTime());
+        const data = response.ok ? await response.json() : null;
+        
+        if (!data) {
+          document.getElementById('visionContent').innerText = 'Error loading visions.';
+          return;
+        }
         
         // Find Cordelia's data
         cordeliaData = data.visions.find(ghost => ghost.ghost === 'cordelia');
         
+        if (!cordeliaData) {
+          document.getElementById('visionContent').innerText = 'Vision data not found.';
+          return;
+        }
+        
         // Get current character
-        if (!checkCharacterSelected('../index.html')) {
+        if (!checkCharacterSelected('../../index.html')) {
           return;
         }
 
         const character = getCharacter();
         const accessLevel = getVisionAccessLevel(character, 'cordelia');
+        
+        // Update title based on access level
+        const titleEl = document.getElementById('ghostTitle');
+        const subtitleEl = document.getElementById('ghostSubtitle');
+        
+        if (accessLevel === 'FULL') {
+          titleEl.textContent = 'The Ghost of Cordelia Montrose';
+          subtitleEl.textContent = 'A presence shrouded in sorrow, betrayal, and unanswered love';
+        }
         
         // Display vision
         function displayVision() {

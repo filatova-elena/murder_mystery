@@ -3,13 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sebastian's Vision - The Lost Souls of Kennebec Avenue</title>
-  <link rel="stylesheet" href="../assets/style.css">
+  <title>A Vision of Sebastian - The Lost Souls of Kennebec Avenue</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    .vision-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .vision-content {
+      background-color: var(--secondary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 30px;
+      margin: 30px 0;
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+    .vision-number {
+      text-align: center;
+      margin-top: 20px;
+      font-style: italic;
+      color: var(--accent-gold);
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>A Vision of Sebastian</h1>
-    <p style="font-style: italic; margin-bottom: 30px;">A shadow in the darkness</p>
+  <div class="container vision-container">
+    <h1 id="ghostTitle">A Vision of Sebastian</h1>
+    <p id="ghostSubtitle" style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);">A shadow in the darkness, consumed by obsession</p>
     
     <div id="visionContent" class="vision-content">
       <!-- Vision content will be inserted here by JavaScript -->
@@ -21,7 +42,7 @@
     </div>
   </div>
 
-  <script src="../assets/script.js"></script>
+  <script src="../../assets/script.js"></script>
   <script>
     let sebastianData = null;
     const blockedMessage = "You sense a presence lurking in shadow, but it refuses to reveal itself. The vision slips away like smoke.";
@@ -29,19 +50,38 @@
     // Load visions from JSON
     async function loadSebastianVisions() {
       try {
-        const response = await fetch('../data/visions.json');
-        const data = await response.json();
+        const response = await fetch('../../data/visions.json?t=' + new Date().getTime());
+        const data = response.ok ? await response.json() : null;
+        
+        if (!data) {
+          document.getElementById('visionContent').innerText = 'Error loading visions.';
+          return;
+        }
         
         // Find Sebastian's data
         sebastianData = data.visions.find(ghost => ghost.ghost === 'sebastian');
         
+        if (!sebastianData) {
+          document.getElementById('visionContent').innerText = 'Vision data not found.';
+          return;
+        }
+        
         // Get current character
-        if (!checkCharacterSelected('../index.html')) {
+        if (!checkCharacterSelected('../../index.html')) {
           return;
         }
 
         const character = getCharacter();
         const accessLevel = getVisionAccessLevel(character, 'sebastian');
+        
+        // Update title based on access level
+        const titleEl = document.getElementById('ghostTitle');
+        const subtitleEl = document.getElementById('ghostSubtitle');
+        
+        if (accessLevel === 'FULL') {
+          titleEl.textContent = 'The Ghost of Sebastian Crane';
+          subtitleEl.textContent = 'A shadow in the darkness, burdened by obsession and the weight of his own mistakes';
+        }
         
         // Display vision
         function displayVision() {

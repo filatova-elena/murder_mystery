@@ -4,23 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Lonely Ghost - The Lost Souls of Kennebec Avenue</title>
-  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    .vision-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .vision-content {
+      background-color: var(--secondary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 30px;
+      margin: 30px 0;
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+    .vision-number {
+      text-align: center;
+      margin-top: 20px;
+      font-style: italic;
+      color: var(--accent-gold);
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container vision-container">
     <h1 id="ghostTitle">The Lonely Ghost</h1>
-    <p id="ghostSubtitle" style="font-style: italic; margin-bottom: 30px;">The translucent specter of a frail young woman in a faded blue dress, her eyes hollow with a century of longing</p>
+    <p id="ghostSubtitle" style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);">The translucent specter of a frail young woman in a faded blue dress, her eyes hollow with a century of longing</p>
     
     <div id="visionContent" class="vision-content">
       <!-- Vision content will be inserted here by JavaScript -->
     </div>
 
     <div class="nav-footer">
+      <p style="margin-bottom: 25px;">Scan the QR code again to proceed to the next vision.</p>
       <a href="/" class="button nav-button">Return to Investigation</a>
     </div>
   </div>
 
-  <script src="../assets/script.js"></script>
+  <script src="../../assets/script.js"></script>
   <script>
     let aliceData = null;
     const blockedMessage = "You sense a cold presence. A young woman in 1920s dress stands before you, her expression sorrowful and distant. But you cannot communicate with spirits. The vision remains forever beyond your comprehension.";
@@ -28,14 +50,24 @@
     // Load visions from JSON
     async function loadAliceVisions() {
       try {
-        const response = await fetch('../data/visions.json');
-        const data = await response.json();
+        const response = await fetch('../../data/visions.json?t=' + new Date().getTime());
+        const data = response.ok ? await response.json() : null;
+        
+        if (!data) {
+          document.getElementById('visionContent').innerText = 'Error loading visions.';
+          return;
+        }
         
         // Find Alice's data
         aliceData = data.visions.find(ghost => ghost.ghost === 'alice');
         
+        if (!aliceData) {
+          document.getElementById('visionContent').innerText = 'Vision data not found.';
+          return;
+        }
+        
         // Get current character
-        if (!checkCharacterSelected('../index.html')) {
+        if (!checkCharacterSelected('../../index.html')) {
           return;
         }
 
@@ -43,18 +75,14 @@
         const accessLevel = getVisionAccessLevel(character, 'alice');
         
         // Update title based on access level
-        function updateGhostTitle() {
-          const titleEl = document.getElementById('ghostTitle');
-          const subtitleEl = document.getElementById('ghostSubtitle');
-          
-          if (accessLevel === 'FULL') {
-            titleEl.textContent = 'The Ghost of Alice Whitmore';
-            subtitleEl.textContent = 'A young woman from the spirit world, finally heard after a century of silence';
-          }
-          // Otherwise keep default "The Lonely Ghost"
-        }
+        const titleEl = document.getElementById('ghostTitle');
+        const subtitleEl = document.getElementById('ghostSubtitle');
         
-        updateGhostTitle();
+        if (accessLevel === 'FULL') {
+          titleEl.textContent = 'The Ghost of Alice Whitmore';
+          subtitleEl.textContent = 'A young woman from the spirit world, finally heard after a century of silence';
+        }
+        // Otherwise keep default "The Lonely Ghost"
         
         // Display vision
         function displayVision() {
