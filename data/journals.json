@@ -7,8 +7,18 @@
       "type": "Personal Diary",
       "format": "Leather-bound daily diary with gold-embossed initials",
       "date": "1924-1925",
-      "location": "Town Doctor's Office",
-      "reveals": "Full confession of the poisoning, Alice's threat, her murder, his guilt, and the cover-up. Documents the entire crime."
+      "location": "Laying around in Montrose Mansion",
+      "reveals": "Non-spoiler entries showing Dr. Thaddeus's professional observations, relationship with Alice, and initial concerns about Sebastian's elixir experiments."
+    },
+    {
+      "id": "thaddeus_diary_missing_pages",
+      "title": "Dr. Thaddeus Crane's Diary - Missing Pages",
+      "is_primary": true,
+      "type": "Personal Diary - Hidden Spoiler Pages",
+      "format": "Torn, water-stained pages from the leather-bound diary, hidden away separately",
+      "date": "October 1925",
+      "location": "Hidden in Abandoned Garage at Montrose Mansion",
+      "reveals": "Spoiler pages - the full confession of the poisoning, Alice's threat, her murder, his guilt, and the cover-up. Documents the entire crime and Thaddeus's desperate attempts to save Sebastian after realizing what he had done."
     },
     {
       "id": "thaddeus_patient_notes",
