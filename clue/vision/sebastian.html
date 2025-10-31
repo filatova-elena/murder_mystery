@@ -90,7 +90,11 @@
           let visionNumber = 1;
           let totalVisions = sebastianData.full.length;
 
-          if (accessLevel === 'FULL') {
+          // Check for character-specific vision first
+          if (sebastianData.character_specific && sebastianData.character_specific[character]) {
+            visionText = sebastianData.character_specific[character];
+            visionNumber = null; // Do not show vision number for character-specific
+          } else if (accessLevel === 'FULL') {
             visionNumber = getNextVisionNumber('sebastian', totalVisions);
             visionText = sebastianData.full[visionNumber - 1];
           } else if (accessLevel === 'GOD_HELMET') {
@@ -105,7 +109,7 @@
 
           contentDiv.innerHTML = `<p>${visionText}</p>`;
           
-          if (accessLevel !== 'LIMITED') {
+          if (accessLevel !== 'LIMITED') && visionNumber !== null) {
             const visionNumberDiv = document.createElement('div');
             visionNumberDiv.className = 'vision-number';
             visionNumberDiv.textContent = `Vision ${visionNumber} of ${totalVisions}`;
