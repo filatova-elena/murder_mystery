@@ -57,7 +57,8 @@
       "subtitle": "A presence shrouded in sorrow and secrets",
       "character_specific": {
         "dressmaker": "You remind me of Elias, he used to write me poems....",
-        "doctor": "You remind me of Thaddeus, unpleasant man."
+        "doctor": "You remind me of Thaddeus, unpleasant man.",
+        "explorer": "Thosmas? You are back from your travels, they said you were lost at sea. There is something important you MUST know... [trails off, you sense the urgency]"
       },
       "full": [
         "I saw them together. In the garden at twilight. His hand on her face. Alice! How could he? She is his patient! She is vulnerable! He is taking advantage of her, I just feel it in my bones, I have to do something! [Your heart clenches with betrayal and worry for a friend.]",
@@ -107,7 +108,8 @@
       "title": "A Vision of Sebastian",
       "subtitle": "A shadow in the darkness, consumed by obsession",
       "character_specific": {
-        "doctor": "You remind me of my brother"
+        "doctor": "You remind me of my brother",
+        "explorer": "Thosmas? Brother? You are back from your travels, they said you were lost at sea."
       },
       "full": [
         "The Jupiter-Venus conjunction! September 4th, 1925. The alignment was perfect, absolutely perfect! I administered the Elixir of Eternal Love that very morning, just as planned. Cordelia drank it willingly. [You feel hope and romantic idealism—the sense of creating something beautiful.]",
