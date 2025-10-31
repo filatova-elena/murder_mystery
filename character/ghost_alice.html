@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lonely Ghost - Alice Whitmore</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    .ghost-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+      border-bottom: 2px solid var(--accent-gold);
+    }
+    .tab-button {
+      padding: 10px 20px;
+      background-color: transparent;
+      color: var(--accent-gold);
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.3s;
+      border-bottom: 3px solid transparent;
+    }
+    .tab-button.active {
+      border-bottom-color: var(--accent-gold);
+      background-color: rgba(218, 165, 32, 0.1);
+    }
+    .tab-button:hover {
+      opacity: 0.8;
+    }
+    .vision-level {
+      display: none;
+    }
+    .vision-level.active {
+      display: block;
+    }
+    .vision-content {
+      background-color: rgba(218, 165, 32, 0.05);
+      border-left: 4px solid var(--accent-gold);
+      padding: 20px;
+      margin: 10px 0;
+      color: var(--text-light);
+      line-height: 1.8;
+      font-style: italic;
+    }
+    .level-indicator {
+      color: var(--accent-gold);
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container ghost-container">
+    <a href="/" class="button" style="display: inline-block; margin-bottom: 20px;">← Return to Main Menu</a>
+
+    <div style="background-color: var(--secondary-dark); border: 2px solid var(--accent-gold); padding: 30px; margin: 30px 0;">
+      <h1 style="color: var(--accent-gold); margin-top: 0;" id="ghostTitle"></h1>
+      <p style="font-style: italic; color: rgba(255, 255, 255, 0.8); margin-bottom: 20px;" id="ghostSubtitle"></p>
+
+      <div style="margin-bottom: 30px;">
+        <h2 style="color: var(--accent-gold); border-bottom: 1px solid var(--accent-gold); padding-bottom: 10px;">Your Story</h2>
+        <p style="color: var(--text-light); line-height: 1.8;" id="ghostBackstory"></p>
+      </div>
+
+      <div>
+        <h2 style="color: var(--accent-gold); border-bottom: 1px solid var(--accent-gold); padding-bottom: 10px;">Your Visions</h2>
+        <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9em; margin-bottom: 20px;">
+          Select how you perceive and communicate with the living:
+        </p>
+
+        <div class="tabs">
+          <button class="tab-button active" onclick="switchVisionTab(event, 'full')">Full Vision</button>
+          <button class="tab-button" onclick="switchVisionTab(event, 'partial')">Partial Vision</button>
+          <button class="tab-button" onclick="switchVisionTab(event, 'mechanical')">Mechanical (Helmet)</button>
+        </div>
+
+        <div id="vision-full" class="vision-level active"></div>
+        <div id="vision-partial" class="vision-level"></div>
+        <div id="vision-mechanical" class="vision-level"></div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+      <button class="button" onclick="selectGhost()" style="padding: 15px 40px; font-size: 1.1em;">
+        Become Alice's Ghost
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const GHOST_KEY = 'alice';
+    const BACKSTORY = `Alice Whitmore was a young woman with a gift—she could see things others could not. A gifted psychic medium trained by Margo Laveau, Alice had premonitions about the terrible events of 1925. She tried to warn everyone, but her claims of poisoning and danger were dismissed as hysteria and delusion. Only Thaddeus Crane believed her. She was struck down suddenly, painfully aware of her friend Cordelia's suffering but powerless to stop it. For a century, she has been trapped, desperate to make someone understand the truth. Now, finally, someone can hear her.`;
+
+    async function loadGhost() {
+      try {
+        const response = await fetch('../data/visions.json');
+        const data = await response.json();
+        
+        const ghost = data.visions.find(v => v.ghost === GHOST_KEY);
+        if (!ghost) {
+          console.error('Ghost not found in visions.json');
+          return;
+        }
+
+        // Set title and subtitle
+        document.getElementById('ghostTitle').textContent = ghost.title;
+        document.getElementById('ghostSubtitle').textContent = ghost.subtitle;
+        document.getElementById('ghostBackstory').textContent = BACKSTORY;
+
+        // Render visions
+        renderVisions(ghost);
+      } catch (error) {
+        console.error('Error loading ghost data:', error);
+      }
+    }
+
+    function renderVisions(ghost) {
+      ['full', 'partial', 'mechanical'].forEach(level => {
+        const container = document.getElementById(`vision-${level}`);
+        const visions = ghost[level] || [];
+        
+        let html = `<div class="level-indicator">${level.toUpperCase()} VISION</div>`;
+        visions.forEach(vision => {
+          html += `<div class="vision-content">${vision}</div>`;
+        });
+        
+        container.innerHTML = html;
+      });
+    }
+
+    function switchVisionTab(event, level) {
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.vision-level').forEach(div => div.classList.remove('active'));
+      event.target.classList.add('active');
+      document.getElementById(`vision-${level}`).classList.add('active');
+    }
+
+    function selectGhost() {
+      localStorage.setItem('selectedCharacter', 'the_lonely_ghost');
+      localStorage.setItem('isGhost', 'true');
+      window.location.href = '/index.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', loadGhost);
+  </script>
+</body>
+</html>
