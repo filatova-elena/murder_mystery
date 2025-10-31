@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sebastian Crane's Birth Certificate</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    .document-content {
+      background-color: var(--secondary-dark);
+      border: 1px solid var(--accent-gold);
+      padding: 30px;
+      margin: 20px 0;
+      font-family: monospace;
+      white-space: pre-wrap;
+      color: var(--text-light);
+      font-size: 0.9em;
+      line-height: 1.8;
+    }
+    .character-note {
+      background-color: rgba(218, 165, 32, 0.1);
+      border-left: 4px solid var(--accent-gold);
+      padding: 20px;
+      margin: 20px 0;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="/clue/clues.html" class="button" style="margin-bottom: 20px;">← Back to Clues</a>
+
+    <h1 id="docTitle"></h1>
+    <p id="docDescription" style="font-style: italic; color: var(--accent-gold); margin-bottom: 30px;"></p>
+
+    <div class="document-content" id="docContent"></div>
+
+    <div id="interpretationSection">
+      <h2 style="color: var(--accent-gold); border-bottom: 1px solid var(--accent-gold); padding-bottom: 10px; margin-top: 30px;">Character Observations</h2>
+      <div id="interpretation" class="character-note"></div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="/clue/clues.html" class="button">Back to Investigation Reference</a>
+    </div>
+  </div>
+
+  <script src="../../assets/script.js"></script>
+  <script>
+    async function loadDocument() {
+      const character = getCharacter();
+      
+      if (!character) {
+        window.location.href = '/index.html';
+        return;
+      }
+
+      try {
+        const response = await fetch('../../data/documents/sebastian_birth_certificate.json?t=' + Date.now());
+        const data = await response.json();
+
+        // Set title and description
+        document.getElementById('docTitle').textContent = data.title;
+        document.getElementById('docDescription').textContent = data.description;
+        
+        // Set document content
+        document.getElementById('docContent').textContent = data.content;
+
+        // Set character interpretation
+        if (data.character_interpretations && data.character_interpretations[character]) {
+          document.getElementById('interpretation').textContent = data.character_interpretations[character];
+        } else {
+          document.getElementById('interpretationSection').style.display = 'none';
+        }
+      } catch (error) {
+        console.error('Error loading document:', error);
+        document.getElementById('docContent').textContent = 'Error loading document.';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadDocument);
+  </script>
+</body>
+</html>
