@@ -43,11 +43,9 @@
 <body>
   <div class="container artifact-container">
     <div class="artifact-header">
-      <h1 id="artifactTitle">Crystal Ball - Antique Scrying Sphere</h1>
-      <p class="artifact-type" id="artifactType">Personal Item - Spiritual Tool</p>
+      <h1 id="artifactTitle">Crystal Ball</h1>
+      <p class="artifact-type" id="artifactType">Occult Object - Divination Tool</p>
     </div>
-
-    <div class="artifact-location" id="artifactLocation"></div>
 
     <div class="artifact-content" id="artifactContent"></div>
 
@@ -84,11 +82,6 @@
       document.getElementById('artifactTitle').innerText = artifact.name || '';
       document.getElementById('artifactType').innerText = artifact.type || '';
       
-      // Location
-      if (artifact.location) {
-        document.getElementById('artifactLocation').innerHTML = `<strong>Location:</strong> ${artifact.location}`;
-      }
-
       // Description only - no technical details
       document.getElementById('artifactContent').innerHTML = artifact.description || 'No additional details available.';
 
