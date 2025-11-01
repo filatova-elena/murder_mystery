@@ -5,19 +5,18 @@
       "title": "Purple Spotted Flowering Plant",
       "name": "Foxglove",
       "scientific_name": "Digitalis purpurea",
-      "description": "A tall flowering plant with tubular flowers in shades of pink, purple, white, or yellow. Known for its distinctive spotted throats. Native to Europe but grown worldwide. Contains cardiac-active compounds historically used in medicine.",
+      "description": "A tall flowering plant with tubular flowers in shades of pink, purple, white, or yellow. The flowers have distinctive spotted throats inside.",
       "is_primary": true,
       "type": "Poison - Cardiac Glycoside",
       "purpose": "The murder weapon - added by Dr. Thaddeus to corrupt the elixir",
-      "location": "Concentrated extract in abandoned garage / residue in glass bottle",
       "reveals": "Concentrated extract that was added to Sebastian's harmless formula. Caused cumulative cardiac poisoning in both Cordelia and Sebastian. Fatal in high doses.",
       "symptoms": "Weakness, nausea, confusion, vision problems, cardiac distress, heart failure",
       "character_interpretations": {
-        "professor": "Foxglove—Digitalis purpurea. The cardiac glycosides require extraction and concentration, a process showing significant botanical knowledge. Someone consulted about extraction methods. Someone prepared this deliberately, not accidentally. Whoever did this knew exactly what they were doing.",
+        "professor": "Foxglove—Digitalis purpurea. The cardiac glycosides require extraction and concentration. A sophisticated process showing significant botanical knowledge. The extraction methods require consultation and expertise. Someone prepared this deliberately and knew exactly what they were doing.",
         "baker": "There's a plant that grows in the garden, tall with purple and white spotted flowers. Pretty, really. I've seen it around estate gardens. But I'd never use it in cooking—I know from intuition it's dangerous. Something about it just feels... wrong.",
         "heiress": "There are plants all over this estate I've never bothered to identify. Some are quite beautiful, honestly. That tall purple-flowered one with the spotted throats is striking. I should ask the gardener what it's called.",
         "explorer": "I've seen this plant in various gardens around the world. Common in European estates. Tall, sturdy, grows in clusters. Not something most people would notice unless they're looking for it.",
-        "fiduciary": "My toxicology hobby includes knowing about botanical poisons. Foxglove is one of the most famous—digitalis compounds, cardiac glycosides, dangerous in any concentration. If someone was interested in this plant, that's a significant red flag."
+        "fiduciary": "My toxicology hobby includes knowing about botanical poisons. Foxglove is one of the most famous. If someone was interested in this plant, that's a significant red flag."
       }
     },
     {
@@ -25,19 +24,18 @@
       "title": "Tropical Yellow Flower Specimen",
       "name": "Damiana",
       "scientific_name": "Turnera diffusa",
-      "description": "A small tropical shrub with delicate yellow flowers. Native to Mexico and Central America. Has a minty, slightly bitter flavor. Traditionally used in herbal beverages and infusions.",
+      "description": "Dried leaves and flower fragments in a bottle. Yellowish, with a minty and slightly bitter smell.",
       "is_primary": true,
       "type": "Herb - Aphrodisiac",
       "purpose": "Original ingredient in Sebastian's harmless elixir",
       "dosage": "5 drops daily",
-      "location": "Ingredient in a bottle in the garage",
       "reveals": "Legitimate ingredient in Sebastian's harmless elixir. Non-toxic in small doses. Proves Sebastian's formula was designed to be harmless.",
       "character_interpretations": {
-        "professor": "Damiana—Turnera diffusa. I can identify it by the dried leaf structure. Tropical origin, requires warm climate cultivation. This is sophisticated sourcing.",
-        "baker": "I can identify this from dried herb suppliers. Damiana has a distinctive smell—slightly minty, slightly bitter. Someone knew what they were sourcing.",
+        "professor": "Damiana—Turnera diffusa. The tropical origin and dried leaf structure indicate sophisticated sourcing. Requires warm climate cultivation. Whoever sourced this knew what they were looking for.",
+        "baker": "Dried herbs. I can tell by the smell it's something exotic. Has that distinctive minty, slightly bitter scent. Someone who knew herbs sourced this.",
         "heiress": "I don't spend time in abandoned garages examining bottles of dried plant matter.",
-        "explorer": "Dried damiana leaves. The processing is careful—the leaves are intact, properly dried. Whoever prepared this knew what they were doing.",
-        "fiduciary": "Damiana. Completely harmless. Non-toxic, traditional medicinal use. Just an ingredient, nothing suspicious about it."
+        "explorer": "Dried herb leaves, carefully processed. The leaves are intact, properly dried. Someone who understood herb preparation did this work.",
+        "fiduciary": "An herbal ingredient. Completely harmless, non-toxic, traditional use. Nothing suspicious about it."
       }
     },
     {
@@ -45,17 +43,16 @@
       "title": "Dried Earthen Root Powder",
       "name": "Valerian Root",
       "scientific_name": "Valeriana officinalis",
-      "description": "The dried root of Valeriana officinalis. Has a distinctive earthy, musty aroma. Used in traditional herbal preparations for centuries. Often combined with other herbs in formulations.",
+      "description": "A powder made from dried roots. Earthy, musty aroma. Fine, consistent texture.",
       "is_primary": true,
       "type": "Herb - Sedative/Calming Agent",
-      "location": "Ingredient in a bottle in the garage",
       "reveals": "Legitimate ingredient in Sebastian's harmless elixir. Safe sedative herb. Chosen to calm the bride and create intimacy.",
       "character_observations": {
-        "professor": "Valeriana officinalis root. Dried, ground to powder. The earthiness is unmistakable. Prepared by someone who knew traditional herbal methods.",
-        "baker": "I know valerian by smell. Earthy, musty, distinctive. The grinding is fine—consistent preparation. Whoever made this knew herbalism.",
+        "professor": "Valeriana officinalis root. Properly dried and ground to powder. The earthy scent is distinctive. The grinding is consistent—prepared by someone with knowledge of traditional herbal methods.",
+        "baker": "I know this by smell. Earthy, musty, distinctive. The grinding is fine and even. Whoever made this knew herbalism.",
         "heiress": "I don't examine jars in dark garages.",
-        "explorer": "Properly harvested and dried valerian root. The preparation shows knowledge—roots were dug at the right season, dried correctly. Not casual collection.",
-        "fiduciary": "Valerian root. Completely safe. Standard herbal preparation. No toxicological concerns whatsoever."
+        "explorer": "A properly harvested and dried root. The preparation shows knowledge—roots were dug at the right season, dried correctly, ground finely. Not casual collection.",
+        "fiduciary": "Root powder. Completely safe. Standard herbal preparation. No toxicological concerns whatsoever."
       }
     },
     {
@@ -63,19 +60,18 @@
       "title": "Precious Forked Root Specimen",
       "name": "Ginseng Root",
       "scientific_name": "Panax ginseng",
-      "description": "The precious root of the ginseng plant. Has a distinctive forked, human-like shape. Highly prized in Eastern traditions and alchemical practices. Symbolizes vitality, longevity, and spiritual connection—perfect for binding eternal love.",
+      "description": "A pale root with a distinctive forked, human-like shape. Unusual appearance. Very expensive-looking.",
       "is_primary": true,
       "type": "Herb - Alchemical Binding Agent",
       "purpose": "Original ingredient in Sebastian's harmless elixir",
       "dosage": "Smallest pinch",
-      "location": "Ingredient in a bottle in the garage",
       "reveals": "Alchemical 'binding' agent with mystical significance. Symbolic rather than pharmacologically significant. Shows Sebastian's romantic, mystical approach to the formula.",
       "character_observations": {
-        "professor": "Ginseng root—precious, difficult to source. The fact that this is here shows significant botanical knowledge and expense. Not someone casually dabbling in herbalism.",
-        "baker": "I don't recognize this root. The shape is unusual. Looks ancient, ritualistic. Out of my knowledge.",
+        "professor": "Ginseng root—precious, difficult to source, very expensive. The fact that this is here shows significant botanical knowledge and considerable expense. Not someone casually dabbling in herbalism.",
+        "baker": "I don't recognize this root. The shape is strange—looks like it has limbs. Very unusual and ritualistically prepared. Out of my knowledge.",
         "heiress": "I don't spend time examining curiosities in abandoned garages.",
         "explorer": "A genuine ginseng root. Very difficult to cultivate and expensive. Only serious practitioners would source this. Someone went to significant effort and considerable expense.",
-        "fiduciary": "Ginseng root. Prized in Eastern traditions and magical practices. Completely harmless. But its presence is... unusual and costly."
+        "fiduciary": "Ginseng root. Prized in Eastern traditions and magical practices. Completely harmless. But its presence is unusual and costly."
       }
     },
     {
@@ -83,19 +79,18 @@
       "title": "Precious Floral Essential Oil",
       "name": "Rose Otto",
       "scientific_name": "Rosa x damascena",
-      "description": "A precious essential oil extracted from rose petals. One of the most expensive oils in the world. Has a deep, complex floral aroma. Requires hundreds of rose flowers to produce a small amount.",
+      "description": "A small bottle of precious oil. Deep, complex floral aroma. The smell is intense and luxurious.",
       "is_primary": true,
       "type": "Essential Oil - Sacred to Venus",
       "purpose": "Original ingredient in Sebastian's harmless elixir",
       "dosage": "1 drop daily",
-      "location": "Ingredient in a bottle in the garage",
-      "reveals": "Precious essential oil sacred to Venus (the planet and goddess). Shows the romantic significance of the elixir.",
+      "reveals": "Precious essential oil. Shows the romantic significance of the elixir.",
       "character_observations": {
-        "professor": "Rose Otto. The fragrance alone identifies it. A few drops would cost more than most people's weekly food budget. The oil is pure, not cut or adulterated.",
-        "baker": "Rose Otto. I recognize the smell immediately. This is extremely expensive—only high-end work uses this. Someone was serious about creating something luxurious.",
+        "professor": "Rose Otto. The fragrance alone identifies it. Pure, not cut or adulterated. The quality is exceptional—the scent complexity suggests genuine distillation from premium rose sources.",
+        "baker": "This oil. I recognize the smell immediately. This is extremely expensive—only luxury work uses this. Someone was serious about creating something special.",
         "heiress": "I don't examine bottles in garages.",
-        "explorer": "Pure rose oil. The color and consistency are right—this is genuine Ottoman or Bulgarian distillation. Not an imitation. Someone paid dearly for this.",
-        "fiduciary": "Rose Otto. Non-toxic, of course. But the cost alone tells a story. This was expensive sourcing. Someone with money."
+        "explorer": "Pure rose oil. The color, consistency, and scent profile are correct—this is genuine Ottoman or Bulgarian distillation. Not an imitation. Someone paid dearly for this.",
+        "fiduciary": "Rose oil. Non-toxic, of course. But the cost alone tells a story. This was expensive sourcing. Someone with money and intention."
       }
     },
     {
@@ -103,20 +98,19 @@
       "title": "White Crystalline Powder",
       "name": "Potassium Bromide",
       "scientific_name": "KBr",
-      "description": "A crystalline chemical compound used in pharmaceutical preparations. Once common in medical formulations during the 1920s. Appears as white crystals or powder.",
+      "description": "A white powder with visible crystals. Looks pharmaceutical or chemical in nature. Unfamiliar to most people.",
       "is_primary": true,
       "type": "Chemical Compound - Mild Sedative",
       "purpose": "Original ingredient in Sebastian's harmless elixir",
       "dosage": "10 grains",
-      "location": "Ingredient in a bottle in the garage",
       "reveals": "Legitimate medical compound used as mild sedative in 1920s. Safe in small doses. Shows Sebastian's knowledge of both traditional and modern medicine.",
       "character_interpretations": {
-        "professor": "Potassium bromide. White crystalline powder. A pharmaceutical compound, not botanical. Shows someone knew modern medicine, not just plant lore.",
+        "professor": "Potassium bromide. A pharmaceutical compound. The crystalline structure and purity indicate careful preparation. This shows someone combined modern pharmaceutical knowledge with botanical expertise.",
         "baker": "A white powder in a jar. I have no idea what it is. Not my field.",
         "heiress": "I don't examine mysterious powders in garages.",
-        "explorer": "A pharmaceutical—potassium bromide. The crystals are well-formed, properly stored. Someone was mixing modern pharmaceuticals with botanical ingredients. Interesting combination.",
+        "explorer": "A pharmaceutical ingredient. The crystals are well-formed, properly stored. Someone was mixing modern pharmaceuticals with botanical ingredients. Professional combination.",
         "fiduciary": "Potassium bromide. A documented 1920s pharmaceutical. Non-toxic in prescribed amounts. Common in the era.",
-        "doctor": "Potassium bromide. A mild sedative used in 1920s medical practice. Safe in prescribed doses. Shows someone was blending traditional herbal knowledge with established pharmaceutical compounds for a holistic approach."
+        "doctor": "Potassium bromide. A mild sedative used in 1920s medical practice. Safe in prescribed doses. Shows someone was blending traditional herbal knowledge with established pharmaceutical compounds."
       }
     },
     {
@@ -124,20 +118,19 @@
       "title": "Fine White Powder",
       "name": "Calcium Lactate",
       "scientific_name": "C₆H₁₀CaO₆",
-      "description": "A salt of lactic acid, calcium lactate is a common ingredient in dietary supplements and laxatives. It's often used to improve absorption of calcium and as a mild laxative.",
+      "description": "A fine white powder. Very uniform texture. Appears chemical or medicinal.",
       "is_primary": true,
       "type": "Chemical Compound - Fortifying Agent",
       "purpose": "Original ingredient in Sebastian's harmless elixir",
       "dosage": "5 grains",
-      "location": "Ingredient in a bottle in the garage",
       "reveals": "Fortifying/health tonic. Shows Sebastian's intention to strengthen Cordelia.",
       "character_interpretations": {
-        "professor": "Calcium lactate. Another pharmaceutical powder. Someone combining botanicals with modern nutritional supplements. Strategic approach.",
+        "professor": "Calcium lactate. Another pharmaceutical powder, finely processed. Someone combining botanicals with modern nutritional supplements. Strategic and knowledgeable approach.",
         "baker": "Another unidentified powder. Chemistry work, not baking.",
         "heiress": "More mysterious jars. I'm not interested.",
-        "explorer": "Calcium lactate. A fortifying supplement common in 1920s health tonics. Shows deliberate health supplementation alongside the botanical work.",
+        "explorer": "A fortifying supplement. The consistency suggests commercial pharmaceutical preparation. Shows deliberate health supplementation.",
         "fiduciary": "Calcium lactate. Safe, nutritional. Common in 1920s supplements. Nothing suspicious.",
-        "doctor": "Calcium lactate. Used medically to improve calcium absorption. An excellent choice for fortification, particularly for women preparing for significant life changes. Shows careful attention to health optimization."
+        "doctor": "Calcium lactate. Used medically to improve calcium absorption. An excellent choice for fortification, particularly for women. Shows careful attention to health optimization."
       }
     },
     {
@@ -145,20 +138,18 @@
       "title": "Reddish-Brown Powder",
       "name": "Iron Citrate",
       "scientific_name": "C₆H₅O₇Fe",
-      "description": "A form of iron, iron citrate is used to treat iron deficiency anemia. It's also a common ingredient in dietary supplements.",
+      "description": "A reddish-brown powder. Distinctive color. Clearly a chemical or mineral compound.",
       "is_primary": true,
       "type": "Chemical Compound - Blood Tonic",
       "purpose": "Original ingredient in Sebastian's harmless elixir",
       "dosage": "3 grains",
-      "location": "Ingredient in a bottle in the garage",
-      "reveals": "Iron tonic to enrich blood and boost vitality. Shows Sebastian's intent to strengthen Cordelia for the marriage ahead.",
       "character_interpretations": {
-        "professor": "Iron citrate. A bioavailable form of iron. Again, mixing botanicals with pharmaceuticals. Someone with real knowledge of health supplementation.",
-        "baker": "More powder. I can't identify this.",
+        "professor": "Iron citrate. A specialized form of iron. The fact it's in solution shows knowledge of bioavailable supplements. Someone understood modern nutritional science.",
+        "baker": "More powder. I can't identify this. The color is unusual—reddish-brown.",
         "heiress": "I've lost interest in the jars.",
-        "explorer": "Iron citrate. Another 1920s supplement. Health tonics were standard practice—someone was thorough in preparation.",
+        "explorer": "An iron supplement. The color and consistency match pharmaceutical preparations. Someone was thorough in health supplementation.",
         "fiduciary": "Iron citrate. A standard tonic of the era. Non-toxic, intended for health. No concerns.",
-        "doctor": "Iron citrate. An excellent form of iron for treating anemia. Particularly valuable for women, as iron deficiency was common before pregnancy. Shows thoughtful care for Cordelia's wellbeing and health."
+        "doctor": "Iron citrate. An excellent bioavailable form of iron. Particularly valuable for women preparing for major life changes. Shows thoughtful care for wellbeing and health."
       }
     },
     {
@@ -166,17 +157,16 @@
       "title": "Sweet Amber Syrup Mixture",
       "name": "Vanilla, Cherry Syrup, Honey",
       "scientific_name": "Vanilla planifolia / Prunus / Apis mellifera",
-      "description": "A sweet, aromatic combination of vanilla, cherry, and honey. Often used as a natural sweetener and flavoring agent. Cherry syrup is derived from tart cherries.",
+      "description": "Amber-colored liquid or syrup. Sweet, aromatic smell. Clearly made to taste good.",
       "is_primary": true,
       "type": "Flavorings",
       "purpose": "Taste and preservation in Sebastian's elixir",
-      "location": "Ingredient in a bottle in the garage",
       "reveals": "Sweet flavorings that made the elixir palatable. Disguised the taste of botanicals.",
       "character_interpretations": {
-        "professor": "Vanilla extract, cherry syrup, honey. Flavorings. These mask the taste of the botanicals. Smart choice—herbal preparations are unpalatable without sweetening.",
-        "baker": "I recognize these flavors immediately. Good quality vanilla, proper cherry syrup, real honey. Someone cared about taste balance. These would disguise herbal bitterness well.",
+        "professor": "Vanilla extract, cherry syrup, honey. Flavorings designed to mask bitter botanicals. A smart choice—herbal preparations are typically unpalatable without sweetening.",
+        "baker": "I recognize these flavors immediately. Good quality vanilla, proper cherry syrup, real honey. Someone knew how to balance flavors. These would completely disguise herbal bitterness.",
         "heiress": "I don't spend time examining jars of syrup in garages.",
-        "explorer": "Vanilla, cherry syrup, honey. The vanilla smells genuine, the syrup is well-made. These are quality ingredients. Someone wasn't cutting corners on flavor.",
+        "explorer": "Vanilla, cherry syrup, honey. The vanilla smells genuine, the syrup is well-made. Quality ingredients. Someone wasn't cutting corners.",
         "fiduciary": "Common flavorings. Their purpose is obvious—to make herbal preparations palatable. Nothing suspicious."
       }
     },
@@ -185,19 +175,18 @@
       "title": "Clear High-Proof Spirit",
       "name": "Grain Alcohol 95%",
       "scientific_name": "Ethanol (C₂H₅OH)",
-      "description": "A clear, colorless distilled spirit with high alcohol content. Used historically as a base and preservative in herbal preparations and tinctures. Burns with a blue flame.",
+      "description": "A clear, colorless liquid. Very strong smell. Obviously high-proof spirits.",
       "is_primary": true,
       "type": "Base/Preservative",
       "purpose": "Base and preservative for the elixir",
       "amount": "8 oz",
-      "location": "Ingredient in a bottle in the garage",
       "reveals": "High-proof alcohol used as base and preservative during Prohibition era (illicit source).",
       "character_interpretations": {
-        "professor": "95% grain alcohol. An excellent solvent and preservative. High proof shows serious work—someone wasn't making amateur tinctures.",
-        "baker": "Strong spirits. Much stronger than anything I work with. Professional-grade alcohol.",
+        "professor": "95% grain alcohol. An excellent solvent and preservative. The high proof indicates serious pharmaceutical work—not amateur tinctures.",
+        "baker": "Strong spirits. Much stronger than anything I work with. Professional-grade alcohol. Very strong smell.",
         "heiress": "I don't examine bottles of illegal spirits.",
         "explorer": "Pure grain alcohol during Prohibition? Someone had serious underworld connections. This wasn't casual sourcing—this was expensive and connected.",
-        "fiduciary": "95% grain alcohol. Likely illicit during Prohibition. Someone had access to bootleggers or illegal suppliers. This wasn't acquired legally."
+        "fiduciary": "95% grain alcohol. Likely illicit during Prohibition. Someone had access to bootleggers. This wasn't acquired legally."
       }
     },
     {
@@ -205,17 +194,15 @@
       "title": "Collection of Preserved Plant Samples",
       "name": "Plant Specimens in Jars",
       "scientific_name": "Various botanical specimens",
-      "description": "A collection of preserved plant specimens, including foxglove, herbs, and exotic plants, found in the abandoned garage at Montrose Mansion. These specimens demonstrate Sebastian's botanical knowledge and his meticulous research methods.",
+      "description": "Multiple glass jars containing dried plant materials—leaves, roots, flowers, seeds. Various colors and textures. Carefully preserved.",
       "is_primary": true,
       "type": "Physical Evidence - Preserved Botanicals",
-      "location": "Abandoned Garage at Montrose Mansion",
-      "reveals": "Sebastian's preserved plant samples including foxglove, herbs, and exotic specimens. Shows his botanical expertise and research methods.",
       "character_interpretations": {
-        "professor": "An entire collection of preserved specimens. This shows systematic botanical study—not random gathering. The preservation methods are careful, the organization is methodical. Someone was conducting serious botanical research, cataloging plants and their properties. This is the work of someone with significant botanical knowledge.",
-        "baker": "Jars of dried plants. I recognize some of them, but I don't know all of them. Someone was definitely collecting and studying these carefully.",
+        "professor": "An entire collection of preserved specimens. This shows systematic botanical study. The preservation methods are careful, the organization methodical. Someone was conducting serious botanical research and cataloging plants. Significant botanical knowledge.",
+        "baker": "Jars of dried plants. I recognize some, but not all. Someone was definitely studying these carefully.",
         "heiress": "A collection of odd jars. I don't know what most of these are.",
-        "explorer": "Preserved botanical specimens. The organization and care taken in preservation shows serious study. Someone was building a reference collection.",
-        "fiduciary": "Multiple plant specimens preserved. This is evidence of deliberate botanical research and experimentation."
+        "explorer": "Preserved botanical specimens organized carefully. The care taken in preservation shows serious study. Someone was building a reference collection.",
+        "fiduciary": "Multiple plant specimens preserved. Evidence of deliberate botanical research and study."
       }
     },
     {
@@ -225,15 +212,14 @@
       "scientific_name": null,
       "is_primary": false,
       "type": "Reference Book - Secondary",
-      "location": "Montrose mansion library, dusty shelf",
-      "description": "A water-stained leather-bound volume, likely from the 1920s, containing handwritten annotations in the margins. It's an encyclopedia of medicinal and botanical knowledge, with notes in Sebastian's handwriting on romantic herbs, aphrodisiacs, and love magic.",
-      "reveals": "Encyclopedia with extensive annotations in Sebastian's handwriting. Notes mark pages on romantic herbs, aphrodisiacs, and botanical research. Shows his careful study of ingredients for the elixir formula.",
+      "description": "A water-stained leather-bound volume from the 1920s. Contains handwritten annotations throughout the margins.",
+      "reveals": "Encyclopedia with extensive annotations. Notes mark pages on romantic herbs, aphrodisiacs, and botanical research. Shows careful study of ingredients.",
       "character_interpretations": {
-        "professor": "This handwriting—meticulous notes in margins. Someone studied this book carefully. The annotations are detailed, systematic. Shows real research, not casual interest.",
-        "baker": "A library book with notes. I can't read all the technical annotations, but the fact that someone marked it up tells me they were studying it seriously.",
-        "heiress": "A dusty old book. I found this in the library and haven't read through it thoroughly. It looks important though.",
-        "explorer": "Detailed annotations on botanical and alchemical knowledge. Someone was doing serious research before preparing the elixir. This shows planning.",
-        "fiduciary": "A reference book with extensive marginalia. The handwriting is consistent, methodical. Someone was using this as a research guide, taking it seriously."
+        "professor": "This handwriting shows meticulous study. The annotations are detailed and systematic. Someone studied this book carefully. Real research, not casual interest.",
+        "baker": "A library book with notes written in margins. I can't read all the annotations, but the fact that someone marked it up tells me they were studying it seriously.",
+        "heiress": "A dusty old book from the library. Haven't read through it thoroughly. It looks important though.",
+        "explorer": "Detailed annotations on botanical and alchemical knowledge. Someone was doing serious research. This shows planning and preparation.",
+        "fiduciary": "A reference book with extensive handwritten notes. The handwriting is consistent and methodical. Someone used this as a serious research guide."
       }
     },
     {
@@ -241,16 +227,15 @@
       "title": "Purple Fragrant Garden Plant",
       "name": "Lavender Plant",
       "scientific_name": "Lavandula angustifolia",
-      "description": "A well-maintained lavender plant, a symbol of peace and calm. It's a gardener's favorite for its soothing aroma, but has no direct connection to the poison or crime.",
+      "description": "A well-maintained plant with purple flowers and a lovely soothing aroma. Common garden plant.",
       "is_primary": false,
       "type": "Garden Herb - For Fun",
-      "location": "Montrose garden, fragrant corner",
-      "reveals": "Ancient symbol of peace and calm. Gardener's favorite for its soothing aroma. No mystery significance - just a lovely garden plant.",
+      "reveals": "A symbol of peace and calm. Gardener's favorite for its soothing aroma.",
       "character_interpretations": {
-        "professor": "Lavender. Common Mediterranean herb. Well-maintained, aromatic. A staple in garden and kitchen. Its soothing properties make it a natural choice for relaxation and stress relief.",
+        "professor": "Lavender. Common Mediterranean herb. Well-maintained, aromatic. A staple in gardens and kitchens. Known for soothing properties.",
         "baker": "Lavender. The scent is lovely. Someone tends this garden carefully.",
-        "heiress": "This corner smells wonderful. Lavender was my great-aunt's favorite. I've been letting the gardens grow wild, but this one thrives anyway.",
-        "explorer": "Lavender. Well-established plant, clearly years old. The garden was maintained at some point, though it's neglected now.",
+        "heiress": "This corner smells wonderful. Lavender was my great-aunt's favorite. I've let the gardens grow wild, but this one thrives anyway.",
+        "explorer": "Lavender. Well-established plant, clearly years old. Garden was maintained at some point, though it's neglected now.",
         "fiduciary": "No botanical significance here."
       }
     },
@@ -259,17 +244,16 @@
       "title": "Grey-Green Needled Herb Plant",
       "name": "Rosemary Plant",
       "scientific_name": "Rosmarinus officinalis",
-      "description": "A fragrant grey-green needled plant with tiny purple flowers, a common garden herb. Research notes show Dr. Thaddeus studied rosemary as potential cardiac support, written in his private research notes from 1925.",
+      "description": "A fragrant grey-green plant with needle-like leaves and tiny purple flowers. Grows sturdy and well-maintained.",
       "is_primary": false,
       "type": "Garden Herb - Clue Related",
-      "location": "Montrose garden, herb section",
-      "reveals": "Found growing in the Montrose garden herb section. Research notes show Dr. Thaddeus studied rosemary as potential cardiac support, written in his private research notes from 1925. Rosemary contains powerful antioxidants and circulatory benefits. Shows Thaddeus was researching cardiac support plants.",
+      "reveals": "Found growing in the Montrose garden.",
       "character_interpretations": {
-        "professor": "Rosemary. Common herb, excellent circulatory properties. Good choice if someone was trying to help a cardiac patient.",
+        "professor": "Rosemary. Common herb with good circulatory properties. A choice that suggests someone was trying to help with cardiac health.",
         "baker": "Rosemary from the garden. Fragrant, strong flavor. A helpful herb.",
         "heiress": "Rosemary grows wild here. I didn't know it was medicinal.",
         "explorer": "Rosemary. Mediterranean origin, grows reliably in this climate. Been here for years.",
-        "fiduciary": "Medicinal herb. No suspicion."
+        "fiduciary": "Garden herb. No suspicion."
       }
     },
     {
@@ -277,16 +261,15 @@
       "title": "Delicate Purple-Flowered Herb",
       "name": "Thyme",
       "scientific_name": "Thymus vulgaris",
-      "description": "A delicate green herb with tiny purple flowers, a traditional culinary herb. It's found growing in the Montrose garden herb section, but has no direct connection to the poison or crime.",
+      "description": "A delicate green herb with tiny purple flowers. Common garden plant. Pleasant aroma.",
       "is_primary": false,
       "type": "Garden Herb - For Fun",
-      "location": "Montrose garden, near rosemary",
-      "reveals": "Traditional culinary herb, the 'herb of courage.' Found growing in the Montrose garden herb section. No mystery significance - just an elegant garden touch.",
+      "reveals": "Traditional culinary herb found in the Montrose garden. No mystery significance.",
       "character_interpretations": {
-        "professor": "Thyme. Common Mediterranean herb. A culinary staple, aromatic, and versatile. Its mild, slightly bitter flavor and purple flowers make it a popular choice for cooking and herbal remedies.",
-        "baker": "Thyme from the garden. Useful in cooking. Its strong, aromatic flavor adds depth to dishes.",
-        "heiress": "Tiny purple flowers. Pretty. Its delicate appearance and pleasant aroma make it a charming addition to any garden.",
-        "explorer": "Thyme. Mediterranean, hardy plant. Grows well in this climate. Its aromatic leaves and purple flowers are a common sight in Mediterranean gardens.",
+        "professor": "Thyme. Common Mediterranean herb. A culinary staple. Aromatic and versatile.",
+        "baker": "Thyme from the garden. Useful in cooking. Strong aromatic flavor.",
+        "heiress": "Tiny purple flowers. Pretty.",
+        "explorer": "Thyme. Mediterranean, hardy plant. Grows well in this climate.",
         "fiduciary": "No significance."
       }
     },
@@ -295,17 +278,16 @@
       "title": "Overgrown Stinging Plant Patch",
       "name": "Stinging Nettle",
       "scientific_name": "Urtica dioica",
-      "description": "An overgrown patch of stinging nettle, a plant known for its strong, stinging hairs. It's found in an old gardener's log, which mentions its potential cardiac benefits.",
+      "description": "An overgrown patch of plants with distinctive stinging hairs on the leaves and stems. Grows wild in a forgotten corner.",
       "is_primary": false,
       "type": "Garden Herb - Clue Related",
-      "location": "Edge of Montrose garden, wild corner",
-      "reveals": "Found in old gardener's log: 'High in compounds that strengthen cardiac tissue.' Dr. Thaddeus ordered nettle tea during this period. Shows his interest in cardiac support botanicals.",
+      "reveals": "Found in old gardener's log mentioning medicinal benefits. Dr. Thaddeus ordered nettle tea during this period.",
       "character_interpretations": {
-        "professor": "Stinging nettle. Common medicinal herb. High mineral content, circulatory benefits. Its stinging hairs are a natural defense mechanism, but its roots contain compounds that can be beneficial for cardiac health.",
-        "baker": "Nettle. Good for tea. Medicinal. Its bitter, astringent flavor makes it a popular choice for herbal remedies.",
-        "heiress": "Stinging plants. Better to avoid. Its strong, stinging hairs can be painful.",
-        "explorer": "Nettle patch. Wild, established. Used to be intentional cultivation. Its strong, stinging hairs are a natural defense mechanism, but its roots can be used for medicinal purposes.",
-        "fiduciary": "Medicinal attempt. No crime here."
+        "professor": "Stinging nettle. Common medicinal herb. High mineral content. Its stinging hairs are a defense mechanism, but the roots contain compounds beneficial for health.",
+        "baker": "Nettle. Good for tea. Medicinal. Bitter, astringent flavor.",
+        "heiress": "Stinging plants. Better to avoid. Its hairs can be painful.",
+        "explorer": "Nettle patch. Wild, established. Used to be cultivated. The plant is useful medicinally.",
+        "fiduciary": "Medicinal plant. No crime here."
       }
     },
     {
@@ -313,16 +295,15 @@
       "title": "White and Yellow Flowered Plant",
       "name": "Chamomile",
       "scientific_name": "Matricaria chamomilla",
-      "description": "Cheerful white and yellow flowers, dried bundles hanging nearby, a common garden staple. It's dried and bundled in the Montrose mansion kitchen, but has no direct connection to the poison or crime.",
+      "description": "Cheerful white and yellow flowers. Dried bundles hanging nearby. Common garden plant.",
       "is_primary": false,
       "type": "Garden Herb - For Fun",
-      "location": "Montrose garden, near house",
-      "reveals": "Soothing garden staple found in the Montrose mansion kitchen, dried and bundled. Chamomile was commonly used for calming teas during the 1920s. No mystery connection - just a beloved household herb and comforting ritual of the era.",
+      "reveals": "Soothing garden plant found in the Montrose mansion kitchen. Commonly used for teas.",
       "character_interpretations": {
-        "professor": "Chamomile. Common, harmless. A gentle, soothing herb. Its delicate, daisy-like flowers and mild flavor make it a popular choice for calming teas and skin care.",
-        "baker": "Chamomile. Used for tea. Kitchen herb. Its mild, slightly sweet flavor and calming properties make it a staple in herbal preparations.",
-        "heiress": "White flowers. Pretty dried. Its delicate, daisy-like appearance and pleasant aroma make it a popular choice for dried floral arrangements.",
-        "explorer": "Chamomile. Old bundles, dried properly. Its delicate, daisy-like flowers and mild flavor make it a common sight in gardens and kitchens.",
+        "professor": "Chamomile. Common and harmless. A gentle herb. Known for soothing properties.",
+        "baker": "Chamomile. Used for tea. Kitchen herb. Mild flavor.",
+        "heiress": "White flowers. Pretty dried.",
+        "explorer": "Chamomile. Old bundles, dried properly. Common sight in gardens and kitchens.",
         "fiduciary": "No significance."
       }
     },
@@ -331,16 +312,15 @@
       "title": "Tan Root Pieces in Jar",
       "name": "Ginger Root",
       "scientific_name": "Zingiber officinale",
-      "description": "Dried ginger root in labeled glass jar, faded label, a common kitchen spice. It's used in teas for upset stomachs and digestive comfort during the 1920s, but has no direct connection to the poison or crime.",
+      "description": "Dried root pieces in a labeled glass jar. Tan colored with visible root texture. Common kitchen spice.",
       "is_primary": false,
       "type": "Kitchen Ingredient - For Fun",
-      "location": "Montrose kitchen, spice shelf",
-      "reveals": "Found among the Montrose kitchen spices. Ginger was used in teas for upset stomachs and digestive comfort during the 1920s. No mystery connection, just a reminder of common household remedies of the era.",
+      "reveals": "Found among Montrose kitchen spices. Used in teas for digestive comfort.",
       "character_interpretations": {
-        "professor": "Ginger. Digestive spice. A common kitchen staple. Its spicy, warm flavor and warming properties make it a popular choice for digestive discomfort and warming teas.",
-        "baker": "Ginger. Kitchen spice. Common. Its strong, spicy flavor and warming properties make it a popular choice for cooking and herbal remedies.",
-        "heiress": "Spice jar. Old label. Its strong, spicy flavor and warming properties make it a common ingredient in kitchen remedies.",
-        "explorer": "Dried ginger. Well-preserved. Its strong, spicy flavor and warming properties make it a common ingredient in kitchen remedies.",
+        "professor": "Ginger. Digestive spice. Common kitchen staple.",
+        "baker": "Ginger. Kitchen spice. Common and useful.",
+        "heiress": "Spice jar. Old label.",
+        "explorer": "Dried ginger. Well-preserved. Common kitchen ingredient.",
         "fiduciary": "No significance."
       }
     },
@@ -349,16 +329,15 @@
       "title": "Dried Herb Bundle",
       "name": "Sage",
       "scientific_name": "Salvia officinalis",
-      "description": "A bundled dried sage tied with string, likely used for spiritual cleansing and meditation. It's found in Alice's room, but has no direct connection to the poison or crime.",
+      "description": "A bundled dried herb tied with string. Strong aromatic smell. Spiritual in appearance.",
       "is_primary": false,
       "type": "Botanical Spiritual Item - For Fun",
-      "location": "Alice's room, shelf near window",
-      "reveals": "Alice used sage for spiritual cleansing and meditation. No connection to the poison or crime. Shows Alice's spiritual practices and her search for peace and clarity in the mansion's darkness.",
+      "reveals": "Alice used this for spiritual practices. Shows her spiritual search for peace.",
       "character_interpretations": {
-        "professor": "Dried sage. Aromatic herb. A common spiritual and medicinal herb. Its strong, aromatic smoke is used for purification and meditation.",
-        "baker": "Sage bundle. For cleansing, I'd guess. Its strong, aromatic smoke is used for purification and meditation.",
-        "heiress": "Something spiritual. Alice's things. Its strong, aromatic smoke is used for purification and meditation.",
-        "explorer": "Sage bundle, ceremonial preparation. Its strong, aromatic smoke is used for purification and meditation.",
+        "professor": "Dried sage. Aromatic herb. Commonly used for spiritual practices.",
+        "baker": "Sage bundle. For cleansing. Strong aroma.",
+        "heiress": "Something spiritual. Alice's things.",
+        "explorer": "Sage bundle, ceremonial preparation. Strong aromatic smoke.",
         "fiduciary": "No significance."
       }
     },
@@ -367,16 +346,15 @@
       "title": "Colorful Fruiting Garden Plants",
       "name": "Spicy Peppers",
       "scientific_name": "Capsicum annuum",
-      "description": "Thriving pepper plants with vibrant red, yellow, and green peppers; varieties labeled as jalapeño, habanero, and serrano, a common garden vegetable. Various hot pepper varieties suggest the household chef enjoyed culinary experimentation and bold flavors, but has no direct connection to the poison or crime.",
+      "description": "Pepper plants with vibrant red, yellow, and green peppers. Common garden vegetable. Clearly thriving.",
       "is_primary": false,
       "type": "Garden Vegetables - For Fun",
-      "location": "Montrose garden, kitchen vegetable section",
-      "reveals": "Found thriving in the Montrose mansion's vegetable garden section. Various hot pepper varieties suggest the household chef enjoyed culinary experimentation and bold flavors. No mystery significance - just evidence of the mansion's sophisticated kitchen and adventurous tastes.",
+      "reveals": "Found in Montrose garden. Suggests the household chef enjoyed culinary experimentation.",
       "character_interpretations": {
-        "professor": "Pepper plants. Culinary varieties. A common garden vegetable. Its pungent, spicy flavor and vibrant colors make it a popular choice for culinary experimentation and bold dishes.",
-        "baker": "Jalapeño, habanero, serrano. Chef liked heat. Its strong, spicy flavor and vibrant colors make it a popular choice for bold flavors.",
-        "heiress": "Colorful vegetables. Still growing. Its strong, spicy flavor and vibrant colors make it a common sight in gardens.",
-        "explorer": "Multiple pepper varieties. Intentional planting. Its strong, spicy flavor and vibrant colors make it a common sight in gardens.",
+        "professor": "Pepper plants. Culinary varieties. Common garden vegetable.",
+        "baker": "Jalapeño, habanero, serrano. Chef liked heat. Good for bold flavors.",
+        "heiress": "Colorful vegetables. Still growing.",
+        "explorer": "Multiple pepper varieties. Intentional planting.",
         "fiduciary": "No significance."
       }
     }
