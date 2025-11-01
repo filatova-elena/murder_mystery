@@ -59,7 +59,7 @@
 
       document.getElementById('botanicalTitle').innerText = botanical.title || '';
       document.getElementById('botanicalContent').innerHTML = botanical.description || '';
-
+      
       const character = getCharacter();
       if (character && character !== 'default' && botanical.character_interpretations && botanical.character_interpretations[character]) {
         document.getElementById('characterAnalysis').innerHTML = `<p>${botanical.character_interpretations[character]}</p>`;
