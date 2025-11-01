@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Long Beach Urban Legends & Mysteries Podcast</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Long Beach Urban Legends & Mysteries</h1>
+    <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold);">Hosted by The Influencer - Research into Long Beach's Darkest Secrets</p>
+    
+    <div class="message-box">
+      <div class="diary-header" id="episodeHeader"></div>
+      <p id="episodeSummary" style="line-height: 1.6; margin-bottom: 20px;"></p>
+      
+      <h3 style="margin-top: 20px; color: var(--accent-gold);">Key Points:</h3>
+      <ul id="keyPoints" style="text-align: left; display: inline-block; line-height: 1.8;"></ul>
+    </div>
+
+    <div id="characterObservations" class="message-box" style="display: none;">
+      <h2>Your Investigation Notes:</h2>
+      <div id="characterAnalysis"></div>
+    </div>
+
+    <div class="page-nav">
+      <button class="button nav-button" id="prevBtn" onclick="previousEpisode()">← Previous Episode</button>
+      <button class="button nav-button" id="nextBtn" onclick="nextEpisode()">Next Episode →</button>
+    </div>
+    <div class="page-num" id="pageNum"></div>
+
+    <div class="nav-footer">
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../../assets/script.js"></script>
+  <script>
+    let podcastEpisodes = [];
+    let currentEpisodeIndex = 0;
+    let character = '';
+
+    async function loadPodcast() {
+      try {
+        const response = await fetch('../../data/long_beach_mysteries.json?t=' + new Date().getTime());
+        const data = await response.json();
+        
+        podcastEpisodes = data.podcast_series.episodes || [];
+        
+        if (!podcastEpisodes || podcastEpisodes.length === 0) {
+          document.getElementById('episodeHeader').innerText = 'Error: No episodes found in podcast data.';
+          console.error('No episodes found. Data structure:', data);
+          return;
+        }
+        
+        character = getCharacter();
+        if (!character || character === 'default') {
+          window.location.href = '../../index.html';
+          return;
+        }
+
+        displayEpisode(0);
+      } catch (error) {
+        console.error('Error loading podcast:', error);
+        document.getElementById('episodeHeader').innerText = 'Error loading episodes: ' + error.message;
+      }
+    }
+
+    function displayEpisode(index) {
+      if (index < 0 || index >= podcastEpisodes.length) return;
+      
+      currentEpisodeIndex = index;
+      const episode = podcastEpisodes[index];
+      
+      // Format the air date
+      const airDate = new Date(episode.air_date).toLocaleDateString('en-US', { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric' 
+      });
+      
+      document.getElementById('episodeHeader').innerText = `Episode ${episode.episode_number}: ${episode.title} (${airDate})`;
+      document.getElementById('episodeSummary').innerText = episode.summary;
+      
+      // Populate key points
+      const keyPointsList = document.getElementById('keyPoints');
+      keyPointsList.innerHTML = '';
+      episode.key_points.forEach(point => {
+        const li = document.createElement('li');
+        li.innerText = point;
+        keyPointsList.appendChild(li);
+      });
+      
+      // Update page number
+      document.getElementById('pageNum').innerText = `Episode ${index + 1} of ${podcastEpisodes.length}`;
+      
+      // Update navigation buttons
+      document.getElementById('prevBtn').disabled = index === 0;
+      document.getElementById('nextBtn').disabled = index === podcastEpisodes.length - 1;
+      
+      // Display character observations if available (for future use)
+      const obsDiv = document.getElementById('characterObservations');
+      if (episode.character_interpretations && episode.character_interpretations[character]) {
+        document.getElementById('characterAnalysis').innerHTML = `<p>${episode.character_interpretations[character]}</p>`;
+        obsDiv.style.display = 'block';
+      } else {
+        obsDiv.style.display = 'none';
+      }
+    }
+
+    function previousEpisode() {
+      displayEpisode(currentEpisodeIndex - 1);
+      window.scrollTo(0, 0);
+    }
+
+    function nextEpisode() {
+      displayEpisode(currentEpisodeIndex + 1);
+      window.scrollTo(0, 0);
+    }
+
+    // Initialize
+    if (!checkCharacterSelected('../../index.html')) {
+      // Redirect will happen
+    } else {
+      loadPodcast();
+    }
+
+    console.log('Long Beach Mysteries Podcast Viewer Loaded');
+  </script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+{
+  "rumors": [
+    {
+      "id": 53,
+      "text": "I heard there might be another heir to the Montrose estate—someone the family desperately wants to keep quiet. They say it's connected to something scandalous from way back. Makes you wonder what the Montroses are so afraid of...",
+      "possession": "OTHER",
+      "truth": true
+    },
+    {
+      "id": 54,
+      "text": "They say Cordelia had an affair with Thomas Whitmore—can you imagine? A sailor! A common merchant marine captain! And he never came back! Such scandal, and her family covered it all up, of course.",
+      "possession": "INFLUENCER",
+      "truth": true
+    },
+    {
+      "id": 55,
+      "text": "I heard that there was a baby at the Sullivan bakery when it burned down. The body was never recovered. Some say the baby survived! Can you imagine?",
+      "possession": "OTHER",
+      "truth": true
+    },
+    {
+      "id": 56,
+      "text": "Have you heard that the baker is a little strange? Sees things sometimes. My grandmother swore it ran in bloodlines; that's all.",
+      "possession": "PSYCHIC",
+      "truth": true
+    },
+    {
+      "id": 57,
+      "text": "I heard Dr. Thaddeus Crane had a child he never claimed—kept it completely hidden from society. Some say the child was raised far away, somewhere up north. Can you imagine the scandal if that came out?",
+      "possession": "OTHER",
+      "truth": false
+    },
+    {
+      "id": 58,
+      "text": "They say Cordelia Montrose was secretly writing love letters to someone—but not to Sebastian. A servant found them hidden in her room after she died. Who was she really in love with? Nobody knows, but her family destroyed the letters to protect her reputation.",
+      "possession": "OTHER",
+      "truth": false
+    },
+    {
+      "id": 59,
+      "text": "I heard Frankie Romano hid millions before the feds seized his assets in the 1960s.",
+      "possession": "EXPLORER",
+      "truth": true
+    },
+    {
+      "id": 60,
+      "text": "They say the Romano treasure might be hidden right here at the Montrose mansion.",
+      "possession": "EXPLORER",
+      "truth": true
+    },
+    {
+      "id": 61,
+      "text": "I heard that pocket watch belonged to some alchemist who was trying to harness the power of the planets. They say he used it to perform rituals during cosmic alignments—that's how he created his poisonous potions. Witchcraft, practically.",
+      "possession": "PSYCHIC",
+      "truth": false
+    },
+    {
+      "id": 62,
+      "text": "They say Cordelia Montrose used the rose garden for secret meetings—and not just with one man, if you know what I mean. The girl had quite the appetite for forbidden romance. Her family would have died if they knew what went on behind those roses.",
+      "possession": "INFLUENCER",
+      "truth": false
+    },
+    {
+      "id": 63,
+      "text": "I heard there's a sealed letter hidden somewhere in the mansion from decades ago. References to 'where the sun sets in the west' and mysterious paintings. Could be treasure, could be nonsense, but somebody sealed it for a reason.",
+      "possession": "EXPLORER",
+      "truth": false
+    },
+    {
+      "id": 64,
+      "text": "They say the feds knew exactly where Frankie Romano's money was but let him keep some of it. Political connections, you know? That's why they only recovered half. Corruption runs deep in Long Beach.",
+      "possession": "INFLUENCER",
+      "truth": false
+    },
+    {
+      "id": 65,
+      "text": "They say Sebastian Crane and Frankie Romano had some kind of secret partnership down at the docks. Nobody knows exactly what they were moving.",
+      "possession": "HEIRESS",
+      "truth": true
+    },
+    {
+      "id": 66,
+      "text": "I heard the Romanos had their fingers in every business along the waterfront. You couldn't sneeze at the harbor without their permission.",
+      "possession": "EXPLORER",
+      "truth": true
+    },
+    {
+      "id": 67,
+      "text": "That dressmaker fellow—Elias Monroe—he was absolutely moonstruck over Cordelia Montrose. They say he never recovered when she chose Sebastian instead.",
+      "possession": "OTHER",
+      "truth": true
+    },
+    {
+      "id": 68,
+      "text": "I heard Cordelia Montrose had the baker make special bread for her—some kind of recipe with rose petals. She was mad for that particular loaf.",
+      "possession": "PSYCHIC",
+      "truth": true
+    },
+    {
+      "id": 69,
+      "text": "I heard Eleanor Sullivan came from money originally—respectable people who had to give her up. Something scandalous in her past, they say.",
+      "possession": "HEIRESS",
+      "truth": true
+    },
+    {
+      "id": 70,
+      "text": "The Romano operation isn't what it appears to be on the surface. Their shipping business is a front for something far more lucrative—and illegal.",
+      "possession": "EXPLORER",
+      "truth": true
+    },
+    {
+      "id": 71,
+      "text": "They say if you go into that old Montrose place late at night, you can feel her presence. The servants won't even go down to the wine cellar anymore.",
+      "possession": "OTHER",
+      "truth": true
+    },
+    {
+      "id": 72,
+      "text": "I heard the fire that destroyed the Sullivan bakery was set on purpose. Someone wanted that family eliminated.",
+      "possession": "PSYCHIC",
+      "truth": true
+    },
+    {
+      "id": 73,
+      "text": "I heard Frankie Romano ordered Sebastian Crane's death. Sebastian knew too much, wanted out—couldn't allow that.",
+      "possession": "PROFESSOR",
+      "truth": false
+    },
+    {
+      "id": 74,
+      "text": "They say Sebastian poisoned his own fiancée in a fit of rage—he couldn't stand the thought of her with anyone else. Absolutely mad.",
+      "possession": "OTHER",
+      "truth": false
+    }
+  ]
+}

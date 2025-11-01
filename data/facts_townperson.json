@@ -1,0 +1,46 @@
+{
+  "facts": [
+    {
+      "id": 1,
+      "text": "The Heartbroken Ghost that haunts the Montrose mansion is Cordelia Montrose—a young society woman from one of Long Beach's wealthiest families. She died in October 1925 under mysterious circumstances.",
+      "character": "townperson",
+      "truth": true
+    },
+    {
+      "id": 2,
+      "text": "Alice Whitmore—The Lonely Ghost, people call her—was a beautiful young woman with striking features. There are old photographs of her in a blue dress from the 1920s. She was connected to the Montrose family somehow, and she died around the same time as Cordelia.",
+      "character": "townperson",
+      "truth": true
+    },
+    {
+      "id": 3,
+      "text": "Dr. Thaddeus Crane is a highly respected physician in Long Beach. He's been a prominent figure in the medical community for decades, very proper and well-regarded by everyone who knows him.",
+      "character": "townperson",
+      "truth": true
+    },
+    {
+      "id": 4,
+      "text": "The Montrose family is old money—generations of wealth. They own several estates: the main mansion here in Long Beach, and I've heard they have properties in Boston as well. They're the kind of family that defines high society in this town.",
+      "character": "townperson",
+      "truth": true
+    },
+    {
+      "id": 5,
+      "text": "Frankie Romano controlled everything that moved through the Port of Long Beach during Prohibition in the 1920s. He ran bootlegging operations disguised as legitimate import businesses. The man was powerful and ruthless—everyone knew it.",
+      "character": "townperson",
+      "truth": true
+    },
+    {
+      "id": 6,
+      "text": "The Romano family fortune collapsed in the 1960s when the IRS came after them. Federal authorities seized their assets, froze their accounts, and auctioned their properties. What was once a flashy, powerful empire vanished almost overnight.",
+      "character": "townperson",
+      "truth": true
+    },
+    {
+      "id": 7,
+      "text": "During Prohibition, the wealthy society crowd in Long Beach would gather at secret speakeasy parties. These were illegal cocktail gatherings where even the most respectable families would go to feel scandalous and break the rules. That's where some of the strangest connections were made.",
+      "character": "townperson",
+      "truth": true
+    }
+  ]
+}
