@@ -16,8 +16,10 @@
       <p style="font-size: 0.95em; opacity: 0.9;">Genuinely cheerful, warm, perpetually covered in flour. An orphan with a mysterious past.</p>
     </div>
 
-    <div class="nav-footer" style="margin: 30px 0; border: none; padding: 0;">
-      <a href="/" class="button nav-button">Begin Investigation</a>
+    <div class="nav-footer" style="margin: 30px 0; border: none; padding: 0; text-align: center;">
+      <button class="button nav-button" onclick="selectBaker()" style="padding: 15px 40px; font-size: 1.1em;">
+        Become the Baker
+      </button>
     </div>
 
     <div class="message-box">
@@ -90,6 +92,11 @@
 
   <script src="../assets/script.js"></script>
   <script>
+    function selectBaker() {
+      localStorage.setItem('characterName', 'baker');
+      window.location.href = '/index.html';
+    }
+    
     setCharacter('baker');
   </script>
 </body>
