@@ -52,16 +52,8 @@
 
       const character = getCharacter();
       if (character && character !== 'default' && data.character_interpretations && data.character_interpretations[character]) {
-        // Parse character interpretations if they're in the content
-        const content = data.content;
-        const characterName = character.charAt(0).toUpperCase() + character.slice(1);
-        const regex = new RegExp(characterName + ': \\'([^']*)\'', 'i');
-        const match = content.match(regex);
-        
-        if (match && match[1]) {
-          document.getElementById('characterAnalysis').innerHTML = `<p>${match[1]}</p>`;
-          document.getElementById('characterObservations').style.display = 'block';
-        }
+        document.getElementById('characterAnalysis').innerHTML = `<p>${data.character_interpretations[character]}</p>`;
+        document.getElementById('characterObservations').style.display = 'block';
       }
     }
 
