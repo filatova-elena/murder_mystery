@@ -37,6 +37,7 @@ CARDS_PER_PAGE = COLS * ROWS
 CHARACTER_NAMES = {
     'townperson_detective': 'Townperson\nDetective',
     'townperson_journalist': 'Townperson\nJournalist',
+    'townperson_animalexpert': 'Townperson\nAnimal Expert',
 }
 
 def draw_ornate_border(draw, x, y, width, height, line_width=2, color='#8B7355'):
