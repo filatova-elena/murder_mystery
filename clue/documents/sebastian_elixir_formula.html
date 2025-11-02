@@ -43,16 +43,16 @@
       const response = await fetch('../../data/documents/sebastian_elixir_formula.json');
       const data = response.ok ? await response.json() : null;
       
-      if (!data) {
+      if (!data || !data.document) {
         document.getElementById('documentContent').innerText = 'Error loading document.';
         return;
       }
 
-      document.getElementById('documentContent').innerText = data.content || '';
+      document.getElementById('documentContent').innerText = data.document.content || '';
 
       const character = getCharacter();
-      if (character && character !== 'default' && data.character_interpretations && data.character_interpretations[character]) {
-        document.getElementById('characterAnalysis').innerHTML = `<p>${data.character_interpretations[character]}</p>`;
+      if (character && character !== 'default' && data.document.character_interpretations && data.document.character_interpretations[character]) {
+        document.getElementById('characterAnalysis').innerHTML = `<p>${data.document.character_interpretations[character]}</p>`;
         document.getElementById('characterObservations').style.display = 'block';
       }
     }
