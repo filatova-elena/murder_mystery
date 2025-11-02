@@ -37,6 +37,8 @@ to_print/
 rumor_images/
 fact_images/
 fact_images_character/
+images/
+qr_codes/
 
 # Environment variables
 .env
