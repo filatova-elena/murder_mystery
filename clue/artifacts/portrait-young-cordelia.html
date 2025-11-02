@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portrait of Young Cordelia Montrose</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <style>
+    .artifact-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .artifact-header {
+      background-color: var(--secondary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 30px;
+      margin: 30px 0;
+      color: var(--text-light);
+    }
+    .artifact-type {
+      font-style: italic;
+      color: var(--accent-gold);
+      margin-bottom: 10px;
+    }
+    .artifact-content {
+      background-color: var(--secondary-dark);
+      border: 2px solid var(--accent-gold);
+      padding: 30px;
+      margin: 30px 0;
+      line-height: 1.8;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+  <div class="container artifact-container">
+    <div class="artifact-header">
+      <h1 id="artifactTitle">Portrait of Young Cordelia Montrose</h1>
+      <p class="artifact-type" id="artifactType">Family Portrait - Heirloom</p>
+    </div>
+
+    <div class="artifact-content" id="artifactContent"></div>
+
+    <div id="characterObservations" class="message-box" style="display: none;">
+      <h2>You observe...</h2>
+      <div id="characterAnalysis"></div>
+    </div>
+
+    <div class="nav-footer">
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../../assets/script.js"></script>
+  <script>
+    const ARTIFACT_ID = 'portrait_young_cordelia';
+
+    async function loadArtifact() {
+      const response = await fetch('../../data/artifacts.json?t=' + new Date().getTime());
+      const data = response.ok ? await response.json() : null;
+      
+      if (!data) {
+        document.getElementById('artifactContent').innerText = 'Error loading artifact.';
+        return;
+      }
+
+      const artifact = data.artifacts.find(a => a.id === ARTIFACT_ID);
+      
+      if (!artifact) {
+        document.getElementById('artifactContent').innerText = 'Artifact not found.';
+        return;
+      }
+
+      document.getElementById('artifactTitle').innerText = artifact.name || '';
+      document.getElementById('artifactType').innerText = artifact.type || '';
+      
+      document.getElementById('artifactContent').innerHTML = artifact.description || 'No additional details available.';
+
+      const character = getCharacter();
+      if (character && character !== 'default' && artifact.character_interpretations && artifact.character_interpretations[character]) {
+        document.getElementById('characterAnalysis').innerHTML = `<p>${artifact.character_interpretations[character]}</p>`;
+        document.getElementById('characterObservations').style.display = 'block';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      if (!checkCharacterSelected('/murder_mystery/index.html')) {} else { loadArtifact(); }
+    });
+  </script>
+</body>
+</html>

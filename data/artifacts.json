@@ -194,6 +194,26 @@
         "art_collector": "Someone used this book to leave deliberate clues. Handwritten annotations appear throughout the pages—repeated references to vessels and what they might contain. One annotation simply reads 'beauty hides secrets' with an arrow pointing to a particular painting. The recurring theme across the marginalia is concealment. 'What appears empty may hold everything.' These notes reference specific paintings, particularly the Italian diptych. Someone was studying these paintings, looking for something hidden in plain sight.",
         "explorer": "Ray Turner was documenting smuggling operations through coded annotations. 'Vessels,' 'containment,' 'beauty hides secrets'—all literal references to how contraband was moved. Find: 1) Ray Turner's personal papers and correspondence, 2) All his annotations in this book—create a full list of paintings he marked and his notes about each, 3) Whether Turner was connected to the Romano family or law enforcement. These annotations are a roadmap of the smuggling operation. Pay special attention to paintings that weren't recovered or relocated. Turner might be pointing you to hidden valuables or evidence."
       }
+    },
+    {
+      "id": "portrait_margaret_montrose",
+      "name": "Portrait of Margaret Montrose",
+      "type": "Family Portrait - Heirloom",
+      "description": "A formal oil painting of an elegant woman in her prime, dressed in jewels and fine silks. Her expression is serene but carries an unmistakable strength.",
+      "character_interpretations": {
+        "art_collector": "Margaret Montrose in her youth—the matriarch who built the family legacy. The refinement and dignity in this portrait speaks to her status and influence.",
+        "heiress": "My grandmother, as I wish I could have known her. She was the true keeper of Montrose traditions and secrets."
+      }
+    },
+    {
+      "id": "portrait_young_cordelia",
+      "name": "Portrait of Young Cordelia Montrose",
+      "type": "Family Portrait - Heirloom",
+      "description": "A tender portrait of a young woman in her late teens, painted with remarkable affection. Her eyes seem to hold both hope and melancholy, as if she alone knew what the future held.",
+      "character_interpretations": {
+        "art_collector": "Cordelia before the tragedy, captured at the moment of her greatest beauty and promise. This is the woman Sebastian loved.",
+        "heiress": "My mother as she was. So full of life, so full of dreams. This portrait haunts me."
+      }
     }
   ]
 }

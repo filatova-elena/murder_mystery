@@ -1,2 +1,48 @@
-qr_codes_grid.pdf
-fact_cards2.pdf
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated files - large binaries
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mov
+*.avi
+
+# Specific generated folders
+to_print/
+rumor_images/
+fact_images/
+fact_images_character/
+
+# Environment variables
+.env
+.env.local
+
+# Caches and temporary files
+.cache/
+*.cache
+*.tmp
