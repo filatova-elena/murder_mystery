@@ -39,6 +39,7 @@ fact_images/
 fact_images_character/
 images/
 qr_codes/
+scripts/
 
 # Environment variables
 .env
