@@ -73,3 +73,4 @@ if __name__ == '__main__':
     print("🦜 Generating Animal Expert Townperson...")
     print("=" * 60)
     generate_animalexpert_image()
+

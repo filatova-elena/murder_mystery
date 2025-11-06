@@ -72,3 +72,4 @@ if __name__ == '__main__':
     print("📰 Regenerating Journalist as Female...")
     print("=" * 60)
     regenerate_journalist_image()
+

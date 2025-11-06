@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 1: Cordelia's Lover</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Chapter 1: Cordelia's Lover</h1>
+    
+    <div class="diary-entry">
+      <div class="diary-header" id="entryDate"></div>
+      <div class="diary-text" id="entryContent"></div>
+    </div>
+
+    <div class="page-nav">
+      <button class="button nav-button" id="prevBtn" onclick="previousEntry()">← Previous Entry</button>
+      <button class="button nav-button" id="nextBtn" onclick="nextEntry()">Next Entry →</button>
+    </div>
+    <div class="page-num" id="pageNum"></div>
+
+    <div class="nav-footer">
+      <a href="book_index.html" class="button nav-button">← Book Index</a>
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../../assets/script.js"></script>
+  <script>
+    let entries = [];
+    let currentEntryIndex = 0;
+
+    async function loadChapter() {
+      try {
+        const response = await fetch('../../data/book/chapter_cordelia_lover.json?t=' + new Date().getTime());
+        const data = await response.json();
+        
+        entries = data.entries || [];
+        
+        if (!entries || entries.length === 0) {
+          document.getElementById('entryContent').innerText = 'Error: No entries found.';
+          return;
+        }
+        
+        displayEntry(0);
+      } catch (error) {
+        console.error('Error loading chapter:', error);
+        document.getElementById('entryContent').innerText = 'Error loading chapter: ' + error.message;
+      }
+    }
+
+    function displayEntry(index) {
+      if (index < 0 || index >= entries.length) return;
+      
+      currentEntryIndex = index;
+      const entry = entries[index];
+      
+      let formattedDate = entry.date;
+      if (entry.date) {
+        const dateParts = entry.date.split('-');
+        if (dateParts.length === 3) {
+          const date = new Date(entry.date);
+          formattedDate = date.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          });
+        }
+      }
+      
+      document.getElementById('entryDate').innerText = formattedDate + ' - ' + entry.location;
+      
+      let contentHTML = entry.content.replace(/\n\n/g, '<br><br>');
+      if (entry.is_italic) {
+        contentHTML = '<em>' + contentHTML + '</em>';
+      }
+      document.getElementById('entryContent').innerHTML = contentHTML;
+      
+      document.getElementById('pageNum').innerText = `Entry ${index + 1} of ${entries.length}`;
+      
+      document.getElementById('prevBtn').disabled = index === 0;
+      document.getElementById('nextBtn').disabled = index === entries.length - 1;
+    }
+
+    function previousEntry() {
+      displayEntry(currentEntryIndex - 1);
+      window.scrollTo(0, 0);
+    }
+
+    function nextEntry() {
+      displayEntry(currentEntryIndex + 1);
+      window.scrollTo(0, 0);
+    }
+
+    loadChapter();
+  </script>
+</body>
+</html>

@@ -127,3 +127,4 @@ def create_ghost_qr_pdf():
 
 if __name__ == '__main__':
     create_ghost_qr_pdf()
+

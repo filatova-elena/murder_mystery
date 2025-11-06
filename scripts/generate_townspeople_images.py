@@ -100,3 +100,4 @@ if __name__ == '__main__':
     print("🔮 Generating Townspeople Characters...")
     print("=" * 60)
     generate_townspeople_images()
+

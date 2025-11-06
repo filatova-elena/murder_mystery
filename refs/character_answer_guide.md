@@ -228,3 +228,4 @@
 4. ⚠️ Why Explorer feels drawn to mansion (ancestral/reincarnation explanation not in data)
 5. ⚠️ Exact details of Cordelia's pregnancy/disappearance in early 1925 (implied but not documented)
 6. ⚠️ Specific mechanism of how Thaddeus substituted the poison in formula (not documented)
+
