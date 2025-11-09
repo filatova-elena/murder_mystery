@@ -26,9 +26,13 @@ Thumbs.db
 *.pdf
 !assets/Murder_Mystery_Book.pdf
 *.png
+!assets/*.png
 *.jpg
+!assets/*.jpg
 *.jpeg
+!assets/*.jpeg
 *.gif
+!assets/*.gif
 *.mp4
 *.mov
 *.avi
