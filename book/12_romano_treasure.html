@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{CHAPTER_TITLE}}</title>
+  <title>Chapter 12: Romano Treasure</title>
   <link rel="stylesheet" href="../assets/style.css">
   <style>
     /* Compact book reader styling */
@@ -109,7 +109,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>{{CHAPTER_TITLE}}</h1>
+    <h1>Chapter 12: Romano Treasure</h1>
     
     <div class="diary-entry">
       <div class="diary-header" id="entryDate"></div>
@@ -147,7 +147,7 @@
       { file: '12_romano_treasure.html', name: 'Chapter 12: Romano Treasure', data: '12_romano_treasure.json' },
       { file: '13_secrets_unravelled.html', name: 'Chapter 13: Secrets Unravelled', data: '13_secrets_unravelled.json' },
       { file: '14_silent_witness.html', name: 'Chapter 14: Silent Witness', data: '14_silent_witness.json' },
-      { file: 'the_end.html', name: 'The End', data: null }
+      { file: '99_epilogue.html', name: 'Epilogue', data: '99_epilogue.json' }
     ];
 
     let entries = [];
@@ -156,7 +156,7 @@
 
     async function loadChapter() {
       try {
-        const response = await fetch('../data/book/{{DATA_FILE}}?t=' + new Date().getTime());
+        const response = await fetch('../data/book/12_romano_treasure.json?t=' + new Date().getTime());
         const data = await response.json();
         
         entries = data.entries || [];
@@ -292,18 +292,12 @@
 
     async function navigateToChapter(chapterIndex, entryPosition = 'first') {
       const targetChapter = chapters[chapterIndex];
-      // Special handling for "The End" page (no hash needed)
-      if (targetChapter.data === null) {
-        window.location.href = targetChapter.file;
-      } else {
-        // Navigate to the next chapter's HTML file with hash
-        const hashValue = entryPosition === 'last' ? (entries.length) : '1';
-        window.location.href = targetChapter.file + '#' + hashValue;
-      }
+      // Navigate to the next chapter's HTML file
+      const hashValue = entryPosition === 'last' ? (entries.length) : '1';
+      window.location.href = targetChapter.file + '#' + hashValue;
     }
 
     loadChapter();
   </script>
 </body>
 </html>
-
