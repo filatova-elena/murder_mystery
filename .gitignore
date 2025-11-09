@@ -23,6 +23,8 @@ build/
 Thumbs.db
 
 # Generated files - large binaries
+*.pdf
+!assets/Murder_Mystery_Book.pdf
 *.png
 *.jpg
 *.jpeg
@@ -32,7 +34,7 @@ Thumbs.db
 *.avi
 
 # Specific generated folders
-# to_print/ - NOT ignored, PDF book should be committed
+to_print/
 rumor_images/
 fact_images/
 fact_images_character/
