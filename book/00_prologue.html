@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prologue</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <style>
+    /* Compact book reader styling */
+    body {
+      padding: 10px;
+    }
+    
+    .container {
+      padding: 20px;
+      max-width: 900px;
+    }
+    
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+    
+    .diary-entry {
+      padding: 15px;
+      margin: 0;
+      line-height: 1.6;
+      border: none;
+    }
+    
+    .diary-header {
+      margin-bottom: 12px;
+      font-size: 0.95em;
+    }
+    
+    .diary-text {
+      margin-bottom: 10px;
+      font-size: 0.95em;
+    }
+    
+    .diary-text p {
+      margin: 20px 0;
+      line-height: 2;
+    }
+    
+    /* Remove styles from embedded diary entries */
+    .diary-text div.diary-entry {
+      all: revert;
+      border-left: 2px solid var(--accent-gold);
+      padding-left: 12px;
+      margin: 20px 0 20px 20px;
+    }
+    
+    .diary-text em {
+      font-style: italic;
+    }
+    
+    .page-nav {
+      margin-top: 15px;
+      gap: 8px;
+    }
+    
+    .nav-button {
+      padding: 8px 16px;
+      font-size: 0.9em;
+      margin: 5px 2px;
+    }
+    
+    .page-num {
+      margin: 10px 0;
+      font-size: 0.9em;
+      color: var(--accent-gold);
+    }
+    
+    .nav-footer {
+      margin-top: 15px;
+      padding-top: 15px;
+    }
+    
+    /* Nested diary entries and special content */
+    .narrative-prose {
+      margin: 8px 0;
+      padding: 0;
+    }
+    
+    .letter {
+      margin: 8px 0;
+      padding: 8px 12px;
+      background-color: rgba(212, 165, 116, 0.08);
+      border-left: 2px solid var(--accent-gold);
+    }
+    
+    .recipe-section {
+      margin: 10px 0;
+      padding: 10px 12px;
+      background-color: rgba(212, 165, 116, 0.08);
+      border-left: 2px solid var(--accent-gold);
+      font-size: 0.92em;
+    }
+    
+    .recipe-note {
+      margin: 8px 0;
+      padding: 8px 12px;
+      background-color: rgba(212, 165, 116, 0.08);
+      border-left: 2px solid var(--accent-gold);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Prologue</h1>
+    
+    <div class="diary-entry">
+      <div class="diary-header" id="entryDate"></div>
+      <div class="diary-text" id="entryContent"></div>
+    </div>
+
+    <div class="page-nav">
+      <button class="button nav-button" id="prevBtn" onclick="previousEntry()">← Previous Entry</button>
+      <button class="button nav-button" id="nextBtn" onclick="nextEntry()">Next Entry →</button>
+    </div>
+    <div class="page-num" id="pageNum"></div>
+
+    <div class="nav-footer">
+      <a href="book_index.html" class="button nav-button">← Book Index</a>
+      <a href="/" class="button nav-button">Return to Investigation</a>
+    </div>
+  </div>
+
+  <script src="../assets/script.js"></script>
+  <script>
+    // Chapter sequence for seamless navigation
+    const chapters = [
+      { file: '00_prologue.html', name: 'Prologue', data: '00_prologue.json' },
+      { file: '01_cordelia_lover.html', name: 'Chapter 1: Cordelia\'s Lover', data: '01_cordelia_lover.json' },
+      { file: '02_the_alchemist.html', name: 'Chapter 2: The Alchemist', data: '02_the_alchemist.json' },
+      { file: '03_doctors_orders.html', name: 'Chapter 3: Doctor\'s Orders', data: '03_doctors_orders.json' },
+      { file: '04_cordelia_concern.html', name: 'Chapter 4: Cordelia\'s Concern', data: '04_cordelia_concern.json' },
+      { file: '05_mortician_discretion.html', name: 'Chapter 5: Mortician\'s Discretion', data: '05_mortician_discretion.json' },
+      { file: '06_investigation_begins.html', name: 'Chapter 6: Investigation Begins', data: '06_investigation_begins.json' },
+      { file: '07_thomas_whitmore.html', name: 'Chapter 7: Thomas Whitmore', data: '07_thomas_whitmore.json' },
+      { file: '08_elixir_eternal_love.html', name: 'Chapter 8: Elixir of Eternal Love', data: '08_elixir_eternal_love.json' },
+      { file: '09_dressmaker_devotion.html', name: 'Chapter 9: Dressmaker\'s Devotion', data: '09_dressmaker_devotion.json' },
+      { file: '10_bakers_inheritance.html', name: 'Chapter 10: Baker\'s Inheritance', data: '10_bakers_inheritance.json' },
+      { file: '11_cordelias_last_words.html', name: 'Chapter 11: Cordelia\'s Last Words', data: '11_cordelias_last_words.json' },
+      { file: '12_romano_treasure.html', name: 'Chapter 12: Romano Treasure', data: '12_romano_treasure.json' },
+      { file: '13_secrets_unravelled.html', name: 'Chapter 13: Secrets Unravelled', data: '13_secrets_unravelled.json' },
+      { file: '14_silent_witness.html', name: 'Chapter 14: Silent Witness', data: '14_silent_witness.json' },
+      { file: '99_epilogue.html', name: 'Epilogue', data: '99_epilogue.json' }
+    ];
+
+    let entries = [];
+    let currentEntryIndex = 0;
+    let currentChapterIndex = 0;
+
+    async function loadChapter() {
+      try {
+        const response = await fetch('../data/book/00_prologue.json?t=' + new Date().getTime());
+        const data = await response.json();
+        
+        entries = data.entries || [];
+        
+        if (!entries || entries.length === 0) {
+          document.getElementById('entryContent').innerText = 'Error: No entries found.';
+          return;
+        }
+        
+        // Check if we have a hash indicating which entry to load
+        let entryToLoad = 0;
+        if (window.location.hash) {
+          const hashValue = window.location.hash.substring(1); // Remove the #
+          const hashNum = parseInt(hashValue);
+          if (!isNaN(hashNum) && hashNum > 0 && hashNum <= entries.length) {
+            entryToLoad = hashNum - 1; // Convert to 0-based index
+          }
+        }
+        
+        displayEntry(entryToLoad);
+      } catch (error) {
+        console.error('Error loading chapter:', error);
+        document.getElementById('entryContent').innerText = 'Error loading chapter: ' + error.message;
+      }
+    }
+
+    function displayEntry(index) {
+      if (index < 0 || index >= entries.length) return;
+      
+      currentEntryIndex = index;
+      
+      // Update the URL hash to reflect current entry (1-based for display)
+      window.location.hash = (index + 1);
+      
+      const entry = entries[index];
+      
+      // Format the date
+      let formattedDate = entry.date;
+      if (entry.date) {
+        const dateParts = entry.date.split('-');
+        if (dateParts.length === 3) {
+          // Parse date manually to avoid UTC timezone conversion issues
+          const year = parseInt(dateParts[0]);
+          const month = parseInt(dateParts[1]) - 1; // Month is 0-indexed
+          const day = parseInt(dateParts[2]);
+          const date = new Date(year, month, day);
+          formattedDate = date.toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+          });
+        }
+      }
+      
+      document.getElementById('entryDate').innerText = formattedDate + ' - ' + entry.location;
+      
+      let contentHTML = entry.content;
+      
+      // Split by double newlines into paragraphs, but preserve HTML
+      let paragraphs = contentHTML.split(/\n\n+/).filter(p => p.trim());
+      let formattedContent = '';
+      
+      for (let para of paragraphs) {
+        // Check if this paragraph contains HTML tags
+        if (para.includes('<')) {
+          // It's already formatted HTML, preserve it
+          formattedContent += '<p>' + para + '</p>';
+        } else {
+          // Plain text paragraph
+          formattedContent += '<p>' + para.replace(/\n/g, ' ') + '</p>';
+        }
+      }
+      
+      if (entry.is_italic) {
+        formattedContent = '<em>' + formattedContent + '</em>';
+      }
+      document.getElementById('entryContent').innerHTML = formattedContent;
+      
+      document.getElementById('pageNum').innerText = `Entry ${index + 1} of ${entries.length}`;
+      
+      // Check if this is the first/last entry in the chapter
+      const isFirstEntry = index === 0;
+      const isLastEntry = index === entries.length - 1;
+      const isFirstChapter = currentChapterIndex === 0;
+      const isLastChapter = currentChapterIndex === chapters.length - 1;
+      
+      // Update prev button - show "← Previous Chapter" if on first entry of non-first chapter
+      const prevBtn = document.getElementById('prevBtn');
+      if (isFirstEntry && isFirstChapter) {
+        prevBtn.disabled = true;
+        prevBtn.textContent = '← Previous Entry';
+      } else if (isFirstEntry && currentChapterIndex > 0) {
+        prevBtn.disabled = false;
+        prevBtn.textContent = '← Previous Chapter';
+      } else {
+        prevBtn.disabled = false;
+        prevBtn.textContent = '← Previous Entry';
+      }
+      
+      // Update next button - show "Next Chapter →" if on last entry
+      const nextBtn = document.getElementById('nextBtn');
+      if (isLastEntry && !isLastChapter) {
+        nextBtn.disabled = false;
+        nextBtn.textContent = 'Next Chapter →';
+      } else if (isLastEntry && isLastChapter) {
+        nextBtn.disabled = true;
+        nextBtn.textContent = 'Next Entry →';
+      } else {
+        nextBtn.disabled = false;
+        nextBtn.textContent = 'Next Entry →';
+      }
+    }
+
+    function previousEntry() {
+      if (currentEntryIndex > 0) {
+        displayEntry(currentEntryIndex - 1);
+        window.scrollTo(0, 0);
+      } else if (currentChapterIndex > 0) {
+        // Go to previous chapter's last entry
+        navigateToChapter(currentChapterIndex - 1, 'last');
+      }
+    }
+
+    function nextEntry() {
+      if (currentEntryIndex < entries.length - 1) {
+        displayEntry(currentEntryIndex + 1);
+        window.scrollTo(0, 0);
+      } else if (currentChapterIndex < chapters.length - 1) {
+        // Go to next chapter's first entry
+        navigateToChapter(currentChapterIndex + 1, 'first');
+      }
+    }
+
+    async function navigateToChapter(chapterIndex, entryPosition = 'first') {
+      const targetChapter = chapters[chapterIndex];
+      // Navigate to the next chapter's HTML file
+      const hashValue = entryPosition === 'last' ? (entries.length) : '1';
+      window.location.href = targetChapter.file + '#' + hashValue;
+    }
+
+    loadChapter();
+  </script>
+</body>
+</html>

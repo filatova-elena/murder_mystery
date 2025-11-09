@@ -23,7 +23,6 @@ build/
 Thumbs.db
 
 # Generated files - large binaries
-*.pdf
 *.png
 *.jpg
 *.jpeg
@@ -33,7 +32,7 @@ Thumbs.db
 *.avi
 
 # Specific generated folders
-to_print/
+# to_print/ - NOT ignored, PDF book should be committed
 rumor_images/
 fact_images/
 fact_images_character/

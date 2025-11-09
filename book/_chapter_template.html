@@ -132,20 +132,21 @@
   <script>
     // Chapter sequence for seamless navigation
     const chapters = [
-      { file: 'chapter_prologue.html', name: 'Prologue', data: 'prologue.json' },
-      { file: 'chapter_cordelia_lover.html', name: 'Chapter 1: Cordelia\'s Lover', data: 'chapter_cordelia_lover.json' },
-      { file: 'chapter_the_alchemist.html', name: 'Chapter 2: The Alchemist', data: 'chapter_the_alchemist.json' },
-      { file: 'chapter_doctors_orders.html', name: 'Chapter 3: Doctor\'s Orders', data: 'chapter_doctors_orders.json' },
-      { file: 'chapter_cordelia_concern.html', name: 'Chapter 4: Cordelia\'s Concern', data: 'chapter_cordelia_concern.json' },
-      { file: 'chapter_mortician_discretion.html', name: 'Chapter 5: Mortician\'s Discretion', data: 'chapter_mortician_discretion.json' },
-      { file: 'chapter_investigation_begins.html', name: 'Chapter 6: Investigation Begins', data: 'chapter_investigation_begins.json' },
-      { file: 'chapter_thomas_whitmore.html', name: 'Chapter 7: Ghost of Thomas Whitmore', data: 'chapter_thomas_whitmore.json' },
-      { file: 'chapter_elixir_eternal_love.html', name: 'Chapter 8: Elixir of Eternal Love', data: 'chapter_elixir_eternal_love.json' },
-      { file: 'chapter_dressmaker_devotion.html', name: 'Chapter 9: Dressmaker\'s Devotion', data: 'chapter_dressmaker_devotion.json' },
-      { file: 'chapter_cordelia_decline.html', name: 'Chapter 10: Cordelia\'s Decline', data: 'chapter_cordelia_decline.json' },
-      { file: 'chapter_romano_treasure.html', name: 'Chapter 11: Search for Romano Treasure', data: 'chapter_romano_treasure.json' },
-      { file: 'chapter_secrets_unravelled.html', name: 'Chapter 12: Secrets Unravelled', data: 'chapter_secrets_unravelled.json' },
-      { file: 'chapter_bakers_inheritance.html', name: 'Chapter 13: Baker\'s Inheritance', data: 'chapter_bakers_inheritance.json' }
+      { file: '00_prologue.html', name: 'Prologue', data: '00_prologue.json' },
+      { file: '01_cordelia_lover.html', name: 'Chapter 1: Cordelia\'s Lover', data: '01_cordelia_lover.json' },
+      { file: '02_the_alchemist.html', name: 'Chapter 2: The Alchemist', data: '02_the_alchemist.json' },
+      { file: '03_doctors_orders.html', name: 'Chapter 3: Doctor\'s Orders', data: '03_doctors_orders.json' },
+      { file: '04_cordelia_concern.html', name: 'Chapter 4: Cordelia\'s Concern', data: '04_cordelia_concern.json' },
+      { file: '05_mortician_discretion.html', name: 'Chapter 5: Mortician\'s Discretion', data: '05_mortician_discretion.json' },
+      { file: '06_investigation_begins.html', name: 'Chapter 6: Investigation Begins', data: '06_investigation_begins.json' },
+      { file: '07_thomas_whitmore.html', name: 'Chapter 7: Thomas Whitmore', data: '07_thomas_whitmore.json' },
+      { file: '08_elixir_eternal_love.html', name: 'Chapter 8: Elixir of Eternal Love', data: '08_elixir_eternal_love.json' },
+      { file: '09_dressmaker_devotion.html', name: 'Chapter 9: Dressmaker\'s Devotion', data: '09_dressmaker_devotion.json' },
+      { file: '10_bakers_inheritance.html', name: 'Chapter 10: Baker\'s Inheritance', data: '10_bakers_inheritance.json' },
+      { file: '11_cordelias_last_words.html', name: 'Chapter 11: Cordelia\'s Last Words', data: '11_cordelias_last_words.json' },
+      { file: '12_romano_treasure.html', name: 'Chapter 12: Romano Treasure', data: '12_romano_treasure.json' },
+      { file: '13_secrets_unravelled.html', name: 'Chapter 13: Secrets Unravelled', data: '13_secrets_unravelled.json' },
+      { file: '14_silent_witness.html', name: 'Chapter 14: Silent Witness', data: '14_silent_witness.json' }
     ];
 
     let entries = [];
@@ -164,12 +165,14 @@
           return;
         }
         
-        // Check if we came from navigation with a hash
+        // Check if we have a hash indicating which entry to load
         let entryToLoad = 0;
-        if (window.location.hash === '#last') {
-          entryToLoad = entries.length - 1;
-        } else if (window.location.hash === '#first') {
-          entryToLoad = 0;
+        if (window.location.hash) {
+          const hashValue = window.location.hash.substring(1); // Remove the #
+          const hashNum = parseInt(hashValue);
+          if (!isNaN(hashNum) && hashNum > 0 && hashNum <= entries.length) {
+            entryToLoad = hashNum - 1; // Convert to 0-based index
+          }
         }
         
         displayEntry(entryToLoad);
@@ -183,6 +186,10 @@
       if (index < 0 || index >= entries.length) return;
       
       currentEntryIndex = index;
+      
+      // Update the URL hash to reflect current entry (1-based for display)
+      window.location.hash = (index + 1);
+      
       const entry = entries[index];
       
       // Format the date
@@ -229,16 +236,31 @@
       
       document.getElementById('pageNum').innerText = `Entry ${index + 1} of ${entries.length}`;
       
-      // Check if this is the last entry in the chapter
+      // Check if this is the first/last entry in the chapter
+      const isFirstEntry = index === 0;
       const isLastEntry = index === entries.length - 1;
-      document.getElementById('prevBtn').disabled = index === 0;
+      const isFirstChapter = currentChapterIndex === 0;
+      const isLastChapter = currentChapterIndex === chapters.length - 1;
+      
+      // Update prev button - show "← Previous Chapter" if on first entry of non-first chapter
+      const prevBtn = document.getElementById('prevBtn');
+      if (isFirstEntry && isFirstChapter) {
+        prevBtn.disabled = true;
+        prevBtn.textContent = '← Previous Entry';
+      } else if (isFirstEntry && currentChapterIndex > 0) {
+        prevBtn.disabled = false;
+        prevBtn.textContent = '← Previous Chapter';
+      } else {
+        prevBtn.disabled = false;
+        prevBtn.textContent = '← Previous Entry';
+      }
       
       // Update next button - show "Next Chapter →" if on last entry
       const nextBtn = document.getElementById('nextBtn');
-      if (isLastEntry && currentChapterIndex < chapters.length - 1) {
+      if (isLastEntry && !isLastChapter) {
         nextBtn.disabled = false;
         nextBtn.textContent = 'Next Chapter →';
-      } else if (isLastEntry) {
+      } else if (isLastEntry && isLastChapter) {
         nextBtn.disabled = true;
         nextBtn.textContent = 'Next Entry →';
       } else {
@@ -270,7 +292,8 @@
     async function navigateToChapter(chapterIndex, entryPosition = 'first') {
       const targetChapter = chapters[chapterIndex];
       // Navigate to the next chapter's HTML file
-      window.location.href = targetChapter.file + (entryPosition === 'last' ? '#last' : '#first');
+      const hashValue = entryPosition === 'last' ? (entries.length) : '1';
+      window.location.href = targetChapter.file + '#' + hashValue;
     }
 
     loadChapter();
