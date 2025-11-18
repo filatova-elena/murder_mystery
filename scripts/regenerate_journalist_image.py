@@ -73,3 +73,4 @@ if __name__ == '__main__':
     print("=" * 60)
     regenerate_journalist_image()
 
+
