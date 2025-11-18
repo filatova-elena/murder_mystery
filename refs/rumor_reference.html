@@ -80,7 +80,7 @@
     // Load rumors from JSON and render
     async function loadRumors() {
       try {
-        const response = await fetch('../data/rumors.json');
+        const response = await fetch('../data/rumors.json?t=' + new Date().getTime());
         const data = await response.json();
         const rumors = data.rumors;
         
