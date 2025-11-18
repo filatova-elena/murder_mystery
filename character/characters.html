@@ -35,11 +35,30 @@
       margin: 15px 0;
       border-radius: 8px;
       transition: all 0.3s ease;
+      text-transform: none;
     }
     
     .character-card:hover {
       background: rgba(139, 109, 62, 0.2);
       transform: translateY(-2px);
+    }
+    
+    .character-image {
+      float: left;
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .character-image img {
+      width: 150px;
+      height: 150px;
+      border: 2px solid var(--accent-gold);
+      border-radius: 4px;
+    }
+    
+    .character-header {
+      overflow: hidden;
+      margin-bottom: 15px;
     }
     
     .character-card h3 {
@@ -66,6 +85,7 @@
     
     .character-goals {
       margin-top: 12px;
+      clear: both;
     }
     
     .character-goals strong {
@@ -92,44 +112,59 @@
 </head>
 <body>
   <main class="container">
-    <h1>Character Reference Guide</h1>
+    <h1>Character reference guide</h1>
     <p style="font-style: italic; margin-bottom: 30px; color: var(--accent-gold); text-align: center;">Quick reference for all characters, their descriptions, and investigation goals</p>
 
     <!-- LIVING CHARACTERS SECTION -->
     <section>
-      <h2>👥 Living Characters</h2>
+      <h2>👥 Living characters</h2>
       
       <div class="character-card">
-        <h3><a href="doctor.html">Dr. Thaddeus Crane (The Town Doctor)</a></h3>
-        <div class="character-description">Brilliant physician haunted by your family's secrets. Searching for answers about your own bloodline and an ancestor who may have been complicit in a cover-up.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/doctor.png" alt="The Town Doctor">
+          </div>
+          <h3><a href="doctor.html">THE TOWN DOCTOR</a></h3>
+          <div class="character-description">Brilliant physician haunted by your family's secrets. Searching for answers about your own bloodline.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
             <li>Understand the role of Dr. Thaddeus Crane. What role did he play? Could he have been involved in something criminal? Was he a victim or a perpetrator?</li>
-            <li>Who is the ghost of The Alchemist? People say The Alchemist is cursed. What was the curse and who cursed him?</li>
+            <li>Who is the ghost of the alchemist? People say the alchemist is cursed. What was the curse and who cursed him?</li>
             <li>Uncover the secret formula. Sporadic notes mention a chemical formula… What was it and how was it used?</li>
           </ol>
         </div>
       </div>
 
       <div class="character-card">
-        <h3><a href="fiduciary.html">The Fiduciary</a></h3>
-        <div class="character-description">Pedantic record-keeper obsessed with documentation. You hold all the secrets in your files. Secret hobby: collecting poisonous spiders and snakes (toxicology expert).</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/fiduciary.png" alt="The Fiduciary">
+          </div>
+          <h3><a href="fiduciary.html">THE FIDUCIARY</a></h3>
+          <div class="character-description">Pedantic record-keeper obsessed with documentation. You hold all the secrets in your files.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
-            <li>Discover who paid the Mortician. Follow the money—who bribed the Mortician to cover something up in 1925?</li>
-            <li>Determine the true heir to the Montrose estate. The Heiress is a distant relative, but is she the true heir?</li>
+            <li>Discover who paid the mortician. Follow the money—who bribed the mortician to cover something up in 1925?</li>
+            <li>Determine the true heir to the Montrose estate. The heiress is a distant relative, but is she the true heir?</li>
             <li>Who was Sebastian Crane? The records are incomplete and mysterious—as if someone tried to erase him from existence completely.</li>
           </ol>
         </div>
       </div>
 
       <div class="character-card">
-        <h3><a href="artcollector.html">The Art Collector</a></h3>
-        <div class="character-description">Pretentious aesthete obsessed with artistic merit and provenance. One foot in legitimacy, one in the shadows. Descended from the notorious Romano mob family.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/artcollector.png" alt="The Art Collector">
+          </div>
+          <h3><a href="artcollector.html">THE ART COLLECTOR</a></h3>
+          <div class="character-description">Pretentious aesthete obsessed with artistic merit and provenance. One foot in legitimacy, one in the shadows.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
             <li>Find the legendary Romano treasure. Hidden wealth that escaped the IRS. Could it be here in the mansion?</li>
             <li>Discover the truth about the glass bottle. Where did it come from? What was it used for? Why did Frankie keep it?</li>
@@ -139,36 +174,51 @@
       </div>
 
       <div class="character-card">
-        <h3><a href="heiress.html">The Heiress</a></h3>
-        <div class="character-description">Wealthy, dramatic socialite who LIVES IN THE HAUNTED MANSION. Terrified but too proud to admit you made a mistake. Behind the dramatic façade, you're observant and shrewd.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/heiress.png" alt="The Heiress">
+          </div>
+          <h3><a href="heiress.html">THE HEIRESS</a></h3>
+          <div class="character-description">Wealthy, dramatic socialite who lives in the haunted mansion. Terrified but too proud to admit you made a mistake.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
             <li>Discover what happened in your mansion. Three ghosts haunt this place. Who were they? What happened to them? Why did they die here?</li>
             <li>Uncover the truth about the Montrose family's dirty deeds. Despite being respected and influential, the Montroses have a dark reputation.</li>
-            <li>Collect as much gossip as possible without losing your mind. You love to gossip, but all these people have their own objectives in YOUR house!</li>
+            <li>Collect as much gossip as possible without losing your mind. You love to gossip, but all these people have their own objectives in your house!</li>
           </ol>
         </div>
       </div>
 
       <div class="character-card">
-        <h3><a href="influencer.html">The Influencer</a></h3>
-        <div class="character-description">Content creator documenting everything. This mystery is perfect for your "Long Beach Urban Legends & Mysteries" series—if you can debunk the supernatural.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/influencer.png" alt="The Influencer">
+          </div>
+          <h3><a href="influencer.html">THE INFLUENCER</a></h3>
+          <div class="character-description">Content creator documenting everything. This mystery is perfect for your series—if you can debunk the supernatural.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
-            <li>Document the investigation for your series. This is content gold—three deaths, a haunted mansion, hidden secrets.</li>
-            <li>Debunk the supernatural claims. Ghosts are psychological phenomena, psychic abilities are pattern recognition. Prove it.</li>
-            <li>Connect the dots between your previous research. You've covered multiple Long Beach mysteries—how do they all connect?</li>
+            <li>Create the ultimate episode. Document everything. Get the footage. Uncover the truth. This investigation could make your series blow up.</li>
+            <li>Prove everything has a rational explanation. Ghosts, psychics, mystical timing—you're convinced it's all psychology, coincidence, and pattern-seeking behavior. Can you debunk the supernatural claims while solving the mystery?</li>
+            <li>Connect the dots between your episodes. You've covered the mansion, the fire, the treasure, the deaths—separately. But what if they're all connected? What if all these "urban legends" are pieces of one true story?</li>
           </ol>
         </div>
       </div>
 
       <div class="character-card">
-        <h3><a href="baker.html">The Baker (Eleanor Sullivan)</a></h3>
-        <div class="character-description">Genuinely cheerful, warm, perpetually covered in flour. An orphan with a mysterious past. You have a gift for measurements and proportions, and sometimes you sense things others can't.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/baker.png" alt="The Baker">
+          </div>
+          <h3><a href="baker.html">THE BAKER</a></h3>
+          <div class="character-description">Genuinely cheerful, warm, perpetually covered in flour. An orphan with a mysterious past.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
             <li>Discover who Eleanor was and how you're connected to her</li>
             <li>Find out who your real family is</li>
@@ -179,49 +229,69 @@
       </div>
 
       <div class="character-card">
-        <h3><a href="clockmaker.html">The Clockmaker</a></h3>
-        <div class="character-description">Time obsessive who sees patterns everywhere. A mysterious pocket watch with a Jupiter-Venus conjunction engraving led you here. Caffeine-fueled chaos, always tinkering.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/clockmaker.png" alt="The Clockmaker">
+          </div>
+          <h3><a href="clockmaker.html">THE CLOCKMAKER</a></h3>
+          <div class="character-description">Time obsessive who sees patterns everywhere. A mysterious pocket watch led you here.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
-            <li>Discover who owned the pocket watch. Someone engraved September 4th and the conjunction symbols. Who? Why was this date so important?</li>
-            <li>Understand the significance of September 4, 1925. The Jupiter-Venus conjunction occurred at 6:14 AM. What happened on this date?</li>
+            <li>Discover who owned the pocket watch. Someone engraved September 4th and the conjunction symbols. Who? Why was this date so important? How did you end up with their watch?</li>
+            <li>Understand the significance of September 4, 1925. The Jupiter-Venus conjunction occurred at 6:14 AM. What happened on this date? Was the timing used deliberately for something?</li>
             <li>Piece together what the timeline reveals. The sequence of deaths is the key to understanding what really happened.</li>
           </ol>
         </div>
       </div>
 
       <div class="character-card">
-        <h3><a href="dressmaker.html">The Dressmaker (Elias Monroe)</a></h3>
-        <div class="character-description">Obsessed with the bride who never wore her dress. Preserving a tragic love story from 1925. Your ancestor Elias was in love with Cordelia Montrose.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/dressmaker.png" alt="The Dressmaker">
+          </div>
+          <h3><a href="dressmaker.html">THE DRESSMAKER</a></h3>
+          <div class="character-description">Obsessed with the bride who never wore her dress. Preserving a tragic love story from 1925.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
             <li>Discover what really happened to Cordelia. She died in October 1925, supposedly of a broken heart. But you don't believe it. What was the true cause?</li>
-            <li>Learn why Cordelia rejected Elias. Your ancestor loved her truly, genuinely. Why did she choose Sebastian instead?</li>
-            <li>Uncover Cordelia's secret. In early 1925, Cordelia disappeared for months, then returned changed—distant. Why did she disappear?</li>
+            <li>Learn why Cordelia rejected Elias. Your ancestor loved her truly, genuinely. He would have cherished her. Why did she choose Sebastian instead? What did she see in him?</li>
+            <li>Uncover Cordelia's secret. In early 1925, Cordelia disappeared for months, then returned changed—distant. Her best friend Alice even complained to Elias that she hadn't seen Cordelia for weeks. Why did she disappear?</li>
           </ol>
         </div>
       </div>
 
       <div class="character-card">
-        <h3><a href="mortician.html">The Mortician</a></h3>
-        <div class="character-description">Unnervingly calm about death. You know what bodies reveal. You've discovered a century-old cover-up. Your ancestor Silas Blackwell handled the 1925 deaths.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/mortician.png" alt="The Mortician">
+          </div>
+          <h3><a href="mortician.html">THE MORTICIAN</a></h3>
+          <div class="character-description">Unnervingly calm about death. You know what bodies reveal. You've discovered a century-old cover-up.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
             <li>Discover who paid the bribe. Someone gave Silas $500 to keep quiet. Was it Dr. Thaddeus Crane? The Montrose family? Follow the money.</li>
-            <li>Determine what really killed each victim. The official causes of death don't match Silas's private observations. What's the truth?</li>
-            <li>Understand why the cover-up happened. What were they trying to hide? And why is it still being hidden 100 years later?</li>
+            <li>Understand what Silas covered up. Your ancestor's notes mention discrepancies in all three deaths. What did he see? What didn't match?</li>
+            <li>Determine the true causes of death. Official records say accident, homicide, and natural causes. But Silas's notes suggest otherwise. What really killed these three people?</li>
           </ol>
         </div>
       </div>
 
       <div class="character-card">
-        <h3><a href="professor.html">The Botany Professor</a></h3>
-        <div class="character-description">Distracted genius obsessed with deadly plants. Your ancestor's secrets are tangled in the 1925 deaths. You get inappropriately excited about botanical poisons.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/professor.png" alt="The Botany Professor">
+          </div>
+          <h3><a href="professor.html">THE BOTANY PROFESSOR</a></h3>
+          <div class="character-description">Distracted genius obsessed with deadly plants. Your ancestor's secrets are tangled in the 1925 deaths.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
             <li>Determine if your ancestor was involved in the murders. The notes mention poisonous plants. Was Edmund somehow involved in the 1925 deaths?</li>
             <li>Identify what poison was used. At least one victim was poisoned. Discover the exact poison formula and its effects.</li>
@@ -231,26 +301,36 @@
       </div>
 
       <div class="character-card">
-        <h3><a href="psychic.html">The Psychic Medium (Margo Laveau)</a></h3>
-        <div class="character-description">Spiritualist descended from a legendary psychic. A restless spirit has waited 100 years for you. Flamboyant with dramatic flair, whether genuinely gifted or a skilled performer.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/psychic.png" alt="Margo Laveau, The Psychic Medium">
+          </div>
+          <h3><a href="psychic.html">MARGO LAVEAU, THE PSYCHIC MEDIUM</a></h3>
+          <div class="character-description">Spiritualist descended from a legendary psychic. A restless spirit has waited 100 years for you.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
-            <li>Help Alice Whitmore find peace. She's been trapped for 100 years. Your family has tried and failed to help her. You're here to finally complete the mission.</li>
-            <li>Discover what Alice witnessed. She knows what really happened. She's been trying to communicate it for a century. What is she trying to say?</li>
+            <li>Help Alice Whitmore find peace. She's been trapped for 100 years. Your family has tried and failed to help her. You're here to finally complete the mission. What does she need to move on?</li>
+            <li>Discover what Alice witnessed. She knows what really happened. She's been trying to communicate it for a century. What is she trying to say? It might help you figure out what happened to all the other spirits.</li>
             <li>Prove the Laveau family gift is real. Communicate with the spirits and show that your gift can be a useful asset to the investigation.</li>
           </ol>
         </div>
       </div>
 
       <div class="character-card">
-        <h3><a href="explorer.html">The Explorer (Frankie Romano)</a></h3>
-        <div class="character-description">Rugged adventurer hunting treasure. Something about this place feels strangely familiar. You're researching the legendary Romano Treasure—hidden wealth that escaped the IRS.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/explorer.png" alt="The Explorer">
+          </div>
+          <h3><a href="explorer.html">THE EXPLORER</a></h3>
+          <div class="character-description">Rugged adventurer hunting treasure. Something about this place feels strangely familiar.</div>
+        </div>
         <div class="character-goals">
-          <strong>Investigation Goals:</strong>
+          <strong>Investigation goals:</strong>
           <ol>
             <li>Discover what really happened in 1925. Three people died here in October 1925. Frankie Romano was involved somehow. Understanding the past might lead you to treasure.</li>
-            <li>Understand why this place feels familiar. You've felt strangely drawn to this investigation. Is it just the treasure, or is there something else?</li>
+            <li>Understand why this place feels familiar. You've felt strangely drawn to this investigation. Is it just the treasure, or is there something else? Why does this mansion, this town, feel like it's calling to you?</li>
             <li>Find the Romano treasure. Cash, contraband, valuable goods hidden somewhere before the IRS seized everything. Your research points to this mansion. Where is it hidden?</li>
           </ol>
         </div>
@@ -259,56 +339,75 @@
 
     <!-- GHOSTLY CHARACTERS SECTION -->
     <section>
-      <h2>👻 The Victims - Ghostly Manifestations</h2>
+      <h2>👻 The victims - ghostly manifestations</h2>
       
       <div class="character-card">
-        <h3><a href="ghost_alice.html">The Ghost of Alice Whitmore</a></h3>
-        <div class="character-description">Psychic connection to the spirit realm. Murdered on October 7, 1925. She's been trying to communicate the truth for 100 years.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/ghost_alice.png" alt="The Ghost of Alice Whitmore">
+          </div>
+          <h3><a href="ghost_alice.html">THE GHOST OF ALICE WHITMORE</a></h3>
+          <div class="character-description">Psychic connection to the spirit realm. Murdered on October 7, 1925. She's been trying to communicate the truth for 100 years.</div>
+        </div>
         <div class="character-goals">
-          <strong>What She Knows:</strong>
+          <strong>What she knows:</strong>
           <ol>
-            <li>She witnessed the murder of Cordelia Montrose</li>
-            <li>She knows who killed her and why</li>
-            <li>She's been waiting for the Laveau family to help her find peace</li>
+            <li>She knows that Thaddeus Crane poisoned Sebastian's elixir with foxglove and that it killed Cordelia and Sebastian</li>
+            <li>She knows someone murdered her—she felt a shadowy figure approaching, then something heavy hit her head</li>
+            <li>She knows about the affair between Thaddeus and herself</li>
+            <li>She knows about Thomas (her brother) and Cordelia's relationship in 1924, and that Cordelia disappeared for months in early 1925</li>
           </ol>
+          <p style="margin-top: 10px; font-style: italic; opacity: 0.8;"><strong>What she doesn't know:</strong> She doesn't know that Thaddeus Crane was the one who murdered her.</p>
         </div>
       </div>
 
       <div class="character-card">
-        <h3><a href="ghost_cordelia.html">The Ghost of Cordelia Montrose</a></h3>
-        <div class="character-description">Tragic bride of 1925. Died on October 18, 1925, never wearing her wedding dress. Engaged to Sebastian Crane, but something was wrong.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/ghost_cordelia.png" alt="The Ghost of Cordelia Montrose">
+          </div>
+          <h3><a href="ghost_cordelia.html">THE GHOST OF CORDELIA MONTROSE</a></h3>
+          <div class="character-description">Tragic bride of 1925. Died on October 18, 1925, never wearing her wedding dress. Engaged to Sebastian Crane, but something was wrong.</div>
+        </div>
         <div class="character-goals">
-          <strong>What She Knows:</strong>
+          <strong>What she knows:</strong>
           <ol>
-            <li>She was slowly poisoned over 44 days</li>
-            <li>She had a secret that changed everything</li>
-            <li>She disappeared for months in early 1925, then returned changed</li>
+            <li>She knows Thaddeus Crane was having an affair with Alice Whitmore and that she threatened him</li>
+            <li>She was getting sicker for the past month</li>
+            <li>News of Sebastian's and Alice's deaths recently arrived</li>
+            <li>She knows about Eleanor (her daughter she had to give away) and Thomas (her first love, lost at sea)</li>
           </ol>
+          <p style="margin-top: 10px; font-style: italic; opacity: 0.8;"><strong>What she doesn't know:</strong> She doesn't know that Thaddeus Crane was the one who murdered her, Sebastian, and Alice. She doesn't even know anything about the poison or the elixir.</p>
         </div>
       </div>
 
       <div class="character-card">
-        <h3><a href="ghost_sebastian.html">The Ghost of Sebastian Crane (The Alchemist)</a></h3>
-        <div class="character-description">Alchemist and visionary. Died on October 11, 1925. He created an elixir formula, but it was corrupted. He unknowingly poisoned the woman he loved.</div>
+        <div class="character-header">
+          <div class="character-image">
+            <img src="../assets/ghost_sebastian.png" alt="The Ghost of Sebastian Crane">
+          </div>
+          <h3><a href="ghost_sebastian.html">THE GHOST OF SEBASTIAN CRANE (THE ALCHEMIST)</a></h3>
+          <div class="character-description">Alchemist and visionary. Died on October 11, 1925. He created an elixir formula, but it was corrupted. He unknowingly poisoned the woman he loved.</div>
+        </div>
         <div class="character-goals">
-          <strong>What He Knows:</strong>
+          <strong>What he knows:</strong>
           <ol>
-            <li>He created a harmless elixir formula for Cordelia</li>
-            <li>His brother Dr. Thaddeus corrupted the formula with foxglove</li>
-            <li>He tested the corrupted formula on himself and died</li>
-            <li>He's been trapped by guilt for 100 years</li>
+            <li>He created the elixir formula and administered it to Cordelia starting September 4, 1925</li>
+            <li>He knows Cordelia was getting sicker and he asked his brother Dr. Thaddeus for advice</li>
+            <li>He tested the formula on himself and got violently ill</li>
+            <li>He believes it was his own fault, his own incompetence that caused everything</li>
           </ol>
+          <p style="margin-top: 10px; font-style: italic; opacity: 0.8;"><strong>What he doesn't know:</strong> He doesn't know that his brother Thaddeus corrupted the formula with foxglove. He doesn't know who really killed him or Cordelia.</p>
         </div>
       </div>
     </section>
 
     <div class="nav-footer">
-      <a href="/" class="button nav-button">Return to Investigation</a>
-      <a href="/characters.html" class="button nav-button">View Character Guide</a>
+      <a href="/" class="button nav-button">Return to investigation</a>
+      <a href="/characters.html" class="button nav-button">View character guide</a>
     </div>
   </main>
 
   <script src="../assets/script.js"></script>
 </body>
 </html>
-
